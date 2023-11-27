@@ -40,3 +40,13 @@ console.log(PI1.toPrecision(3)); /// 3.14
 
 const lightSpeed = 186000;
 console.log(lightSpeed.toExponential()); // 1.86+5
+
+console.log((123 + 5).valueOf()); // 128 (number type)
+const stringValue = "10";
+console.log(typeof Number(stringValue)); // number
+
+let x = new Date("1970-01-01");
+console.log(x);
+
+console.log(parseInt("10.55")); // 10 (number type)
+console.log(parseFloat("10.55")); // 10.55 (number type)
