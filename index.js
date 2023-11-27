@@ -50,3 +50,24 @@ console.log(x);
 
 console.log(parseInt("10.55")); // 10 (number type)
 console.log(parseFloat("10.55")); // 10.55 (number type)
+
+/////////////////// Strings////////////////////////////////
+
+const message = "this is my code"; // string type
+const another = new String("hi"); // object type
+
+console.log(another.length); // 2
+console.log(message[0]); // t
+console.log(message.includes("is")); // true
+console.log(message.includes("her")); // false
+console.log(message.startsWith("this")); // true
+console.log(message.indexOf("code")); // 11
+const newMessage = message.replace("my", "her"); // does not mutate original
+console.log(newMessage); /// this is her code
+console.log(message.toUpperCase()); // THIS IS MY CODE
+
+const message2 = "  this is my code  ";
+console.log(message2.trim()); // "this is my code"
+console.log(message.charAt(0)); // t
+console.log(message.slice(4, 8)); /// is
+console.log(message.split(" ")); // ['this', 'is', 'my', 'code']
