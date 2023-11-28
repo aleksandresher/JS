@@ -71,3 +71,24 @@ console.log(message2.trim()); // "this is my code"
 console.log(message.charAt(0)); // t
 console.log(message.slice(4, 8)); /// is
 console.log(message.split(" ")); // ['this', 'is', 'my', 'code']
+
+///////////// var, let, const /////////////////////
+
+function start() {
+  for (var i = 0; i < 5; i++) {
+    console.log(i);
+  }
+  console.log(i); ///// var is accessible outside of block-scope (in function scope)
+}
+start();
+
+function start2() {
+  for (let i = 0; i < 5; i++) {
+    console.log(i);
+  }
+  console.log(i); ///// got error because let is not accessible outside block-scope
+}
+start2();
+
+var color = "red"; /// attaches variable to window object
+let age = 30;
