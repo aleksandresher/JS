@@ -134,15 +134,41 @@
 
 ///////////// hoisting
 
-getName(); /// "Namaste Javascript"
-console.log(x); /// undefined
+// getName(); /// "Namaste Javascript"
+// console.log(x); /// undefined
 
-var x = 7;
+// var x = 7;
 
-function getName() {
-  console.log("Namaste Javascript");
+// function getName() {
+//   console.log("Namaste Javascript");
+// }
+
+// carName = "Volvo";
+// let carName; //// Cannot access 'carName' before initialization
+////////
+
+// console.log(me); // undefined
+// console.log(lastName); //Cannot access 'lastName' before initialization
+// console.log(year); // Cannot access 'year' before initialization
+
+// var me = "Aleksandre";
+// let lastName = "Shervashidze";
+// const year = 1994;
+
+//// functions
+console.log(addDecl(2, 3)); /// 5
+console.log(addExpr(2, 3)); /// Cannot access 'addExpr' before initialization
+console.log(addArrow(2, 3)); ////  Cannot access 'addArrow' before initialization
+console.log(addArrow2(2, 3)); ///  addArrow2 is not a function  (undefined(2,3))
+
+function addDecl(a, b) {
+  return a + b;
 }
 
-carName = "Volvo";
-let carName; //// Cannot access 'carName' before initialization
-////////
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+const addArrow = (a, b) => a + b;
+
+var addArrow2 = (a, b) => a + b;
