@@ -156,19 +156,55 @@
 // const year = 1994;
 
 //// functions
-console.log(addDecl(2, 3)); /// 5
-console.log(addExpr(2, 3)); /// Cannot access 'addExpr' before initialization
-console.log(addArrow(2, 3)); ////  Cannot access 'addArrow' before initialization
-console.log(addArrow2(2, 3)); ///  addArrow2 is not a function  (undefined(2,3))
+// console.log(addDecl(2, 3)); /// 5
+// console.log(addExpr(2, 3)); /// Cannot access 'addExpr' before initialization
+// console.log(addArrow(2, 3)); ////  Cannot access 'addArrow' before initialization
+// console.log(addArrow2(2, 3)); ///  addArrow2 is not a function  (undefined(2,3))
 
-function addDecl(a, b) {
-  return a + b;
+// function addDecl(a, b) {
+//   return a + b;
+// }
+
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
+
+// const addArrow = (a, b) => a + b;
+
+// var addArrow2 = (a, b) => a + b;
+
+//////////////////////// closures
+
+for (var i = 0; i < 3; i++) {
+  const log = () => {
+    console.log(i); /// 3 3 3
+  };
+  setTimeout(log, 100);
 }
 
-const addExpr = function (a, b) {
-  return a + b;
-};
+for (let i = 0; i < 3; i++) {
+  const log = () => {
+    console.log(i); /// 0 1 2
+  };
+  setTimeout(log, 100);
+}
 
-const addArrow = (a, b) => a + b;
+let myName = "Aleksandre";
 
-var addArrow2 = (a, b) => a + b;
+function printName() {
+  console.log(myName); /// zura
+}
+
+myName = "zura";
+
+printName();
+
+function outerFunction(outerVariable) {
+  return function innerFunction(innerVariable) {
+    console.log("Outer Variable" + outerVariable);
+    console.log("Inner Variable" + innerVariable);
+  };
+}
+const newFunction = outerFunction("outside");
+newFunction(); //// Outer Variableoutside
+////Inner Variableundefined
