@@ -175,36 +175,92 @@
 
 //////////////////////// closures
 
-for (var i = 0; i < 3; i++) {
-  const log = () => {
-    console.log(i); /// 3 3 3
-  };
-  setTimeout(log, 100);
-}
+// for (var i = 0; i < 3; i++) {
+//   const log = () => {
+//     console.log(i); /// 3 3 3
+//   };
+//   setTimeout(log, 100);
+// }
 
-for (let i = 0; i < 3; i++) {
-  const log = () => {
-    console.log(i); /// 0 1 2
-  };
-  setTimeout(log, 100);
-}
+// for (let i = 0; i < 3; i++) {
+//   const log = () => {
+//     console.log(i); /// 0 1 2
+//   };
+//   setTimeout(log, 100);
+// }
 
-let myName = "Aleksandre";
+// let myName = "Aleksandre";
 
-function printName() {
-  console.log(myName); /// zura
-}
+// function printName() {
+//   console.log(myName); /// zura
+// }
 
-myName = "zura";
+// myName = "zura";
 
-printName();
+// printName();
 
-function outerFunction(outerVariable) {
-  return function innerFunction(innerVariable) {
-    console.log("Outer Variable" + outerVariable);
-    console.log("Inner Variable" + innerVariable);
-  };
-}
-const newFunction = outerFunction("outside");
-newFunction(); //// Outer Variableoutside
+// function outerFunction(outerVariable) {
+//   return function innerFunction(innerVariable) {
+//     console.log("Outer Variable" + outerVariable);
+//     console.log("Inner Variable" + innerVariable);
+//   };
+// }
+// const newFunction = outerFunction("outside");
+// newFunction(); //// Outer Variableoutside
 ////Inner Variableundefined
+
+///////////// loops
+
+for (let i = 0; i < 6; i++) {
+  // console.log(`statement ${i}`);
+}
+
+for (let i = 0; i < 6; i++) {
+  if (i === 4) {
+    break;
+  }
+  // console.log(`statement ${i}`);
+}
+
+const arr = [1, 2, 3];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+///// iterate  over object properties
+
+const capitals = {
+  a: "Tbilisi",
+  b: "Cairo",
+  c: "Belgrade",
+};
+
+for (let key in capitals) {
+  console.log(key + ": " + capitals[key]);
+}
+
+///////// for of
+
+const arr2 = ["Fred", "Tom", "Bob"];
+
+for (let i of arr2) {
+  console.log(i);
+}
+
+//// while
+
+// let i = 1;
+
+// while (i < 5) {
+//   console.log(i);
+//   i++;
+// }
+
+///// do while  //// run at least once // condition is checked at the end of iteration
+let i = 10;
+
+do {
+  console.log(i); /// 10
+  i++;
+} while (i < 10);
