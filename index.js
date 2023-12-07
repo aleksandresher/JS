@@ -591,3 +591,24 @@ function separateNums() {
 }
 const checkResult = separateNums();
 console.log(checkResult); ////// even [4, 6, 8, 12, 14, 22, 28]  odd [3, 5, 13, 23]
+
+let arr6 = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [10, 11, 12],
+];
+
+function getSum6() {
+  let sum = 0;
+
+  for (let i = 0; i < arr6.length; i++) {
+    for (let j = 0; j < arr6[i].length; j++) {
+      sum += arr6[i][j];
+    }
+  }
+  return sum;
+}
+
+const arr6Result = getSum6();
+console.log(arr6Result); // 78
