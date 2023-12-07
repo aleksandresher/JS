@@ -211,56 +211,300 @@
 
 ///////////// loops
 
-for (let i = 0; i < 6; i++) {
-  // console.log(`statement ${i}`);
-}
-
-for (let i = 0; i < 6; i++) {
-  if (i === 4) {
-    break;
-  }
-  // console.log(`statement ${i}`);
-}
-
-const arr = [1, 2, 3];
-
-for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}
-
-///// iterate  over object properties
-
-const capitals = {
-  a: "Tbilisi",
-  b: "Cairo",
-  c: "Belgrade",
-};
-
-for (let key in capitals) {
-  console.log(key + ": " + capitals[key]);
-}
-
-///////// for of
-
-const arr2 = ["Fred", "Tom", "Bob"];
-
-for (let i of arr2) {
-  console.log(i);
-}
-
-//// while
-
-// let i = 1;
-
-// while (i < 5) {
-//   console.log(i);
-//   i++;
+// for (let i = 0; i < 6; i++) {
+//   // console.log(`statement ${i}`);
 // }
 
-///// do while  //// run at least once // condition is checked at the end of iteration
-let i = 10;
+// for (let i = 0; i < 6; i++) {
+//   if (i === 4) {
+//     break;
+//   }
+//   // console.log(`statement ${i}`);
+// }
 
-do {
-  console.log(i); /// 10
-  i++;
-} while (i < 10);
+// const arr = [1, 2, 3];
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+// ///// iterate  over object properties
+
+// const capitals = {
+//   a: "Tbilisi",
+//   b: "Cairo",
+//   c: "Belgrade",
+// };
+
+// for (let key in capitals) {
+//   console.log(key + ": " + capitals[key]);
+// }
+
+// ///////// for of
+
+// const arr2 = ["Fred", "Tom", "Bob"];
+
+// for (let i of arr2) {
+//   console.log(i);
+// }
+
+// //// while
+
+// // let i = 1;
+
+// // while (i < 5) {
+// //   console.log(i);
+// //   i++;
+// // }
+
+// ///// do while  //// run at least once // condition is checked at the end of iteration
+// let i = 10;
+
+// do {
+//   console.log(i); /// 10
+//   i++;
+// } while (i < 10);
+
+// const myName = "Aleksandre";
+// // var age = 29;
+
+// function first() {
+//   // const age = 30;
+//   if (age >= 29) {
+//     const decade = 3;
+//     var millenial = true;
+//   }
+//   function second() {
+//     const job = "teacher";
+//     // const age = 31;
+
+//     console.log(`${myName} is a ${age}-old ${job}`);
+//   }
+//   second();
+// }
+
+// first();
+// let age = 32;
+// first();
+
+//// exercise 1
+
+// function test() {
+//   console.log(a);
+//   console.log(foo());
+
+//   var a = 1;
+//   const foo = function () {
+//     return 2;
+//   };
+// }
+
+// test();
+
+///// exercise 2
+
+// var a = 1;
+
+// function someFunction(number) {
+//   function otherFunction(input) {
+//     return a;
+//   }
+
+//   a = 5;
+
+//   otherFunction();
+// }
+
+// var firstResult = someFunction();
+// console.log(firstResult);
+
+//// exercise 3
+// var a = 1;
+// function b() {
+//   a = 10;
+//   return;
+//   function a() {}
+// }
+// b();
+// console.log(a);
+
+///exercise 4
+
+// function some() {
+//   return a();
+
+//   function a() {
+//     return 2 + 6;
+//   }
+// }
+// const result = some();
+// console.log(result);
+
+//////exercise 5
+
+// const result = calcAge(1994);
+
+// function calcAge(birthYear) {
+//   const age = 2023 - birthYear;
+
+//   return age;
+// }
+// console.log(result);
+
+///////exercise 6
+
+// const result = calcAge(1994);
+
+// const calcAge = function (birthYear) {
+//   const age = 2023 - birthYear;
+//   return age;
+// };
+// console.log(result);
+
+//// exercise 7
+
+// function calcAge(birthYear) {
+//   const age = 2023 - birthYear;
+
+//   function printAge() {
+//     const output = `${firstName}, your are ${age}, born in ${birthYear}`;
+//     console.log(output);
+//   }
+//   printAge();
+
+//   return age;
+// }
+// const firstName = "Aleksandre";
+// calcAge(1994);
+
+// function outer() {
+//   var a = 10;
+
+//   function inner() {
+//     var b = 20;
+//     console.log(a); // What is the output?
+//   }
+
+//   inner();
+//   // console.log(b); // What happens if you uncomment this line?
+// }
+
+// outer();
+
+// const secureBooking = function () {
+//   let passengerCount = 0;
+
+//   return function () {
+//     passengerCount++;
+//     console.log(`${passengerCount} passengers`);
+//   };
+// };
+
+// const booker = secureBooking();
+// booker();
+
+// function createCounter() {
+//   let count = 0;
+
+//   function increment() {
+//     count++;
+//     console.log(count);
+//   }
+
+//   function decrement() {
+//     count--;
+//     console.log(count);
+//   }
+
+//   function reset() {
+//     count = 0;
+//     console.log(count);
+//   }
+
+//   function getCount() {
+//     console.log(count);
+//   }
+
+//   return {
+//     increment: increment,
+//     decrement: decrement,
+//     reset: reset,
+//     getCount: getCount,
+//   };
+// }
+
+// const counter1 = createCounter();
+// const counter2 = createCounter();
+
+// // Exercise 1:
+// counter1.increment(); // What will this output?
+// counter1.increment(); // What will this output?
+// counter1.decrement(); // What will this output?
+// counter1.reset(); // What will this output?
+
+// // Exercise 2:
+// counter2.increment(); // What will this output?
+// counter2.getCount(); // What will this output?
+
+// // Exercise 3:
+// counter1.getCount(); // What will this output?
+
+// let f;
+
+// const g = function () {
+//   const a = 23;
+//   f = function () {
+//     console.log(a * 2);
+//   };
+// };
+// const result = g();
+// console.log(result);
+
+// const boardPassengers = function (n, wait) {
+//   const perGroup = n / 3;
+
+//   setTimeout(function () {
+//     console.log(`We are now boarding all ${n} passengers`);
+//     console.log(`There are 3 groups, each with ${perGroup} passengers`);
+//   }, wait * 1000);
+
+//   console.log(`Will start boarding in ${wait} seconds`);
+// };
+
+// const result = boardPassengers(180, 3);
+// console.log(result);
+
+// if (3 === 3) {
+//   var somerandom = 3;
+// } else {
+//   var somerandom2 = 4;
+// }
+// function sayHello() {
+//   var say = function () {
+//     console.log(hello);
+//   };
+//   var hello = "Hello, world!";
+//   return say;
+// }
+// var sayHelloClosure = sayHello();
+// sayHelloClosure();
+
+var x = 10;
+function foo(a) {
+  var b = 20;
+
+  function bar(c) {
+    var d = 30;
+    return boop(x + a + b + c + d);
+  }
+
+  function boop(e) {
+    return e * -1;
+  }
+
+  return bar;
+}
+
+var moar = foo(5);
+
+moar(15);
