@@ -489,22 +489,70 @@
 // var sayHelloClosure = sayHello();
 // sayHelloClosure();
 
-var x = 10;
-function foo(a) {
-  var b = 20;
+// var x = 10;
+// function foo(a) {
+//   var b = 20;
 
-  function bar(c) {
-    var d = 30;
-    return boop(x + a + b + c + d);
+//   function bar(c) {
+//     var d = 30;
+//     return boop(x + a + b + c + d);
+//   }
+
+//   function boop(e) {
+//     return e * -1;
+//   }
+
+//   return bar;
+// }
+
+// var moar = foo(5);
+
+// moar(15);
+
+let arr_1 = [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2];
+
+function getSum() {
+  let sum = 0;
+  for (let i = 0; i < arr_1.length; i++) {
+    sum += arr_1[i];
   }
-
-  function boop(e) {
-    return e * -1;
-  }
-
-  return bar;
+  return sum;
 }
+const result = getSum();
+console.log(result); //276
 
-var moar = foo(5);
+function getSum2() {
+  let sum = 0;
+  for (const number of arr_1) {
+    sum += number;
+  }
+  return sum;
+}
+const result2 = getSum2();
+console.log(result2); // 276
 
-moar(15);
+function getSum3() {
+  let sum = 0;
+  let i = 0;
+
+  while (i < arr_1.length) {
+    sum += arr_1[i];
+    i++;
+  }
+  return sum;
+}
+const result3 = getSum3();
+console.log(result3); // 276
+
+function getSum4() {
+  let sum = 0;
+  let i = 0;
+
+  do {
+    sum += arr_1[i];
+    i++;
+  } while (i < arr_1.length);
+  return sum;
+}
+const result4 = getSum4();
+console.log(result4); ///276
