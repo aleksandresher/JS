@@ -509,106 +509,136 @@
 
 // moar(15);
 
-let arr_1 = [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2];
+// let arr_1 = [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2];
 
-function getSum() {
-  let sum = 0;
-  for (let i = 0; i < arr_1.length; i++) {
-    sum += arr_1[i];
-  }
-  return sum;
-}
-const result = getSum();
-console.log(result); //276
+// function getSum() {
+//   let sum = 0;
+//   for (let i = 0; i < arr_1.length; i++) {
+//     sum += arr_1[i];
+//   }
+//   return sum;
+// }
+// const result = getSum();
+// console.log(result); //276
 
-function getSum2() {
-  let sum = 0;
-  for (const number of arr_1) {
-    sum += number;
-  }
-  return sum;
-}
-const result2 = getSum2();
-console.log(result2); // 276
+// function getSum2() {
+//   let sum = 0;
+//   for (const number of arr_1) {
+//     sum += number;
+//   }
+//   return sum;
+// }
+// const result2 = getSum2();
+// console.log(result2); // 276
 
-function getSum3() {
-  let sum = 0;
-  let i = 0;
+// function getSum3() {
+//   let sum = 0;
+//   let i = 0;
 
-  while (i < arr_1.length) {
-    sum += arr_1[i];
-    i++;
-  }
-  return sum;
-}
-const result3 = getSum3();
-console.log(result3); // 276
+//   while (i < arr_1.length) {
+//     sum += arr_1[i];
+//     i++;
+//   }
+//   return sum;
+// }
+// const result3 = getSum3();
+// console.log(result3); // 276
 
-function getSum4() {
-  let sum = 0;
-  let i = 0;
+// function getSum4() {
+//   let sum = 0;
+//   let i = 0;
 
-  do {
-    sum += arr_1[i];
-    i++;
-  } while (i < arr_1.length);
-  return sum;
-}
-const result4 = getSum4();
-console.log(result4); ///276
+//   do {
+//     sum += arr_1[i];
+//     i++;
+//   } while (i < arr_1.length);
+//   return sum;
+// }
+// const result4 = getSum4();
+// console.log(result4); ///276
 
-let arr_3 = [4, 6, 7];
-let arr_4 = [8, 1, 9];
+// let arr_3 = [4, 6, 7];
+// let arr_4 = [8, 1, 9];
 
-function sumToArray() {
-  let sum = 0;
-  let newArray = [];
+// function sumToArray() {
+//   let sum = 0;
+//   let newArray = [];
 
-  for (let i = 0; i < arr_3.length; i++) {
-    let currentSum = arr_3[i] + arr_4[i];
-    sum += currentSum;
+//   for (let i = 0; i < arr_3.length; i++) {
+//     let currentSum = arr_3[i] + arr_4[i];
+//     sum += currentSum;
 
-    newArray.push(arr_3[i] + arr_4[i]);
-  }
-  return { sum, newArray };
-}
-const result5 = sumToArray();
-console.log(result5); //// newArray [12,7,16] /// sum 35
+//     newArray.push(arr_3[i] + arr_4[i]);
+//   }
+//   return { sum, newArray };
+// }
+// const result5 = sumToArray();
+// console.log(result5); //// newArray [12,7,16] /// sum 35
 
-let arr = [3, 4, 5, 6, 8, 12, 14, 13, 23, 22, 28];
+// let arr = [3, 4, 5, 6, 8, 12, 14, 13, 23, 22, 28];
 
-function separateNums() {
-  let even = [];
-  let odd = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 == 0) {
-      even.push(arr[i]);
-    } else {
-      odd.push(arr[i]);
-    }
-  }
-  return { even, odd };
-}
-const checkResult = separateNums();
-console.log(checkResult); ////// even [4, 6, 8, 12, 14, 22, 28]  odd [3, 5, 13, 23]
+// function separateNums() {
+//   let even = [];
+//   let odd = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 == 0) {
+//       even.push(arr[i]);
+//     } else {
+//       odd.push(arr[i]);
+//     }
+//   }
+//   return { even, odd };
+// }
+// const checkResult = separateNums();
+// console.log(checkResult); ////// even [4, 6, 8, 12, 14, 22, 28]  odd [3, 5, 13, 23]
 
-let arr6 = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-  [10, 11, 12],
-];
+// let arr6 = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+//   [10, 11, 12],
+// ];
 
-function getSum6() {
-  let sum = 0;
+// function getSum6() {
+//   let sum = 0;
 
-  for (let i = 0; i < arr6.length; i++) {
-    for (let j = 0; j < arr6[i].length; j++) {
-      sum += arr6[i][j];
-    }
-  }
-  return sum;
-}
+//   for (let i = 0; i < arr6.length; i++) {
+//     for (let j = 0; j < arr6[i].length; j++) {
+//       sum += arr6[i][j];
+//     }
+//   }
+//   return sum;
+// }
 
-const arr6Result = getSum6();
-console.log(arr6Result); // 78
+// const arr6Result = getSum6();
+// console.log(arr6Result); // 78
+
+/////////////////////////////////////////// Arrays ///////////////////////////////////////////////////////////////////////////
+
+const myArray = [];
+//// add element to an array
+myArray[0] = "Dave";
+myArray[1] = 1001;
+myArray[2] = false;
+
+//// refer to an array
+console.log(myArray);
+////length property
+console.log(myArray.length);
+////last element in array
+console.log(myArray[myArray.length - 1]);
+
+////add element at the end of an array
+myArray.push("school");
+
+//// add element at the start of an array
+myArray.unshift(42);
+const newLength = myArray.unshift(42); /// 4 // will return new length of array
+console.log(myArray);
+
+/// remove and save last element from array
+const lastItem = myArray.pop();
+console.log(lastItem); /// "school"
+
+/// remove and save first element from array
+const firstItem = myArray.shift();
