@@ -715,3 +715,72 @@ console.log(reversedPeople); /// ['John', 'Kyle', 'Sally']
 const spliced = people.toSpliced(0, 2, "New"); /// works as splice method but does not change/mutate original array
 console.log(people); /// ['Sally', 'Kyle', 'John']
 console.log(spliced); /// ['New', 'John']
+
+////////////// foreach
+//// use when need to perform some action on each element
+
+const food = ["Grape", "Apple", "Banana", "Orange", "Strawberry"];
+food.forEach((item, index) => {
+  console.log(`${item}  delicious index is ${index + 1} from ${food.length} `);
+});
+
+///////////// map
+/////// use when need to perform some action on element and return result in new array
+const newMappedArray = food.map((item) => item + item);
+console.log(newMappedArray); //// ['GrapeGrape', 'AppleApple', 'BananaBanana', 'OrangeOrange', 'StrawberryStrawberry']
+
+/////////filter
+const filteredFruit = food.filter((item) => item.length > 5);
+console.log(filteredFruit); ///  ['Banana', 'Orange', 'Strawberry']
+
+////// find
+const foundItem = food.find((item) => item.length === 5);
+console.log(foundItem); //// Grape
+//// It returns the value of the first element in the array that satisfies the testing function
+
+////// findIndex
+const findIndexOfElement = food.findIndex((item) => item.length === 10);
+console.log(findIndexOfElement); /// 4
+/////// returns index of first element which satisfies contidion
+
+////// indexOf
+const result = food.indexOf("Orange");
+const result2 = food.indexOf("Orange", 4);
+console.log(result); //// 3
+console.log(result2); //// -1
+//// -1 if no result
+
+/////// lastIndexOf
+const food2 = ["Grape", "Apple", "Apple", "Banana", "Orange", "Strawberry"];
+const lastIndex = food2.lastIndexOf("Apple");
+console.log(lastIndex); //// 2
+
+////// some
+const checkIf = food.some((item) => item.startsWith("B"));
+console.log(checkIf); /// true
+///// check if at least one element satisfies condition
+
+///////every
+const chechIfAll = food.every((item) => item.endsWith("a"));
+console.log(chechIfAll); //// false
+
+//////// includes
+const ifIncludesOrange = food.includes("Orange");
+const ifIncludesKiwi = food.includes("Kiwi");
+console.log(ifIncludesOrange); /// true
+console.log(ifIncludesKiwi); /// false
+//// array.included(element, fromIndex)
+
+/////// toString
+const arrayToString = food.toString();
+console.log(arrayToString); /// Grape,Apple,Banana,Orange,Strawberry
+
+////// join
+const separated = food.join(" - ");
+console.log(separated); /// Grape - Apple - Banana - Orange - Strawberry
+/// with join we can specify separator
+
+///// fill
+// const filledWithKiwi = food.fill("Kiwi");
+console.log(food); //// ['Kiwi', 'Kiwi', 'Kiwi', 'Kiwi', 'Kiwi']
+//// we can also specify start and/or last index of fill ("Kiwi", 2);  ("Kiwi", 2, 6)
