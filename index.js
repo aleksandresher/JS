@@ -643,23 +643,25 @@
 // /// remove and save first element from array
 // const firstItem = myArray.shift();
 
-const myArray = [];
-//// add element to an array
-myArray[0] = "Dave";
-myArray[1] = 1001;
-myArray[2] = false;
+// const myArray = [];
+// //// add element to an array
+// myArray[0] = "Dave";
+// myArray[1] = 1001;
+// myArray[2] = false;
 
-/// delete certain element from array
-myArray.splice(1, 1); /// start from position 1 and delete 1 element
-console.log(myArray); ////  ['Dave', false]
+// /// delete certain element from array
+// myArray.splice(1, 1); /// start from position 1 and delete 1 element
+// console.log(myArray); ////  ['Dave', false]
 
-///// replace element(s) in array
-const newArray = ["Aleksandre", 1001, false];
-newArray.splice(1, 1, 42); /// start from position 1 and replace one element with 42
-console.log(newArray); ///  ['Aleksandre', 42, false]
-newArray.splice(1, 2, 45, true); //// start from position 1 and replace 2 element. first with 45, second with - true
-console.log(newArray); //// ['Aleksandre', 45, true]
+// ///// replace element(s) in array
+// const newArray = ["Aleksandre", 1001, false];
+// newArray.splice(1, 1, 42); /// start from position 1 and replace one element with 42
+// console.log(newArray); ///  ['Aleksandre', 42, false]
+// newArray.splice(1, 2, 45, true); //// start from position 1 and replace 2 element. first with 45, second with - true
+// console.log(newArray); //// ['Aleksandre', 45, true]
 
-///// insert element in array
-newArray.splice(1, 0, 42); /// add element at position 1
-console.log(newArray); // ['Aleksandre', 42, 45, true]
+// ///// insert element in array
+// newArray.splice(1, 0, 42); /// add element at position 1
+// console.log(newArray); // ['Aleksandre', 42, 45, true]
+
+// const newArray = [2, 3, 4];
