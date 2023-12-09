@@ -665,3 +665,53 @@
 // console.log(newArray); // ['Aleksandre', 42, 45, true]
 
 // const newArray = [2, 3, 4];
+
+const myArray = ["A", "B", "C", "D", "E", "F"];
+
+const newArray = myArray.slice(2, 5); /// takes elements from 2 to 5
+console.log(newArray); //// ['C', 'D', 'E']
+
+const reversedArray = myArray.reverse();
+console.log(reversedArray); /// ['F', 'E', 'D', 'C', 'B', 'A'] /// mutates original array
+
+const newString = myArray.join();
+console.log(newString); //// F,E,D,C,B,A
+
+const arrayA = ["A", "B", "C"];
+const arrayB = ["D", "E", "F"];
+
+const concatedArray = arrayA.concat(arrayB);
+console.log(concatedArray); /// ['A', 'B', 'C', 'D', 'E', 'F']
+
+const combinedArray = [...arrayA, ...arrayB];
+console.log(combinedArray); // ['A', 'B', 'C', 'D', 'E', 'F']
+
+const equipShelfA = ["baseball", "football", "volleyboll"];
+const equipShelfB = ["basketball", "golf balls", "tennis balls"];
+
+const clothesShelfA = ["tank tops", "t-shirts", "jerseys"];
+const clothesShelfB = ["sweat tops", "sweat pants", "hoodies"];
+
+const equipDept = [equipShelfA, equipShelfB];
+const clothesDept = [clothesShelfA, clothesShelfB];
+
+console.log(equipDept[0][1]); /// football
+console.log(clothesDept[1][0]); /// sweat tops
+
+const sportStore = [equipDept, clothesDept];
+console.log(sportStore[0][0][1]); // football
+
+const people = ["Sally", "Kyle", "John"];
+const newPeople = people.with(2, "New"); /// does not mutate original array
+console.log(newPeople); /// ['Sally', 'Kyle', 'New']
+console.log(people); //  ['Sally', 'Kyle', 'John']
+
+const sortedPeople = people.toSorted(); /// sort alphabetically
+console.log(sortedPeople); ///  ['John', 'Kyle', 'Sally']
+
+const reversedPeople = people.toReversed(); // reversing array
+console.log(reversedPeople); /// ['John', 'Kyle', 'Sally']
+
+const spliced = people.toSpliced(0, 2, "New"); /// works as splice method but does not change/mutate original array
+console.log(people); /// ['Sally', 'Kyle', 'John']
+console.log(spliced); /// ['New', 'John']
