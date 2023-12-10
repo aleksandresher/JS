@@ -666,226 +666,288 @@
 
 // const newArray = [2, 3, 4];
 
-const myArray = ["A", "B", "C", "D", "E", "F"];
+// const myArray = ["A", "B", "C", "D", "E", "F"];
 
-const newArray = myArray.slice(2, 5); /// takes elements from 2 to 5
-console.log(newArray); //// ['C', 'D', 'E']
+// const newArray = myArray.slice(2, 5); /// takes elements from 2 to 5
+// console.log(newArray); //// ['C', 'D', 'E']
 
-const reversedArray = myArray.reverse();
-console.log(reversedArray); /// ['F', 'E', 'D', 'C', 'B', 'A'] /// mutates original array
+// const reversedArray = myArray.reverse();
+// console.log(reversedArray); /// ['F', 'E', 'D', 'C', 'B', 'A'] /// mutates original array
 
-const newString = myArray.join();
-console.log(newString); //// F,E,D,C,B,A
+// const newString = myArray.join();
+// console.log(newString); //// F,E,D,C,B,A
 
-const arrayA = ["A", "B", "C"];
-const arrayB = ["D", "E", "F"];
+// const arrayA = ["A", "B", "C"];
+// const arrayB = ["D", "E", "F"];
 
-const concatedArray = arrayA.concat(arrayB);
-console.log(concatedArray); /// ['A', 'B', 'C', 'D', 'E', 'F']
+// const concatedArray = arrayA.concat(arrayB);
+// console.log(concatedArray); /// ['A', 'B', 'C', 'D', 'E', 'F']
 
-const combinedArray = [...arrayA, ...arrayB];
-console.log(combinedArray); // ['A', 'B', 'C', 'D', 'E', 'F']
+// const combinedArray = [...arrayA, ...arrayB];
+// console.log(combinedArray); // ['A', 'B', 'C', 'D', 'E', 'F']
 
-const equipShelfA = ["baseball", "football", "volleyboll"];
-const equipShelfB = ["basketball", "golf balls", "tennis balls"];
+// const equipShelfA = ["baseball", "football", "volleyboll"];
+// const equipShelfB = ["basketball", "golf balls", "tennis balls"];
 
-const clothesShelfA = ["tank tops", "t-shirts", "jerseys"];
-const clothesShelfB = ["sweat tops", "sweat pants", "hoodies"];
+// const clothesShelfA = ["tank tops", "t-shirts", "jerseys"];
+// const clothesShelfB = ["sweat tops", "sweat pants", "hoodies"];
 
-const equipDept = [equipShelfA, equipShelfB];
-const clothesDept = [clothesShelfA, clothesShelfB];
+// const equipDept = [equipShelfA, equipShelfB];
+// const clothesDept = [clothesShelfA, clothesShelfB];
 
-console.log(equipDept[0][1]); /// football
-console.log(clothesDept[1][0]); /// sweat tops
+// console.log(equipDept[0][1]); /// football
+// console.log(clothesDept[1][0]); /// sweat tops
 
-const sportStore = [equipDept, clothesDept];
-console.log(sportStore[0][0][1]); // football
+// const sportStore = [equipDept, clothesDept];
+// console.log(sportStore[0][0][1]); // football
 
-const people = ["Sally", "Kyle", "John"];
-const newPeople = people.with(2, "New"); /// does not mutate original array
-console.log(newPeople); /// ['Sally', 'Kyle', 'New']
-console.log(people); //  ['Sally', 'Kyle', 'John']
+// const people = ["Sally", "Kyle", "John"];
+// const newPeople = people.with(2, "New"); /// does not mutate original array
+// console.log(newPeople); /// ['Sally', 'Kyle', 'New']
+// console.log(people); //  ['Sally', 'Kyle', 'John']
 
-const sortedPeople = people.toSorted(); /// sort alphabetically
-console.log(sortedPeople); ///  ['John', 'Kyle', 'Sally']
+// const sortedPeople = people.toSorted(); /// sort alphabetically
+// console.log(sortedPeople); ///  ['John', 'Kyle', 'Sally']
 
-const reversedPeople = people.toReversed(); // reversing array
-console.log(reversedPeople); /// ['John', 'Kyle', 'Sally']
+// const reversedPeople = people.toReversed(); // reversing array
+// console.log(reversedPeople); /// ['John', 'Kyle', 'Sally']
 
-const spliced = people.toSpliced(0, 2, "New"); /// works as splice method but does not change/mutate original array
-console.log(people); /// ['Sally', 'Kyle', 'John']
-console.log(spliced); /// ['New', 'John']
+// const spliced = people.toSpliced(0, 2, "New"); /// works as splice method but does not change/mutate original array
+// console.log(people); /// ['Sally', 'Kyle', 'John']
+// console.log(spliced); /// ['New', 'John']
 
-////////////// foreach
-//// use when need to perform some action on each element
+// ////////////// foreach
+// //// use when need to perform some action on each element
 
-const food = ["Grape", "Apple", "Banana", "Orange", "Strawberry"];
-food.forEach((item, index) => {
-  console.log(`${item}  delicious index is ${index + 1} from ${food.length} `);
-});
+// const food = ["Grape", "Apple", "Banana", "Orange", "Strawberry"];
+// food.forEach((item, index) => {
+//   console.log(`${item}  delicious index is ${index + 1} from ${food.length} `);
+// });
 
-///////////// map
-/////// use when need to perform some action on element and return result in new array
-const newMappedArray = food.map((item) => item + item);
-console.log(newMappedArray); //// ['GrapeGrape', 'AppleApple', 'BananaBanana', 'OrangeOrange', 'StrawberryStrawberry']
+// ///////////// map
+// /////// use when need to perform some action on element and return result in new array
+// const newMappedArray = food.map((item) => item + item);
+// console.log(newMappedArray); //// ['GrapeGrape', 'AppleApple', 'BananaBanana', 'OrangeOrange', 'StrawberryStrawberry']
 
-/////////filter
-const filteredFruit = food.filter((item) => item.length > 5);
-console.log(filteredFruit); ///  ['Banana', 'Orange', 'Strawberry']
+// /////////filter
+// const filteredFruit = food.filter((item) => item.length > 5);
+// console.log(filteredFruit); ///  ['Banana', 'Orange', 'Strawberry']
 
-////// find
-const foundItem = food.find((item) => item.length === 5);
-console.log(foundItem); //// Grape
-//// It returns the value of the first element in the array that satisfies the testing function
+// ////// find
+// const foundItem = food.find((item) => item.length === 5);
+// console.log(foundItem); //// Grape
+// //// It returns the value of the first element in the array that satisfies the testing function
 
-////// findIndex
-const findIndexOfElement = food.findIndex((item) => item.length === 10);
-console.log(findIndexOfElement); /// 4
-/////// returns index of first element which satisfies contidion
+// ////// findIndex
+// const findIndexOfElement = food.findIndex((item) => item.length === 10);
+// console.log(findIndexOfElement); /// 4
+// /////// returns index of first element which satisfies contidion
 
-////// indexOf
-const result = food.indexOf("Orange");
-const result2 = food.indexOf("Orange", 4);
-console.log(result); //// 3
-console.log(result2); //// -1
-//// -1 if no result
+// ////// indexOf
+// const result = food.indexOf("Orange");
+// const result2 = food.indexOf("Orange", 4);
+// console.log(result); //// 3
+// console.log(result2); //// -1
+// //// -1 if no result
 
-/////// lastIndexOf
-const food2 = ["Grape", "Apple", "Apple", "Banana", "Orange", "Strawberry"];
-const lastIndex = food2.lastIndexOf("Apple");
-console.log(lastIndex); //// 2
+// /////// lastIndexOf
+// const food2 = ["Grape", "Apple", "Apple", "Banana", "Orange", "Strawberry"];
+// const lastIndex = food2.lastIndexOf("Apple");
+// console.log(lastIndex); //// 2
 
-////// some
-const checkIf = food.some((item) => item.startsWith("B"));
-console.log(checkIf); /// true
-///// check if at least one element satisfies condition
+// ////// some
+// const checkIf = food.some((item) => item.startsWith("B"));
+// console.log(checkIf); /// true
+// ///// check if at least one element satisfies condition
 
-///////every
-const chechIfAll = food.every((item) => item.endsWith("a"));
-console.log(chechIfAll); //// false
+// ///////every
+// const chechIfAll = food.every((item) => item.endsWith("a"));
+// console.log(chechIfAll); //// false
 
-//////// includes
-const ifIncludesOrange = food.includes("Orange");
-const ifIncludesKiwi = food.includes("Kiwi");
-console.log(ifIncludesOrange); /// true
-console.log(ifIncludesKiwi); /// false
-//// array.included(element, fromIndex)
+// //////// includes
+// const ifIncludesOrange = food.includes("Orange");
+// const ifIncludesKiwi = food.includes("Kiwi");
+// console.log(ifIncludesOrange); /// true
+// console.log(ifIncludesKiwi); /// false
+// //// array.included(element, fromIndex)
 
-/////// toString
-const arrayToString = food.toString();
-console.log(arrayToString); /// Grape,Apple,Banana,Orange,Strawberry
+// /////// toString
+// const arrayToString = food.toString();
+// console.log(arrayToString); /// Grape,Apple,Banana,Orange,Strawberry
 
-////// join
-const separated = food.join(" - ");
-console.log(separated); /// Grape - Apple - Banana - Orange - Strawberry
-/// with join we can specify separator
+// ////// join
+// const separated = food.join(" - ");
+// console.log(separated); /// Grape - Apple - Banana - Orange - Strawberry
+// /// with join we can specify separator
 
-///// fill
-// const filledWithKiwi = food.fill("Kiwi");
-console.log(food); //// ['Kiwi', 'Kiwi', 'Kiwi', 'Kiwi', 'Kiwi']
-//// we can also specify start and/or last index of fill ("Kiwi", 2);  ("Kiwi", 2, 6)
+// ///// fill
+// // const filledWithKiwi = food.fill("Kiwi");
+// console.log(food); //// ['Kiwi', 'Kiwi', 'Kiwi', 'Kiwi', 'Kiwi']
+// //// we can also specify start and/or last index of fill ("Kiwi", 2);  ("Kiwi", 2, 6)
 
-///// copyWithin
-// const newArray2 = food.copyWithin(0, 3, 4);
-// console.log(newArray2); //  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] //// takes 3 th element and paste in at 0
-// console.log(food);//  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] /// modifies original array
+// ///// copyWithin
+// // const newArray2 = food.copyWithin(0, 3, 4);
+// // console.log(newArray2); //  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] //// takes 3 th element and paste in at 0
+// // console.log(food);//  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] /// modifies original array
 
-///// splice
-// const result4 = food.splice(0, 1, "Kiwi");
-// console.log(food); /// ['Kiwi', 'Apple', 'Banana', 'Orange', 'Strawberry']
-// console.log(result4); /// ['Grape']
+// ///// splice
+// // const result4 = food.splice(0, 1, "Kiwi");
+// // console.log(food); /// ['Kiwi', 'Apple', 'Banana', 'Orange', 'Strawberry']
+// // console.log(result4); /// ['Grape']
 
-////// sort
-const numArray = [1, 3, 5, 60, 9, 8];
-newArray.sort();
-console.log(numArray); ///  [1, 3, 5, 60, 9, 8]
-numArray.sort((a, b) => {
-  return a - b;
-});
-console.log(numArray); /// [1, 3, 5, 8, 9, 60]
-console.log(
-  numArray.sort((a, b) => {
-    return b - a;
+// ////// sort
+// const numArray = [1, 3, 5, 60, 9, 8];
+// newArray.sort();
+// console.log(numArray); ///  [1, 3, 5, 60, 9, 8]
+// numArray.sort((a, b) => {
+//   return a - b;
+// });
+// console.log(numArray); /// [1, 3, 5, 8, 9, 60]
+// console.log(
+//   numArray.sort((a, b) => {
+//     return b - a;
+//   })
+// ); //// [60, 9, 8, 5, 3, 1]
+// ///// > 0  /// sort a after b
+// //// < 0  /// sort a before b
+// //// === 0  //// keep original order
+
+// ///// from
+// const str = "1234";
+// const numbers = Array.from(str, (element) => Number(element));
+// console.log(numbers); /// [1, 2, 3, 4]
+
+// //// isArray
+// const checkIfArray = Array.isArray(food);
+// console.log(checkIfArray); // true
+// console.log(Array.isArray(str)); // false
+
+// /// valueOf
+// const foodCopy = food.valueOf();
+// console.log(foodCopy); /// ['Grape', 'Apple', 'Banana', 'Orange', 'Strawberry']
+// /// creates copy
+
+// /// entries
+// const foodEntries = food.entries();
+// for (let element of foodEntries) {
+//   console.log(element);
+// }
+
+// //  [0, 'Grape']
+// //  [1, 'Apple']
+// //  [2, 'Banana']
+// //  [3, 'Orange']
+// //  [4, 'Strawberry']
+
+// ///// keys
+// const foodKeys = food.keys();
+// for (let key of foodKeys) {
+//   console.log(key);
+// }
+// // 0
+// // 1;
+// // 2;
+// // 3;
+// // 4;
+
+// ///// values
+// const foodValues = food.values();
+// for (let value of foodValues) {
+//   console.log(value);
+// }
+// // Grape
+// //  Apple
+// //  Banana
+// //  Orange
+// //  Strawberry
+
+// ///// reduce
+// const numbersArray = [1, 2, 3, 4];
+// function reducer(prev, curr) {
+//   return prev + curr;
+// }
+// const sum = numbersArray.reduce(reducer, 0);
+// console.log(sum); /// 10
+
+// ///// reduceRight
+// const sum2 = numbersArray.reduceRight(reducer, 0);
+// console.log(sum2); // 10
+
+// //// flat
+// //// array.flat(depth)
+// const nestedArray = [1, 2, 3, [4, 5, [6, 7]]];
+// const flatedArray1 = nestedArray.flat();
+// console.log(flatedArray1); /// [1, 2, 3, 4, 5, Array(2)]
+// console.log(nestedArray.flat(2)); /// [1, 2, 3, 4, 5, 6, 7]
+
+// ///// flatMap
+// const nestedArray2 = [
+//   [1, 2],
+//   [3, 4],
+// ];
+// const resultArray = nestedArray2.flatMap((array) => {
+//   return [array[0] + array[1]];
+// });
+// console.log(resultArray); // [3, 7]
+
+//// Write a JavaScript program to find the most frequent item in an array.
+// let arr1 = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+// let mf = 1;
+// let m = 0;
+// let item;
+
+// for (let i = 0; i < arr1.length; i++) {
+//   for (let j = i; j < arr1.length; j++) {
+//     if (arr1[i] === arr1[j]) {
+//       m++;
+//     }
+//     if (mf < m) {
+//       mf = m;
+//       item = arr1[i];
+//     }
+//   }
+//   m = 0;
+// }
+// console.log(item + " ( " + mf + " times ) "); /// a (5 times)
+
+//////////// Given an array of numbers, square each number and return only the even squares.
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const result = numbers
+  .filter((item) => (item * item) % 2 === 0)
+  .map((item) => item * item);
+console.log(result); /// [4, 16, 36]
+
+//////////// Write a function that calculates the factorial of a given number using the reduce method.
+const calculateFactorial = (n) => {
+  const nArray = Array.from({ length: n }, (_, index) => index + 1);
+  const res = nArray.reduce((prev, curr) => prev * curr);
+  return res;
+};
+console.log(calculateFactorial(5));
+
+/////////// Given an array of strings, concatenate them into a single string and convert it to uppercase.
+const words = ["hello", "world", "javascript", "array"];
+const newArray = words.map((item) => item.toUpperCase()).join("");
+console.log(newArray);
+
+// Find the first element in an array that is divisible by 7.
+const numbers2 = [8, 15, 21, 30, 42, 50];
+const res = numbers2.find((item) => item % 7 === 0);
+console.log(res);
+
+//// Sort an array of strings in descending order of their lengths and then reverse the sorted array.
+const words2 = ["apple", "banana", "orange", "strawberry", "kiwi"];
+
+const res2 = words2
+  .sort((a, b) => {
+    if (a.length > b.length) {
+      return 1; //// > 0    a after b
+    } else if (a.length < b.length) {
+      return -1; //// <0   a before b
+    } else {
+      return 0;
+    }
   })
-); //// [60, 9, 8, 5, 3, 1]
-///// > 0  /// sort a after b
-//// < 0  /// sort a before b
-//// === 0  //// keep original order
-
-///// from
-const str = "1234";
-const numbers = Array.from(str, (element) => Number(element));
-console.log(numbers); /// [1, 2, 3, 4]
-
-//// isArray
-const checkIfArray = Array.isArray(food);
-console.log(checkIfArray); // true
-console.log(Array.isArray(str)); // false
-
-/// valueOf
-const foodCopy = food.valueOf();
-console.log(foodCopy); /// ['Grape', 'Apple', 'Banana', 'Orange', 'Strawberry']
-/// creates copy
-
-/// entries
-const foodEntries = food.entries();
-for (let element of foodEntries) {
-  console.log(element);
-}
-
-//  [0, 'Grape']
-//  [1, 'Apple']
-//  [2, 'Banana']
-//  [3, 'Orange']
-//  [4, 'Strawberry']
-
-///// keys
-const foodKeys = food.keys();
-for (let key of foodKeys) {
-  console.log(key);
-}
-// 0
-// 1;
-// 2;
-// 3;
-// 4;
-
-///// values
-const foodValues = food.values();
-for (let value of foodValues) {
-  console.log(value);
-}
-// Grape
-//  Apple
-//  Banana
-//  Orange
-//  Strawberry
-
-///// reduce
-const numbersArray = [1, 2, 3, 4];
-function reducer(prev, curr) {
-  return prev + curr;
-}
-const sum = numbersArray.reduce(reducer, 0);
-console.log(sum); /// 10
-
-///// reduceRight
-const sum2 = numbersArray.reduceRight(reducer, 0);
-console.log(sum2); // 10
-
-//// flat
-//// array.flat(depth)
-const nestedArray = [1, 2, 3, [4, 5, [6, 7]]];
-const flatedArray1 = nestedArray.flat();
-console.log(flatedArray1); /// [1, 2, 3, 4, 5, Array(2)]
-console.log(nestedArray.flat(2)); /// [1, 2, 3, 4, 5, 6, 7]
-
-///// flatMap
-const nestedArray2 = [
-  [1, 2],
-  [3, 4],
-];
-const resultArray = nestedArray2.flatMap((array) => {
-  return [array[0] + array[1]];
-});
-console.log(resultArray); // [3, 7]
+  .reverse();
+console.log(res2); //  ['strawberry', 'orange', 'banana', 'apple', 'kiwi']
