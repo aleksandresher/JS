@@ -784,3 +784,108 @@ console.log(separated); /// Grape - Apple - Banana - Orange - Strawberry
 // const filledWithKiwi = food.fill("Kiwi");
 console.log(food); //// ['Kiwi', 'Kiwi', 'Kiwi', 'Kiwi', 'Kiwi']
 //// we can also specify start and/or last index of fill ("Kiwi", 2);  ("Kiwi", 2, 6)
+
+///// copyWithin
+// const newArray2 = food.copyWithin(0, 3, 4);
+// console.log(newArray2); //  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] //// takes 3 th element and paste in at 0
+// console.log(food);//  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] /// modifies original array
+
+///// splice
+// const result4 = food.splice(0, 1, "Kiwi");
+// console.log(food); /// ['Kiwi', 'Apple', 'Banana', 'Orange', 'Strawberry']
+// console.log(result4); /// ['Grape']
+
+////// sort
+const numArray = [1, 3, 5, 60, 9, 8];
+newArray.sort();
+console.log(numArray); ///  [1, 3, 5, 60, 9, 8]
+numArray.sort((a, b) => {
+  return a - b;
+});
+console.log(numArray); /// [1, 3, 5, 8, 9, 60]
+console.log(
+  numArray.sort((a, b) => {
+    return b - a;
+  })
+); //// [60, 9, 8, 5, 3, 1]
+///// > 0  /// sort a after b
+//// < 0  /// sort a before b
+//// === 0  //// keep original order
+
+///// from
+const str = "1234";
+const numbers = Array.from(str, (element) => Number(element));
+console.log(numbers); /// [1, 2, 3, 4]
+
+//// isArray
+const checkIfArray = Array.isArray(food);
+console.log(checkIfArray); // true
+console.log(Array.isArray(str)); // false
+
+/// valueOf
+const foodCopy = food.valueOf();
+console.log(foodCopy); /// ['Grape', 'Apple', 'Banana', 'Orange', 'Strawberry']
+/// creates copy
+
+/// entries
+const foodEntries = food.entries();
+for (let element of foodEntries) {
+  console.log(element);
+}
+
+//  [0, 'Grape']
+//  [1, 'Apple']
+//  [2, 'Banana']
+//  [3, 'Orange']
+//  [4, 'Strawberry']
+
+///// keys
+const foodKeys = food.keys();
+for (let key of foodKeys) {
+  console.log(key);
+}
+// 0
+// 1;
+// 2;
+// 3;
+// 4;
+
+///// values
+const foodValues = food.values();
+for (let value of foodValues) {
+  console.log(value);
+}
+// Grape
+//  Apple
+//  Banana
+//  Orange
+//  Strawberry
+
+///// reduce
+const numbersArray = [1, 2, 3, 4];
+function reducer(prev, curr) {
+  return prev + curr;
+}
+const sum = numbersArray.reduce(reducer, 0);
+console.log(sum); /// 10
+
+///// reduceRight
+const sum2 = numbersArray.reduceRight(reducer, 0);
+console.log(sum2); // 10
+
+//// flat
+//// array.flat(depth)
+const nestedArray = [1, 2, 3, [4, 5, [6, 7]]];
+const flatedArray1 = nestedArray.flat();
+console.log(flatedArray1); /// [1, 2, 3, 4, 5, Array(2)]
+console.log(nestedArray.flat(2)); /// [1, 2, 3, 4, 5, 6, 7]
+
+///// flatMap
+const nestedArray2 = [
+  [1, 2],
+  [3, 4],
+];
+const resultArray = nestedArray2.flatMap((array) => {
+  return [array[0] + array[1]];
+});
+console.log(resultArray); // [3, 7]
