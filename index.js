@@ -951,3 +951,110 @@ const res2 = words2
   })
   .reverse();
 console.log(res2); //  ['strawberry', 'orange', 'banana', 'apple', 'kiwi']
+
+////////////////////////////// Objects ////////////////////////////////////
+
+const myObj = { name: "Aleksandre" };
+console.log(myObj); // {name: 'Aleksandre'}
+console.log(myObj.name); /// Aleksandre
+
+const anotherObj = {
+  alive: true,
+  answer: 42,
+  hobbies: ["Eat", "Sleep", "Code"],
+  beverage: {
+    morning: "Coffee",
+    afternoon: "Iced Tea",
+  },
+  action: function () {
+    return "Hello from method";
+  },
+  action2: function () {
+    return `Time for ${this.beverage.morning}`; //// "this" refers to object
+  },
+};
+console.log(anotherObj.hobbies); /// ['Eat', 'Sleep', 'Code']
+console.log(anotherObj["hobbies"]); /// ['Eat', 'Sleep', 'Code']
+console.log(anotherObj.beverage.morning); /// Coffee
+console.log(anotherObj.action()); /// Hello from method
+console.log(anotherObj.action2()); /// Time for Coffee
+////
+////
+////
+////////// generic object
+const vehicle = {
+  wheels: 4,
+  engine: function () {
+    return "Vrroooom!";
+  },
+};
+//////
+/////
+const truck = Object.create(vehicle);
+truck.doors = 2;
+console.log(truck); /// {doors: 2}
+console.log(truck.wheels); /// 4  /////// Inheritance //////// truck inherits properties and methods of vehicle
+console.log(truck.engine()); /// Vrroooom!
+/////
+/////
+const car = Object.create(vehicle);
+car.doors = 4;
+car.engine = function () {
+  return "Whooosh";
+}; ///// /// overwrite inherited method
+console.log(car.engine()); //// Whooosh
+////
+////
+const tesla = Object.create(car);
+console.log(tesla.wheels); //4  /// inherits from vehicle  //// vehicle -> car -> tesla
+console.log(tesla.engine()); /// Whooosh
+tesla.engine = function () {
+  return "Shhhhhh";
+};
+console.log(tesla.engine()); //// Shhhhhh
+///////////////
+//////////////
+/////////////
+const band = {
+  vocals: "Robert Plant",
+  guitar: "Jimmy Page",
+  bass: "John Paul Jones",
+  drums: "John Bonham",
+};
+
+// delete band.drums; ///// delete property
+console.log(Object.keys(band)); ///// ['vocals', 'guitar', 'bass', 'drums']
+console.log(Object.values(band)); ////  ['Robert Plant', 'Jimmy Page', 'John Paul Jones', 'John Bonham']
+console.log(band.hasOwnProperty("guitar")); //// true
+/////
+/////
+for (let job in band) {
+  console.log(band[job]);
+}
+// Robert Plant
+// Jimmy Page
+// John Paul Jones
+// John Bonham
+for (let job in band) {
+  console.log(`On ${job}, it's ${band[job]}!`);
+}
+// On vocals, it's Robert Plant!
+// On guitar, it's Jimmy Page!
+// On bass, it's John Paul Jones!
+// On drums, it's John Bonham!
+/////////
+//////////
+
+/////////////////////////// destructuring objects
+
+const { guitar: myVariable, bass: myBass } = band;
+console.log(myVariable); //// Jimmy Page
+console.log(myBass); /// John Paul Jones
+const { vocals, guitar, bass, drums } = band;
+console.log(drums); // John Bonham
+
+////////
+function sings({ vocals }) {
+  return `${vocals} sings!`;
+}
+console.log(sings(band)); //// Robert Plant sings!
