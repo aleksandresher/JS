@@ -1058,3 +1058,94 @@ function sings({ vocals }) {
   return `${vocals} sings!`;
 }
 console.log(sings(band)); //// Robert Plant sings!
+////////////
+////////////
+//////////
+//////// define object with object literals
+const circleObj = {
+  radius: 1,
+  location: {
+    x: 1,
+    y: 1,
+  },
+  draw: function () {
+    return "draw";
+  },
+};
+
+console.log(circleObj.draw()); // "draw"
+
+//////////// define object with factory
+//// factory function
+function createCircle(radius) {
+  return {
+    radius,
+    draw: function () {
+      console.log("draw");
+    },
+  };
+}
+const circle = createCircle(1);
+
+//////////// constructor funtion
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+const another = new Circle(1);
+
+////////// constructor property
+//////////// every object has a constructor property and that references to function that was used to create that object
+let x = {}; ///// let x = new Object();
+console.log(another.constructor);
+// ƒ Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function () {
+//     console.log("draw");
+//   };
+
+///////// functions are object
+Circle.call({}, 1); /// is same as -  const another = new Circle(1);
+
+//// Primitives are copied by their value ///// Objects are copied by their reference
+/// value type
+let number = 10;
+
+function increase(number) {
+  number++;
+}
+increase(number);
+console.log(number); /// 10 //// we have two independent copies
+
+//// reference type
+let obj = { value: 10 };
+
+function increase1(obj) {
+  obj.value++;
+}
+increase1(obj);
+console.log(obj); /// {value: 11} /// passed by reference
+
+/////////////
+//////////////
+const propertyName = "location";
+circle[propertyName] = { x: 1 };
+
+function Cirlce(radius) {
+  this.radius = radius;
+  this.defaultLocation = { x: 0, y: 0 };
+
+  let computeOptimumLocation = function (factor) {
+    ///
+  };
+  this.draw = function () {
+    computeOptimumLocation(0.1);
+
+    console.log("draw");
+  };
+}
+const cirlce = new Circle(10);
+
+circle.draw();
