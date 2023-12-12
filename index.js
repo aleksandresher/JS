@@ -1262,3 +1262,79 @@ console.log(square1.width); /// 5
 console.log(square1.area);
 console.log(square1.area);
 console.log(square1.numOfRequestForArea); // 3
+
+//////////////// static methods
+/////////////// used as helper functions
+/////////// does not require instances
+
+class Square1 {
+  constructor(_width) {
+    this.width = _width;
+    this.height = _width;
+  }
+  //// a and b are two different instances
+  static equals(a, b) {
+    return a.width * a.height === b.width * b.height;
+  }
+  static isValidDimensions(width, height) {
+    return width === height;
+  }
+}
+let square3 = new Square1(8);
+let square4 = new Square1(9);
+
+////// static methods called on Square1 class directly,  not on instance
+console.log(Square1.equals(square3, square4)); /// flase
+console.log(square3); /// Square1 {width: 8, height: 8}
+console.log(Square1.isValidDimensions(6, 6)); /// true
+
+/////////////////
+/////////////////
+////////////////
+//////////////////////// inheritance/extends////////////
+////// parent class to create child class
+
+class Person {
+  constructor(_name, _age) {
+    this.name = _name;
+    this.age = _age;
+  }
+  describe() {
+    console.log(`I am ${this.name} and I am ${this.age} years old`);
+  }
+}
+
+class Programmer extends Person {
+  constructor(_name, _age, _yearsOfExperience) {
+    super(_name, _age);
+
+    /////// Custom behavior
+    this.yearsOfExperience = _yearsOfExperience;
+  }
+  code() {
+    console.log(`${this.name} is coding`);
+  }
+}
+let person1 = new Person("Jeff", 48);
+let programmer1 = new Programmer("Dom", 56, 12);
+
+console.log(programmer1.code()); /// Dom is coding
+
+////// Programmer inherits describe method from parent class(Person)
+programmer1.describe(); /// I am Dom and I am 56 years old
+// console.log(person1); /// Person {name: 'Jeff', age: 48}
+// console.log(programmer1); /// Programmer {name: 'Dom', age: 56, yearsOfExperience: 12
+
+const programmers = [
+  new Programmer("John", 56, 15),
+  new Programmer("Denn", 24, 4),
+];
+
+function developSoftware(programmers) {
+  for (let programmer of programmers) {
+    programmer.code();
+  }
+}
+developSoftware(programmers);
+// John is coding
+// Denn is coding
