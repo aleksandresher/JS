@@ -1199,3 +1199,36 @@ console.log(res1); /// ['name', 'sclass', 'rollno']
 /////// Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
 // delete student.rollno;
 console.log(student); /// {name: 'David Rayy', sclass: 'VI'}
+
+//////////////////////////////////////////Classes////////////////////////////////////////////////////////////
+/////////////////
+///////////////////
+//// create class
+class Rectangle {
+  //// setup object
+  constructor(_width, _height, _color) {
+    console.log("the rectange is being created");
+
+    //////// define instance properties
+    //// "this" refers to object which will created using class
+    this.width = _width;
+    this.height = _height;
+    this.color = _color;
+  }
+  ///// creating instance methods
+  getArea() {
+    return this.width * this.height;
+  }
+  printDescription() {
+    console.log(
+      `I am rectangle of ${this.width} x ${this.height} and i am ${this.color}`
+    );
+  }
+}
+let myRectangle1 = new Rectangle(5, 3, "blue");
+let myRectangle2 = new Rectangle(10, 5, "red");
+console.log(myRectangle1); /// Rectangle {width: 5, height: 3, color: 'blue'}
+console.log(myRectangle2); /// Rectangle {width: 10, height: 5, color: 'red'}
+console.log(myRectangle1.getArea()); // 15
+console.log(myRectangle2.getArea()); // 50
+myRectangle1.printDescription(); // I am rectangle of 5 x 3 and i am blue
