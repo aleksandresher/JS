@@ -1232,3 +1232,33 @@ console.log(myRectangle2); /// Rectangle {width: 10, height: 5, color: 'red'}
 console.log(myRectangle1.getArea()); // 15
 console.log(myRectangle2.getArea()); // 50
 myRectangle1.printDescription(); // I am rectangle of 5 x 3 and i am blue
+///////////////////////
+//////////////////////
+/////////////////////// Getters and Setters
+
+class Square {
+  constructor(_width) {
+    this.width = _width;
+    this.height = _width;
+    this.numOfRequestForArea = 0;
+  }
+  //// getter
+  get area() {
+    this.numOfRequestForArea++;
+    return this.width * this.height;
+  }
+  //// setter
+  set area(area) {
+    this.width = Math.sqrt(area);
+    this.height = this.width;
+  }
+}
+let square1 = new Square(4);
+console.log(square1.area); /// 16
+
+square1.area = 25;
+console.log(square1.width); /// 5
+
+console.log(square1.area);
+console.log(square1.area);
+console.log(square1.numOfRequestForArea); // 3
