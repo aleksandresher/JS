@@ -1149,3 +1149,53 @@ function Cirlce(radius) {
 const cirlce = new Circle(10);
 
 circle.draw();
+
+//////////////
+/////////////
+
+const grades = {
+  math: 90,
+  science: 85,
+  sport: 100,
+};
+
+function iterateOverObj(obj) {
+  for (let subject in obj) {
+    console.log(`${subject} ${obj[subject]}`);
+  }
+}
+const result3 = iterateOverObj(grades);
+
+///////////////
+//////////////
+
+const shop = {
+  items: [
+    { name: "item1", price: 10 },
+    { name: "item2", price: 20 },
+    { name: "item3", price: 30 },
+  ],
+  totalCost: function () {
+    let total = 0;
+    for (let i = 0; i < this.items.length; i++) {
+      total += this.items[i].price;
+    }
+    return total;
+  },
+};
+const res3 = shop.totalCost();
+console.log(res3);
+
+//////////// Write a JavaScript program to list the properties of a JavaScript object.
+const student = {
+  name: "David Rayy",
+  sclass: "VI",
+  rollno: 12,
+};
+
+const res1 = Object.keys(student);
+console.log(res1); /// ['name', 'sclass', 'rollno']
+
+/////// Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+// delete student.rollno;
+console.log(student); /// {name: 'David Rayy', sclass: 'VI'}
