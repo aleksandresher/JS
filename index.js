@@ -1368,3 +1368,121 @@ a1.makeSound(); /// Generic animal sound!
 
 const a2 = new Dog("Jeff");
 a2.makeSound(); /// Woof Woof!
+
+// class Pizza {
+//   constructor(pizzaType, pizzaSize) {
+//     this.type = pizzaType;
+//     this.size = pizzaSize;
+//     this.crust = "original";
+//     this.toppings = [];
+//   }
+//   getCrust() {
+//     return this.crust;
+//   }
+//   setCrust(pizzaCrust) {
+//     this.crust = pizzaCrust;
+//   }
+//   getToppings() {
+//     return this.toppings;
+//   }
+//   setToppings(topping) {
+//     this.toppings.push(topping);
+//   }
+//   bake() {
+//     console.log(`Baking a ${this.size} ${this.size} ${this.crust} crust pizza`);
+//   }
+// }
+// const myPizza = new Pizza("pepperoni", "small");
+// myPizza.setCrust("thin");
+// myPizza.bake(); // Baking a small small thin crust pizza
+// myPizza.setToppings("sausage");
+// myPizza.setToppings("olive");
+// console.log(myPizza.getToppings()); // ['sausage', 'olive']
+
+///////////////////
+///////////////////
+// class Pizza {
+//   constructor(pizzaSize) {
+//     this.size = pizzaSize;
+//     this.crust = "original";
+//   }
+//   getCrust() {
+//     return this.crust;
+//   }
+//   setCrust(pizzaCrust) {
+//     this.crust = pizzaCrust;
+//   }
+// }
+
+// class SpecialtyPizza extends Pizza {
+//   constructor(pizzaSize) {
+//     super(pizzaSize);
+//     this.type = "The works";
+//   }
+//   slice() {
+//     console.log(`Our ${this.type} ${this.size} pizza has 8 slices.`);
+//   }
+// }
+
+// const mySpecialty = new SpecialtyPizza("medium");
+// mySpecialty.slice(); // Our The works medium pizza has 8 slices.
+
+///////
+/////// naming conventions
+////// underscore(_) means that it is intended to be private
+
+// class Pizza {
+//   constructor(pizzaSize) {
+//     this._size = pizzaSize;
+//     this._crust = "original";
+//   }
+//   getCrust() {
+//     return this._crust;
+//   }
+//   setCrust(pizzaCrust) {
+//     this._crust = pizzaCrust;
+//   }
+// }
+
+/////////// factory function
+////////// we have private properties which will not accessible outside of object
+
+// function pizzaFactory(pizzaSize) {
+//   const crust = "original";
+//   const size = pizzaSize;
+//   return {
+//     bake: () => console.log(`Baking a ${size} ${crust} crust pizza`),
+//   };
+// }
+
+// const myPizza = pizzaFactory("small");
+// myPizza.bake(); /// Baking a small original crust pizza
+
+///// public and private fields
+class Pizza {
+  ///// public field
+  crust = "original";
+  //// private field
+  #sauce = "traditional";
+  #size;
+  constructor(pizzaSize) {
+    this.#size = pizzaSize;
+  }
+  getCrust() {
+    return this.crust;
+  }
+  setCrust(pizzaCrust) {
+    this.crust = pizzaCrust;
+  }
+  hereYouGo() {
+    console.log(
+      `Here's your ${this.crust} ${this.#sauce} sauce ${this.#size} pizza`
+    );
+  }
+}
+const myPizza = new Pizza("large");
+myPizza.hereYouGo(); // Here's your original traditional sauce large pizza
+//// is accessible with . notation
+console.log(myPizza.getCrust()); // original
+/// is not accessible
+console.log(myPizza.sauce); /// undefined
