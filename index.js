@@ -1486,3 +1486,176 @@ myPizza.hereYouGo(); // Here's your original traditional sauce large pizza
 console.log(myPizza.getCrust()); // original
 /// is not accessible
 console.log(myPizza.sauce); /// undefined
+
+////////////////////////////////////// this keyword ///////////////////////////////////////////////////////
+
+/////////// method -> obj
+const video = {
+  title: "a",
+  play() {
+    console.log(this);
+  },
+};
+video.stop = function () {
+  console.log(this);
+};
+video.play(); /// {title: 'a', play: ƒ} /// got video object
+video.stop(); // {title: 'a', play: ƒ, stop: ƒ}   // got video object
+
+///////////// function -> global (window, global)
+
+function Video(title) {
+  this.title = title;
+  console.log(this);
+}
+const v = new Video("b"); /// Video {title: 'b'}
+
+///////////////
+
+const video2 = {
+  title: "a",
+  tags: ["a", "b", "c"],
+  showTags() {
+    this.tags.forEach(function (tag) {
+      console.log(this, tag);
+    });
+  },
+};
+video2.showTags();
+// undefined 'a'
+// undefined 'b'
+// undefined 'c'
+
+const video3 = {
+  title: "a",
+  tags: ["a", "b", "c"],
+  showTags() {
+    this.tags.forEach(function (tag) {
+      console.log(this.title, tag);
+    }, this); /////// we can pass this as second argument in callback function with will point to object
+  },
+};
+video3.showTags();
+// a a
+// a b
+// a c
+
+///////////////////
+///////////////////
+//////////////////
+
+function showFace() {
+  return this.face;
+}
+const jeff = {
+  face: "smile",
+};
+const showJeffFace = showFace.bind(jeff);
+console.log(showJeffFace()); /// smile
+/////////////////////
+/////////////////////
+/////////////////////
+
+function talk() {
+  return `I am ${this.name}`;
+}
+
+const me = {
+  name: "Sina",
+  talk,
+};
+const you = {
+  name: "Qoli",
+  talk,
+};
+console.log(me.talk()); // I am Sina
+console.log(you.talk()); // I am Qoli
+
+/////////////////
+////////////////// bind/////////
+
+function talk2() {
+  return `I am ${this.name}`;
+}
+const me2 = {
+  name: "Sina",
+};
+console.log(talk.bind(me)); ////////// takes me object and you as value of this
+// ////ƒ talk() {
+//   return `I am ${this.name}`;
+// }
+const meTalk = talk.bind(me);
+console.log(meTalk()); /// I am Sina
+
+console.log(talk.call(me)); /// I am Sina
+
+//////////////////
+/////////////////// call with one argument
+
+// function talk3(lang) {
+//   if (lang === "en") {
+//     return `I am ${this.name}`;
+//   } else if (lang === "it") {
+//     return `Io sono ${this.name}`;
+//   }
+// }
+// const me3 = {
+//   name: "Sina",
+// };
+// console.log(talk3.call(me, "en")); ///  I am Sina
+// console.log(talk3.call(me, "it")); // Io sono Sina
+
+////////////////
+///////////////// call with two argument
+
+function talk3(lang, isPolite) {
+  if (isPolite) {
+    if (lang === "en") {
+      return `I am ${this.name}`;
+    } else if (lang === "it") {
+      return `Ciao bella, sono ${this.name}`;
+    }
+  }
+  if (!isPolite) {
+    if (lang === "en") {
+      return `${this.name} what you want?`;
+    } else if (lang === "it") {
+      return `Sono ${this.name}`;
+    }
+  }
+}
+const me3 = {
+  name: "Sina",
+};
+
+console.log(talk3.call(me3, "it", true)); /// Ciao bella, sono Sina
+
+///////////// same with apply // arguments are passed with array
+console.log(talk3.apply(me3, ["it", true])); //// Ciao bella, sono Sina
+
+//////////////////////
+////////////////////
+//////////// constructor functions///////////// binding is created automaticaly
+
+function PersonNew(n) {
+  this.name = n;
+  this.talk = function () {
+    console.log(this);
+  };
+  // setTimeout(function () {
+  //   console.log(this); /////////// Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+  // }, 100);
+
+  // setTimeout(
+  //   function () {
+  //     console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
+  //   }.bind(this),
+  //   100
+  // );
+
+  setTimeout(() => {
+    console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
+  }, 100);
+}
+const me4 = new PersonNew("Sina"); /// PersonNew {name: 'Sina'}
+me4.talk(); /// PersonNew {name: 'Sina', talk: ƒ}
