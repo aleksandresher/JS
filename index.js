@@ -911,751 +911,770 @@
 // console.log(item + " ( " + mf + " times ) "); /// a (5 times)
 
 //////////// Given an array of numbers, square each number and return only the even squares.
-const numbers = [1, 2, 3, 4, 5, 6];
+// const numbers = [1, 2, 3, 4, 5, 6];
 
-const result = numbers
-  .filter((item) => (item * item) % 2 === 0)
-  .map((item) => item * item);
-console.log(result); /// [4, 16, 36]
+// const result = numbers
+//   .filter((item) => (item * item) % 2 === 0)
+//   .map((item) => item * item);
+// console.log(result); /// [4, 16, 36]
 
-//////////// Write a function that calculates the factorial of a given number using the reduce method.
-const calculateFactorial = (n) => {
-  const nArray = Array.from({ length: n }, (_, index) => index + 1);
-  const res = nArray.reduce((prev, curr) => prev * curr);
-  return res;
-};
-console.log(calculateFactorial(5));
+// //////////// Write a function that calculates the factorial of a given number using the reduce method.
+// const calculateFactorial = (n) => {
+//   const nArray = Array.from({ length: n }, (_, index) => index + 1);
+//   const res = nArray.reduce((prev, curr) => prev * curr);
+//   return res;
+// };
+// console.log(calculateFactorial(5));
 
-/////////// Given an array of strings, concatenate them into a single string and convert it to uppercase.
-const words = ["hello", "world", "javascript", "array"];
-const newArray = words.map((item) => item.toUpperCase()).join("");
-console.log(newArray);
+// /////////// Given an array of strings, concatenate them into a single string and convert it to uppercase.
+// const words = ["hello", "world", "javascript", "array"];
+// const newArray = words.map((item) => item.toUpperCase()).join("");
+// console.log(newArray);
 
-// Find the first element in an array that is divisible by 7.
-const numbers2 = [8, 15, 21, 30, 42, 50];
-const res = numbers2.find((item) => item % 7 === 0);
-console.log(res);
+// // Find the first element in an array that is divisible by 7.
+// const numbers2 = [8, 15, 21, 30, 42, 50];
+// const res = numbers2.find((item) => item % 7 === 0);
+// console.log(res);
 
-//// Sort an array of strings in descending order of their lengths and then reverse the sorted array.
-const words2 = ["apple", "banana", "orange", "strawberry", "kiwi"];
+// //// Sort an array of strings in descending order of their lengths and then reverse the sorted array.
+// const words2 = ["apple", "banana", "orange", "strawberry", "kiwi"];
 
-const res2 = words2
-  .sort((a, b) => {
-    if (a.length > b.length) {
-      return 1; //// > 0    a after b
-    } else if (a.length < b.length) {
-      return -1; //// <0   a before b
-    } else {
-      return 0;
-    }
-  })
-  .reverse();
-console.log(res2); //  ['strawberry', 'orange', 'banana', 'apple', 'kiwi']
+// const res2 = words2
+//   .sort((a, b) => {
+//     if (a.length > b.length) {
+//       return 1; //// > 0    a after b
+//     } else if (a.length < b.length) {
+//       return -1; //// <0   a before b
+//     } else {
+//       return 0;
+//     }
+//   })
+//   .reverse();
+// console.log(res2); //  ['strawberry', 'orange', 'banana', 'apple', 'kiwi']
 
-////////////////////////////// Objects ////////////////////////////////////
+// ////////////////////////////// Objects ////////////////////////////////////
 
-const myObj = { name: "Aleksandre" };
-console.log(myObj); // {name: 'Aleksandre'}
-console.log(myObj.name); /// Aleksandre
+// const myObj = { name: "Aleksandre" };
+// console.log(myObj); // {name: 'Aleksandre'}
+// console.log(myObj.name); /// Aleksandre
 
-const anotherObj = {
-  alive: true,
-  answer: 42,
-  hobbies: ["Eat", "Sleep", "Code"],
-  beverage: {
-    morning: "Coffee",
-    afternoon: "Iced Tea",
-  },
-  action: function () {
-    return "Hello from method";
-  },
-  action2: function () {
-    return `Time for ${this.beverage.morning}`; //// "this" refers to object
-  },
-};
-console.log(anotherObj.hobbies); /// ['Eat', 'Sleep', 'Code']
-console.log(anotherObj["hobbies"]); /// ['Eat', 'Sleep', 'Code']
-console.log(anotherObj.beverage.morning); /// Coffee
-console.log(anotherObj.action()); /// Hello from method
-console.log(anotherObj.action2()); /// Time for Coffee
-////
-////
-////
-////////// generic object
-const vehicle = {
-  wheels: 4,
-  engine: function () {
-    return "Vrroooom!";
-  },
-};
-//////
-/////
-const truck = Object.create(vehicle);
-truck.doors = 2;
-console.log(truck); /// {doors: 2}
-console.log(truck.wheels); /// 4  /////// Inheritance //////// truck inherits properties and methods of vehicle
-console.log(truck.engine()); /// Vrroooom!
-/////
-/////
-const car = Object.create(vehicle);
-car.doors = 4;
-car.engine = function () {
-  return "Whooosh";
-}; ///// /// overwrite inherited method
-console.log(car.engine()); //// Whooosh
-////
-////
-const tesla = Object.create(car);
-console.log(tesla.wheels); //4  /// inherits from vehicle  //// vehicle -> car -> tesla
-console.log(tesla.engine()); /// Whooosh
-tesla.engine = function () {
-  return "Shhhhhh";
-};
-console.log(tesla.engine()); //// Shhhhhh
-///////////////
-//////////////
-/////////////
-const band = {
-  vocals: "Robert Plant",
-  guitar: "Jimmy Page",
-  bass: "John Paul Jones",
-  drums: "John Bonham",
-};
+// const anotherObj = {
+//   alive: true,
+//   answer: 42,
+//   hobbies: ["Eat", "Sleep", "Code"],
+//   beverage: {
+//     morning: "Coffee",
+//     afternoon: "Iced Tea",
+//   },
+//   action: function () {
+//     return "Hello from method";
+//   },
+//   action2: function () {
+//     return `Time for ${this.beverage.morning}`; //// "this" refers to object
+//   },
+// };
+// console.log(anotherObj.hobbies); /// ['Eat', 'Sleep', 'Code']
+// console.log(anotherObj["hobbies"]); /// ['Eat', 'Sleep', 'Code']
+// console.log(anotherObj.beverage.morning); /// Coffee
+// console.log(anotherObj.action()); /// Hello from method
+// console.log(anotherObj.action2()); /// Time for Coffee
+// ////
+// ////
+// ////
+// ////////// generic object
+// const vehicle = {
+//   wheels: 4,
+//   engine: function () {
+//     return "Vrroooom!";
+//   },
+// };
+// //////
+// /////
+// const truck = Object.create(vehicle);
+// truck.doors = 2;
+// console.log(truck); /// {doors: 2}
+// console.log(truck.wheels); /// 4  /////// Inheritance //////// truck inherits properties and methods of vehicle
+// console.log(truck.engine()); /// Vrroooom!
+// /////
+// /////
+// const car = Object.create(vehicle);
+// car.doors = 4;
+// car.engine = function () {
+//   return "Whooosh";
+// }; ///// /// overwrite inherited method
+// console.log(car.engine()); //// Whooosh
+// ////
+// ////
+// const tesla = Object.create(car);
+// console.log(tesla.wheels); //4  /// inherits from vehicle  //// vehicle -> car -> tesla
+// console.log(tesla.engine()); /// Whooosh
+// tesla.engine = function () {
+//   return "Shhhhhh";
+// };
+// console.log(tesla.engine()); //// Shhhhhh
+// ///////////////
+// //////////////
+// /////////////
+// const band = {
+//   vocals: "Robert Plant",
+//   guitar: "Jimmy Page",
+//   bass: "John Paul Jones",
+//   drums: "John Bonham",
+// };
 
-// delete band.drums; ///// delete property
-console.log(Object.keys(band)); ///// ['vocals', 'guitar', 'bass', 'drums']
-console.log(Object.values(band)); ////  ['Robert Plant', 'Jimmy Page', 'John Paul Jones', 'John Bonham']
-console.log(band.hasOwnProperty("guitar")); //// true
-/////
-/////
-for (let job in band) {
-  console.log(band[job]);
-}
-// Robert Plant
-// Jimmy Page
-// John Paul Jones
-// John Bonham
-for (let job in band) {
-  console.log(`On ${job}, it's ${band[job]}!`);
-}
-// On vocals, it's Robert Plant!
-// On guitar, it's Jimmy Page!
-// On bass, it's John Paul Jones!
-// On drums, it's John Bonham!
-/////////
-//////////
+// // delete band.drums; ///// delete property
+// console.log(Object.keys(band)); ///// ['vocals', 'guitar', 'bass', 'drums']
+// console.log(Object.values(band)); ////  ['Robert Plant', 'Jimmy Page', 'John Paul Jones', 'John Bonham']
+// console.log(band.hasOwnProperty("guitar")); //// true
+// /////
+// /////
+// for (let job in band) {
+//   console.log(band[job]);
+// }
+// // Robert Plant
+// // Jimmy Page
+// // John Paul Jones
+// // John Bonham
+// for (let job in band) {
+//   console.log(`On ${job}, it's ${band[job]}!`);
+// }
+// // On vocals, it's Robert Plant!
+// // On guitar, it's Jimmy Page!
+// // On bass, it's John Paul Jones!
+// // On drums, it's John Bonham!
+// /////////
+// //////////
 
-/////////////////////////// destructuring objects
+// /////////////////////////// destructuring objects
 
-const { guitar: myVariable, bass: myBass } = band;
-console.log(myVariable); //// Jimmy Page
-console.log(myBass); /// John Paul Jones
-const { vocals, guitar, bass, drums } = band;
-console.log(drums); // John Bonham
+// const { guitar: myVariable, bass: myBass } = band;
+// console.log(myVariable); //// Jimmy Page
+// console.log(myBass); /// John Paul Jones
+// const { vocals, guitar, bass, drums } = band;
+// console.log(drums); // John Bonham
 
-////////
-function sings({ vocals }) {
-  return `${vocals} sings!`;
-}
-console.log(sings(band)); //// Robert Plant sings!
-////////////
-////////////
-//////////
-//////// define object with object literals
-const circleObj = {
-  radius: 1,
-  location: {
-    x: 1,
-    y: 1,
-  },
-  draw: function () {
-    return "draw";
-  },
-};
+// ////////
+// function sings({ vocals }) {
+//   return `${vocals} sings!`;
+// }
+// console.log(sings(band)); //// Robert Plant sings!
+// ////////////
+// ////////////
+// //////////
+// //////// define object with object literals
+// const circleObj = {
+//   radius: 1,
+//   location: {
+//     x: 1,
+//     y: 1,
+//   },
+//   draw: function () {
+//     return "draw";
+//   },
+// };
 
-console.log(circleObj.draw()); // "draw"
+// console.log(circleObj.draw()); // "draw"
 
-//////////// define object with factory
-//// factory function
-function createCircle(radius) {
-  return {
-    radius,
-    draw: function () {
-      console.log("draw");
-    },
-  };
-}
-const circle = createCircle(1);
+// //////////// define object with factory
+// //// factory function
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw: function () {
+//       console.log("draw");
+//     },
+//   };
+// }
+// const circle = createCircle(1);
 
-//////////// constructor funtion
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function () {
-    console.log("draw");
-  };
-}
-const another = new Circle(1);
-
-////////// constructor property
-//////////// every object has a constructor property and that references to function that was used to create that object
-let x = {}; ///// let x = new Object();
-console.log(another.constructor);
-// ƒ Circle(radius) {
+// //////////// constructor funtion
+// function Circle(radius) {
 //   this.radius = radius;
 //   this.draw = function () {
 //     console.log("draw");
 //   };
-
-///////// functions are object
-Circle.call({}, 1); /// is same as -  const another = new Circle(1);
-
-//// Primitives are copied by their value ///// Objects are copied by their reference
-/// value type
-let number = 10;
-
-function increase(number) {
-  number++;
-}
-increase(number);
-console.log(number); /// 10 //// we have two independent copies
-
-//// reference type
-let obj = { value: 10 };
-
-function increase1(obj) {
-  obj.value++;
-}
-increase1(obj);
-console.log(obj); /// {value: 11} /// passed by reference
-
-/////////////
-//////////////
-const propertyName = "location";
-circle[propertyName] = { x: 1 };
-
-function Cirlce(radius) {
-  this.radius = radius;
-  this.defaultLocation = { x: 0, y: 0 };
-
-  let computeOptimumLocation = function (factor) {
-    ///
-  };
-  this.draw = function () {
-    computeOptimumLocation(0.1);
-
-    console.log("draw");
-  };
-}
-const cirlce = new Circle(10);
-
-circle.draw();
-
-//////////////
-/////////////
-
-const grades = {
-  math: 90,
-  science: 85,
-  sport: 100,
-};
-
-function iterateOverObj(obj) {
-  for (let subject in obj) {
-    console.log(`${subject} ${obj[subject]}`);
-  }
-}
-const result3 = iterateOverObj(grades);
-
-///////////////
-//////////////
-
-const shop = {
-  items: [
-    { name: "item1", price: 10 },
-    { name: "item2", price: 20 },
-    { name: "item3", price: 30 },
-  ],
-  totalCost: function () {
-    let total = 0;
-    for (let i = 0; i < this.items.length; i++) {
-      total += this.items[i].price;
-    }
-    return total;
-  },
-};
-const res3 = shop.totalCost();
-console.log(res3);
-
-//////////// Write a JavaScript program to list the properties of a JavaScript object.
-const student = {
-  name: "David Rayy",
-  sclass: "VI",
-  rollno: 12,
-};
-
-const res1 = Object.keys(student);
-console.log(res1); /// ['name', 'sclass', 'rollno']
-
-/////// Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
-// delete student.rollno;
-console.log(student); /// {name: 'David Rayy', sclass: 'VI'}
-
-//////////////////////////////////////////Classes////////////////////////////////////////////////////////////
-/////////////////
-///////////////////
-//// create class
-class Rectangle {
-  //// setup object
-  constructor(_width, _height, _color) {
-    console.log("the rectange is being created");
-
-    //////// define instance properties
-    //// "this" refers to object which will created using class
-    this.width = _width;
-    this.height = _height;
-    this.color = _color;
-  }
-  ///// creating instance methods
-  getArea() {
-    return this.width * this.height;
-  }
-  printDescription() {
-    console.log(
-      `I am rectangle of ${this.width} x ${this.height} and i am ${this.color}`
-    );
-  }
-}
-let myRectangle1 = new Rectangle(5, 3, "blue");
-let myRectangle2 = new Rectangle(10, 5, "red");
-console.log(myRectangle1); /// Rectangle {width: 5, height: 3, color: 'blue'}
-console.log(myRectangle2); /// Rectangle {width: 10, height: 5, color: 'red'}
-console.log(myRectangle1.getArea()); // 15
-console.log(myRectangle2.getArea()); // 50
-myRectangle1.printDescription(); // I am rectangle of 5 x 3 and i am blue
-///////////////////////
-//////////////////////
-/////////////////////// Getters and Setters
-
-class Square {
-  constructor(_width) {
-    this.width = _width;
-    this.height = _width;
-    this.numOfRequestForArea = 0;
-  }
-  //// getter
-  get area() {
-    this.numOfRequestForArea++;
-    return this.width * this.height;
-  }
-  //// setter
-  set area(area) {
-    this.width = Math.sqrt(area);
-    this.height = this.width;
-  }
-}
-let square1 = new Square(4);
-console.log(square1.area); /// 16
-
-square1.area = 25;
-console.log(square1.width); /// 5
-
-console.log(square1.area);
-console.log(square1.area);
-console.log(square1.numOfRequestForArea); // 3
-
-//////////////// static methods
-/////////////// used as helper functions
-/////////// does not require instances
-
-class Square1 {
-  constructor(_width) {
-    this.width = _width;
-    this.height = _width;
-  }
-  //// a and b are two different instances
-  static equals(a, b) {
-    return a.width * a.height === b.width * b.height;
-  }
-  static isValidDimensions(width, height) {
-    return width === height;
-  }
-}
-let square3 = new Square1(8);
-let square4 = new Square1(9);
-
-////// static methods called on Square1 class directly,  not on instance
-console.log(Square1.equals(square3, square4)); /// flase
-console.log(square3); /// Square1 {width: 8, height: 8}
-console.log(Square1.isValidDimensions(6, 6)); /// true
-
-/////////////////
-/////////////////
-////////////////
-//////////////////////// inheritance/extends////////////
-////// parent class to create child class
-
-class Person {
-  constructor(_name, _age) {
-    this.name = _name;
-    this.age = _age;
-  }
-  describe() {
-    console.log(`I am ${this.name} and I am ${this.age} years old`);
-  }
-}
-
-class Programmer extends Person {
-  constructor(_name, _age, _yearsOfExperience) {
-    super(_name, _age);
-
-    /////// Custom behavior
-    this.yearsOfExperience = _yearsOfExperience;
-  }
-  code() {
-    console.log(`${this.name} is coding`);
-  }
-}
-let person1 = new Person("Jeff", 48);
-let programmer1 = new Programmer("Dom", 56, 12);
-
-console.log(programmer1.code()); /// Dom is coding
-
-////// Programmer inherits describe method from parent class(Person)
-programmer1.describe(); /// I am Dom and I am 56 years old
-// console.log(person1); /// Person {name: 'Jeff', age: 48}
-// console.log(programmer1); /// Programmer {name: 'Dom', age: 56, yearsOfExperience: 12
-
-const programmers = [
-  new Programmer("John", 56, 15),
-  new Programmer("Denn", 24, 4),
-];
-
-function developSoftware(programmers) {
-  for (let programmer of programmers) {
-    programmer.code();
-  }
-}
-developSoftware(programmers);
-// John is coding
-// Denn is coding
-
-/////////////////////////////////
-/////////////////////////////////
-///////////////////////////////////// Polymorphism
-//////// overwrite method inside child class
-
-class Animal {
-  constructor(name) {
-    this.name = name;
-  }
-  makeSound() {
-    console.log(`Generic animal sound!`);
-  }
-}
-
-class Dog extends Animal {
-  constructor(name) {
-    super(name);
-  }
-  makeSound() {
-    ///// super calls parent method
-    super.makeSound();
-    console.log("Woof Woof!");
-  }
-}
-const a1 = new Animal("Dom");
-a1.makeSound(); /// Generic animal sound!
-
-const a2 = new Dog("Jeff");
-a2.makeSound(); /// Woof Woof!
-
-// class Pizza {
-//   constructor(pizzaType, pizzaSize) {
-//     this.type = pizzaType;
-//     this.size = pizzaSize;
-//     this.crust = "original";
-//     this.toppings = [];
-//   }
-//   getCrust() {
-//     return this.crust;
-//   }
-//   setCrust(pizzaCrust) {
-//     this.crust = pizzaCrust;
-//   }
-//   getToppings() {
-//     return this.toppings;
-//   }
-//   setToppings(topping) {
-//     this.toppings.push(topping);
-//   }
-//   bake() {
-//     console.log(`Baking a ${this.size} ${this.size} ${this.crust} crust pizza`);
-//   }
 // }
-// const myPizza = new Pizza("pepperoni", "small");
-// myPizza.setCrust("thin");
-// myPizza.bake(); // Baking a small small thin crust pizza
-// myPizza.setToppings("sausage");
-// myPizza.setToppings("olive");
-// console.log(myPizza.getToppings()); // ['sausage', 'olive']
+// const another = new Circle(1);
 
-///////////////////
-///////////////////
-// class Pizza {
-//   constructor(pizzaSize) {
-//     this.size = pizzaSize;
-//     this.crust = "original";
-//   }
-//   getCrust() {
-//     return this.crust;
-//   }
-//   setCrust(pizzaCrust) {
-//     this.crust = pizzaCrust;
-//   }
+// ////////// constructor property
+// //////////// every object has a constructor property and that references to function that was used to create that object
+// let x = {}; ///// let x = new Object();
+// console.log(another.constructor);
+// // ƒ Circle(radius) {
+// //   this.radius = radius;
+// //   this.draw = function () {
+// //     console.log("draw");
+// //   };
+
+// ///////// functions are object
+// Circle.call({}, 1); /// is same as -  const another = new Circle(1);
+
+// //// Primitives are copied by their value ///// Objects are copied by their reference
+// /// value type
+// let number = 10;
+
+// function increase(number) {
+//   number++;
 // }
+// increase(number);
+// console.log(number); /// 10 //// we have two independent copies
 
-// class SpecialtyPizza extends Pizza {
-//   constructor(pizzaSize) {
-//     super(pizzaSize);
-//     this.type = "The works";
-//   }
-//   slice() {
-//     console.log(`Our ${this.type} ${this.size} pizza has 8 slices.`);
-//   }
+// //// reference type
+// let obj = { value: 10 };
+
+// function increase1(obj) {
+//   obj.value++;
 // }
+// increase1(obj);
+// console.log(obj); /// {value: 11} /// passed by reference
 
-// const mySpecialty = new SpecialtyPizza("medium");
-// mySpecialty.slice(); // Our The works medium pizza has 8 slices.
+// /////////////
+// //////////////
+// const propertyName = "location";
+// circle[propertyName] = { x: 1 };
 
-///////
-/////// naming conventions
-////// underscore(_) means that it is intended to be private
+// function Cirlce(radius) {
+//   this.radius = radius;
+//   this.defaultLocation = { x: 0, y: 0 };
 
-// class Pizza {
-//   constructor(pizzaSize) {
-//     this._size = pizzaSize;
-//     this._crust = "original";
-//   }
-//   getCrust() {
-//     return this._crust;
-//   }
-//   setCrust(pizzaCrust) {
-//     this._crust = pizzaCrust;
-//   }
-// }
+//   let computeOptimumLocation = function (factor) {
+//     ///
+//   };
+//   this.draw = function () {
+//     computeOptimumLocation(0.1);
 
-/////////// factory function
-////////// we have private properties which will not accessible outside of object
-
-// function pizzaFactory(pizzaSize) {
-//   const crust = "original";
-//   const size = pizzaSize;
-//   return {
-//     bake: () => console.log(`Baking a ${size} ${crust} crust pizza`),
+//     console.log("draw");
 //   };
 // }
+// const cirlce = new Circle(10);
 
-// const myPizza = pizzaFactory("small");
-// myPizza.bake(); /// Baking a small original crust pizza
+// circle.draw();
 
-///// public and private fields
-class Pizza {
-  ///// public field
-  crust = "original";
-  //// private field
-  #sauce = "traditional";
-  #size;
-  constructor(pizzaSize) {
-    this.#size = pizzaSize;
-  }
-  getCrust() {
-    return this.crust;
-  }
-  setCrust(pizzaCrust) {
-    this.crust = pizzaCrust;
-  }
-  hereYouGo() {
-    console.log(
-      `Here's your ${this.crust} ${this.#sauce} sauce ${this.#size} pizza`
-    );
-  }
-}
-const myPizza = new Pizza("large");
-myPizza.hereYouGo(); // Here's your original traditional sauce large pizza
-//// is accessible with . notation
-console.log(myPizza.getCrust()); // original
-/// is not accessible
-console.log(myPizza.sauce); /// undefined
+// //////////////
+// /////////////
 
-////////////////////////////////////// this keyword ///////////////////////////////////////////////////////
+// const grades = {
+//   math: 90,
+//   science: 85,
+//   sport: 100,
+// };
 
-/////////// method -> obj
-const video = {
-  title: "a",
-  play() {
-    console.log(this);
-  },
-};
-video.stop = function () {
-  console.log(this);
-};
-video.play(); /// {title: 'a', play: ƒ} /// got video object
-video.stop(); // {title: 'a', play: ƒ, stop: ƒ}   // got video object
+// function iterateOverObj(obj) {
+//   for (let subject in obj) {
+//     console.log(`${subject} ${obj[subject]}`);
+//   }
+// }
+// const result3 = iterateOverObj(grades);
 
-///////////// function -> global (window, global)
+// ///////////////
+// //////////////
 
-function Video(title) {
-  this.title = title;
-  console.log(this);
-}
-const v = new Video("b"); /// Video {title: 'b'}
+// const shop = {
+//   items: [
+//     { name: "item1", price: 10 },
+//     { name: "item2", price: 20 },
+//     { name: "item3", price: 30 },
+//   ],
+//   totalCost: function () {
+//     let total = 0;
+//     for (let i = 0; i < this.items.length; i++) {
+//       total += this.items[i].price;
+//     }
+//     return total;
+//   },
+// };
+// const res3 = shop.totalCost();
+// console.log(res3);
 
-///////////////
+// //////////// Write a JavaScript program to list the properties of a JavaScript object.
+// const student = {
+//   name: "David Rayy",
+//   sclass: "VI",
+//   rollno: 12,
+// };
 
-const video2 = {
-  title: "a",
-  tags: ["a", "b", "c"],
-  showTags() {
-    this.tags.forEach(function (tag) {
-      console.log(this, tag);
-    });
-  },
-};
-video2.showTags();
-// undefined 'a'
-// undefined 'b'
-// undefined 'c'
+// const res1 = Object.keys(student);
+// console.log(res1); /// ['name', 'sclass', 'rollno']
 
-const video3 = {
-  title: "a",
-  tags: ["a", "b", "c"],
-  showTags() {
-    this.tags.forEach(function (tag) {
-      console.log(this.title, tag);
-    }, this); /////// we can pass this as second argument in callback function with will point to object
-  },
-};
-video3.showTags();
-// a a
-// a b
-// a c
+// /////// Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+// // delete student.rollno;
+// console.log(student); /// {name: 'David Rayy', sclass: 'VI'}
 
-///////////////////
-///////////////////
-//////////////////
+// //////////////////////////////////////////Classes////////////////////////////////////////////////////////////
+// /////////////////
+// ///////////////////
+// //// create class
+// class Rectangle {
+//   //// setup object
+//   constructor(_width, _height, _color) {
+//     console.log("the rectange is being created");
 
-function showFace() {
-  return this.face;
-}
-const jeff = {
-  face: "smile",
-};
-const showJeffFace = showFace.bind(jeff);
-console.log(showJeffFace()); /// smile
-/////////////////////
-/////////////////////
-/////////////////////
+//     //////// define instance properties
+//     //// "this" refers to object which will created using class
+//     this.width = _width;
+//     this.height = _height;
+//     this.color = _color;
+//   }
+//   ///// creating instance methods
+//   getArea() {
+//     return this.width * this.height;
+//   }
+//   printDescription() {
+//     console.log(
+//       `I am rectangle of ${this.width} x ${this.height} and i am ${this.color}`
+//     );
+//   }
+// }
+// let myRectangle1 = new Rectangle(5, 3, "blue");
+// let myRectangle2 = new Rectangle(10, 5, "red");
+// console.log(myRectangle1); /// Rectangle {width: 5, height: 3, color: 'blue'}
+// console.log(myRectangle2); /// Rectangle {width: 10, height: 5, color: 'red'}
+// console.log(myRectangle1.getArea()); // 15
+// console.log(myRectangle2.getArea()); // 50
+// myRectangle1.printDescription(); // I am rectangle of 5 x 3 and i am blue
+// ///////////////////////
+// //////////////////////
+// /////////////////////// Getters and Setters
 
-function talk() {
-  return `I am ${this.name}`;
-}
+// class Square {
+//   constructor(_width) {
+//     this.width = _width;
+//     this.height = _width;
+//     this.numOfRequestForArea = 0;
+//   }
+//   //// getter
+//   get area() {
+//     this.numOfRequestForArea++;
+//     return this.width * this.height;
+//   }
+//   //// setter
+//   set area(area) {
+//     this.width = Math.sqrt(area);
+//     this.height = this.width;
+//   }
+// }
+// let square1 = new Square(4);
+// console.log(square1.area); /// 16
 
-const me = {
-  name: "Sina",
-  talk,
-};
-const you = {
-  name: "Qoli",
-  talk,
-};
-console.log(me.talk()); // I am Sina
-console.log(you.talk()); // I am Qoli
+// square1.area = 25;
+// console.log(square1.width); /// 5
 
-/////////////////
-////////////////// bind/////////
+// console.log(square1.area);
+// console.log(square1.area);
+// console.log(square1.numOfRequestForArea); // 3
 
-function talk2() {
-  return `I am ${this.name}`;
-}
-const me2 = {
-  name: "Sina",
-};
-console.log(talk.bind(me)); ////////// takes me object and you as value of this
-// ////ƒ talk() {
+// //////////////// static methods
+// /////////////// used as helper functions
+// /////////// does not require instances
+
+// class Square1 {
+//   constructor(_width) {
+//     this.width = _width;
+//     this.height = _width;
+//   }
+//   //// a and b are two different instances
+//   static equals(a, b) {
+//     return a.width * a.height === b.width * b.height;
+//   }
+//   static isValidDimensions(width, height) {
+//     return width === height;
+//   }
+// }
+// let square3 = new Square1(8);
+// let square4 = new Square1(9);
+
+// ////// static methods called on Square1 class directly,  not on instance
+// console.log(Square1.equals(square3, square4)); /// flase
+// console.log(square3); /// Square1 {width: 8, height: 8}
+// console.log(Square1.isValidDimensions(6, 6)); /// true
+
+// /////////////////
+// /////////////////
+// ////////////////
+// //////////////////////// inheritance/extends////////////
+// ////// parent class to create child class
+
+// class Person {
+//   constructor(_name, _age) {
+//     this.name = _name;
+//     this.age = _age;
+//   }
+//   describe() {
+//     console.log(`I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// class Programmer extends Person {
+//   constructor(_name, _age, _yearsOfExperience) {
+//     super(_name, _age);
+
+//     /////// Custom behavior
+//     this.yearsOfExperience = _yearsOfExperience;
+//   }
+//   code() {
+//     console.log(`${this.name} is coding`);
+//   }
+// }
+// let person1 = new Person("Jeff", 48);
+// let programmer1 = new Programmer("Dom", 56, 12);
+
+// console.log(programmer1.code()); /// Dom is coding
+
+// ////// Programmer inherits describe method from parent class(Person)
+// programmer1.describe(); /// I am Dom and I am 56 years old
+// // console.log(person1); /// Person {name: 'Jeff', age: 48}
+// // console.log(programmer1); /// Programmer {name: 'Dom', age: 56, yearsOfExperience: 12
+
+// const programmers = [
+//   new Programmer("John", 56, 15),
+//   new Programmer("Denn", 24, 4),
+// ];
+
+// function developSoftware(programmers) {
+//   for (let programmer of programmers) {
+//     programmer.code();
+//   }
+// }
+// developSoftware(programmers);
+// // John is coding
+// // Denn is coding
+
+// /////////////////////////////////
+// /////////////////////////////////
+// ///////////////////////////////////// Polymorphism
+// //////// overwrite method inside child class
+
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   makeSound() {
+//     console.log(`Generic animal sound!`);
+//   }
+// }
+
+// class Dog extends Animal {
+//   constructor(name) {
+//     super(name);
+//   }
+//   makeSound() {
+//     ///// super calls parent method
+//     super.makeSound();
+//     console.log("Woof Woof!");
+//   }
+// }
+// const a1 = new Animal("Dom");
+// a1.makeSound(); /// Generic animal sound!
+
+// const a2 = new Dog("Jeff");
+// a2.makeSound(); /// Woof Woof!
+
+// // class Pizza {
+// //   constructor(pizzaType, pizzaSize) {
+// //     this.type = pizzaType;
+// //     this.size = pizzaSize;
+// //     this.crust = "original";
+// //     this.toppings = [];
+// //   }
+// //   getCrust() {
+// //     return this.crust;
+// //   }
+// //   setCrust(pizzaCrust) {
+// //     this.crust = pizzaCrust;
+// //   }
+// //   getToppings() {
+// //     return this.toppings;
+// //   }
+// //   setToppings(topping) {
+// //     this.toppings.push(topping);
+// //   }
+// //   bake() {
+// //     console.log(`Baking a ${this.size} ${this.size} ${this.crust} crust pizza`);
+// //   }
+// // }
+// // const myPizza = new Pizza("pepperoni", "small");
+// // myPizza.setCrust("thin");
+// // myPizza.bake(); // Baking a small small thin crust pizza
+// // myPizza.setToppings("sausage");
+// // myPizza.setToppings("olive");
+// // console.log(myPizza.getToppings()); // ['sausage', 'olive']
+
+// ///////////////////
+// ///////////////////
+// // class Pizza {
+// //   constructor(pizzaSize) {
+// //     this.size = pizzaSize;
+// //     this.crust = "original";
+// //   }
+// //   getCrust() {
+// //     return this.crust;
+// //   }
+// //   setCrust(pizzaCrust) {
+// //     this.crust = pizzaCrust;
+// //   }
+// // }
+
+// // class SpecialtyPizza extends Pizza {
+// //   constructor(pizzaSize) {
+// //     super(pizzaSize);
+// //     this.type = "The works";
+// //   }
+// //   slice() {
+// //     console.log(`Our ${this.type} ${this.size} pizza has 8 slices.`);
+// //   }
+// // }
+
+// // const mySpecialty = new SpecialtyPizza("medium");
+// // mySpecialty.slice(); // Our The works medium pizza has 8 slices.
+
+// ///////
+// /////// naming conventions
+// ////// underscore(_) means that it is intended to be private
+
+// // class Pizza {
+// //   constructor(pizzaSize) {
+// //     this._size = pizzaSize;
+// //     this._crust = "original";
+// //   }
+// //   getCrust() {
+// //     return this._crust;
+// //   }
+// //   setCrust(pizzaCrust) {
+// //     this._crust = pizzaCrust;
+// //   }
+// // }
+
+// /////////// factory function
+// ////////// we have private properties which will not accessible outside of object
+
+// // function pizzaFactory(pizzaSize) {
+// //   const crust = "original";
+// //   const size = pizzaSize;
+// //   return {
+// //     bake: () => console.log(`Baking a ${size} ${crust} crust pizza`),
+// //   };
+// // }
+
+// // const myPizza = pizzaFactory("small");
+// // myPizza.bake(); /// Baking a small original crust pizza
+
+// ///// public and private fields
+// class Pizza {
+//   ///// public field
+//   crust = "original";
+//   //// private field
+//   #sauce = "traditional";
+//   #size;
+//   constructor(pizzaSize) {
+//     this.#size = pizzaSize;
+//   }
+//   getCrust() {
+//     return this.crust;
+//   }
+//   setCrust(pizzaCrust) {
+//     this.crust = pizzaCrust;
+//   }
+//   hereYouGo() {
+//     console.log(
+//       `Here's your ${this.crust} ${this.#sauce} sauce ${this.#size} pizza`
+//     );
+//   }
+// }
+// const myPizza = new Pizza("large");
+// myPizza.hereYouGo(); // Here's your original traditional sauce large pizza
+// //// is accessible with . notation
+// console.log(myPizza.getCrust()); // original
+// /// is not accessible
+// console.log(myPizza.sauce); /// undefined
+
+// ////////////////////////////////////// this keyword ///////////////////////////////////////////////////////
+
+// /////////// method -> obj
+// const video = {
+//   title: "a",
+//   play() {
+//     console.log(this);
+//   },
+// };
+// video.stop = function () {
+//   console.log(this);
+// };
+// video.play(); /// {title: 'a', play: ƒ} /// got video object
+// video.stop(); // {title: 'a', play: ƒ, stop: ƒ}   // got video object
+
+// ///////////// function -> global (window, global)
+
+// function Video(title) {
+//   this.title = title;
+//   console.log(this);
+// }
+// const v = new Video("b"); /// Video {title: 'b'}
+
+// ///////////////
+
+// const video2 = {
+//   title: "a",
+//   tags: ["a", "b", "c"],
+//   showTags() {
+//     this.tags.forEach(function (tag) {
+//       console.log(this, tag);
+//     });
+//   },
+// };
+// video2.showTags();
+// // undefined 'a'
+// // undefined 'b'
+// // undefined 'c'
+
+// const video3 = {
+//   title: "a",
+//   tags: ["a", "b", "c"],
+//   showTags() {
+//     this.tags.forEach(function (tag) {
+//       console.log(this.title, tag);
+//     }, this); /////// we can pass this as second argument in callback function with will point to object
+//   },
+// };
+// video3.showTags();
+// // a a
+// // a b
+// // a c
+
+// ///////////////////
+// ///////////////////
+// //////////////////
+
+// function showFace() {
+//   return this.face;
+// }
+// const jeff = {
+//   face: "smile",
+// };
+// const showJeffFace = showFace.bind(jeff);
+// console.log(showJeffFace()); /// smile
+// /////////////////////
+// /////////////////////
+// /////////////////////
+
+// function talk() {
 //   return `I am ${this.name}`;
 // }
-const meTalk = talk.bind(me);
-console.log(meTalk()); /// I am Sina
 
-console.log(talk.call(me)); /// I am Sina
+// const me = {
+//   name: "Sina",
+//   talk,
+// };
+// const you = {
+//   name: "Qoli",
+//   talk,
+// };
+// console.log(me.talk()); // I am Sina
+// console.log(you.talk()); // I am Qoli
 
-//////////////////
-/////////////////// call with one argument
+// /////////////////
+// ////////////////// bind/////////
 
-// function talk3(lang) {
-//   if (lang === "en") {
-//     return `I am ${this.name}`;
-//   } else if (lang === "it") {
-//     return `Io sono ${this.name}`;
+// function talk2() {
+//   return `I am ${this.name}`;
+// }
+// const me2 = {
+//   name: "Sina",
+// };
+// console.log(talk.bind(me)); ////////// takes me object and you as value of this
+// // ////ƒ talk() {
+// //   return `I am ${this.name}`;
+// // }
+// const meTalk = talk.bind(me);
+// console.log(meTalk()); /// I am Sina
+
+// console.log(talk.call(me)); /// I am Sina
+
+// //////////////////
+// /////////////////// call with one argument
+
+// // function talk3(lang) {
+// //   if (lang === "en") {
+// //     return `I am ${this.name}`;
+// //   } else if (lang === "it") {
+// //     return `Io sono ${this.name}`;
+// //   }
+// // }
+// // const me3 = {
+// //   name: "Sina",
+// // };
+// // console.log(talk3.call(me, "en")); ///  I am Sina
+// // console.log(talk3.call(me, "it")); // Io sono Sina
+
+// ////////////////
+// ///////////////// call with two argument
+
+// function talk3(lang, isPolite) {
+//   if (isPolite) {
+//     if (lang === "en") {
+//       return `I am ${this.name}`;
+//     } else if (lang === "it") {
+//       return `Ciao bella, sono ${this.name}`;
+//     }
+//   }
+//   if (!isPolite) {
+//     if (lang === "en") {
+//       return `${this.name} what you want?`;
+//     } else if (lang === "it") {
+//       return `Sono ${this.name}`;
+//     }
 //   }
 // }
 // const me3 = {
 //   name: "Sina",
 // };
-// console.log(talk3.call(me, "en")); ///  I am Sina
-// console.log(talk3.call(me, "it")); // Io sono Sina
 
-////////////////
-///////////////// call with two argument
+// console.log(talk3.call(me3, "it", true)); /// Ciao bella, sono Sina
 
-function talk3(lang, isPolite) {
-  if (isPolite) {
-    if (lang === "en") {
-      return `I am ${this.name}`;
-    } else if (lang === "it") {
-      return `Ciao bella, sono ${this.name}`;
-    }
-  }
-  if (!isPolite) {
-    if (lang === "en") {
-      return `${this.name} what you want?`;
-    } else if (lang === "it") {
-      return `Sono ${this.name}`;
-    }
-  }
-}
-const me3 = {
-  name: "Sina",
+// ///////////// same with apply // arguments are passed with array
+// console.log(talk3.apply(me3, ["it", true])); //// Ciao bella, sono Sina
+
+// //////////////////////
+// ////////////////////
+// //////////// constructor functions///////////// binding is created automaticaly
+
+// function PersonNew(n) {
+//   this.name = n;
+//   this.talk = function () {
+//     console.log(this);
+//   };
+//   // setTimeout(function () {
+//   //   console.log(this); /////////// Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+//   // }, 100);
+
+//   // setTimeout(
+//   //   function () {
+//   //     console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
+//   //   }.bind(this),
+//   //   100
+//   // );
+
+//   setTimeout(() => {
+//     console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
+//   }, 100);
+// }
+// const me4 = new PersonNew("Sina"); /// PersonNew {name: 'Sina'}
+// me4.talk(); /// PersonNew {name: 'Sina', talk: ƒ}
+
+/////////////////////////////
+/////////////////////////////
+//////////////////////////////////////// getters and setters///////////////////////////////////////////////
+
+const person = {
+  firstName: "Aleksandre",
+  lastName: "Shervashidze",
+  get fullName() {
+    return `${person.firstName} ${person.lastName}`;
+  },
+  set fullName(value) {
+    const parts = value.split(" ");
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
 };
-
-console.log(talk3.call(me3, "it", true)); /// Ciao bella, sono Sina
-
-///////////// same with apply // arguments are passed with array
-console.log(talk3.apply(me3, ["it", true])); //// Ciao bella, sono Sina
-
-//////////////////////
-////////////////////
-//////////// constructor functions///////////// binding is created automaticaly
-
-function PersonNew(n) {
-  this.name = n;
-  this.talk = function () {
-    console.log(this);
-  };
-  // setTimeout(function () {
-  //   console.log(this); /////////// Window {window: Window, self: Window, document: document, name: '', location: Location, …}
-  // }, 100);
-
-  // setTimeout(
-  //   function () {
-  //     console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
-  //   }.bind(this),
-  //   100
-  // );
-
-  setTimeout(() => {
-    console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
-  }, 100);
-}
-const me4 = new PersonNew("Sina"); /// PersonNew {name: 'Sina'}
-me4.talk(); /// PersonNew {name: 'Sina', talk: ƒ}
+person.fullName = "John Smith";
+console.log(person);
