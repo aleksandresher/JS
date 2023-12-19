@@ -1678,3 +1678,62 @@ const person = {
 };
 person.fullName = "John Smith";
 console.log(person);
+
+/////////////////////////////////////////
+/////////////////////////////////////////
+////////////////////////////////////////////////// functions //////////////////////////////
+
+////////////
+//////////// function statement aka function declaration
+a(); /// a called  ///// function statement/declaration are hoisted and can be called before declaration
+
+function a() {
+  console.log("a called");
+}
+
+//////////
+///////// function expression
+// b(); // Uncaught ReferenceError: Cannot access 'b' before initialization
+
+const b = function () {
+  console.log("b called");
+};
+
+//////////
+////////// Anonymous function
+//////// functions without a name. we need to assign it to variable
+
+// function () {
+//   //...
+// });
+
+/////////
+///////// Named functions expression
+
+const b2 = function xys() {
+  console.log("b2 called");
+};
+
+//////// xys it not created in outer scope
+// xys(); /// xys is not defined
+
+//////////////////////
+/////////////////////  difference between parameters and arguments
+
+const b3 = function (param1, param2) {
+  /// param1 and param2 are parameters
+  console.log(`b called with ${param1}, ${param2}`); /// param1 and param2 are accessable only in this body
+};
+b3(1, 2); ///// 1, 2 are arguments
+
+//////////////////
+//////////////////// first class functions/// first class citizens
+///////////// ability to use functions as values /// and return function from function
+
+const b4 = function (param1) {
+  return function xyz() {};
+};
+console.log(b4()); // ƒ xyz() {}
+
+/////////////////////
+/////////////////////// callback function
