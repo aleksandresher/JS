@@ -1761,3 +1761,37 @@ function attachEventListener() {
 }
 
 attachEventListener();
+
+////////////////////////////////  Constructor function /////////////////////////////////////////////////////////
+
+// function Person(name) {
+//   this.name = name;
+// }
+// const sina = new Person("Sina");
+// console.log(sina);
+
+function Person(name) {
+  this.name = name;
+  this.talk = () => {
+    return `Hello i am ${this.name}`;
+  };
+}
+const sina = new Person("Sina");
+const ben = new Person("Ben");
+const sam = new Person("Sam");
+
+function SuperElement(type, content) {
+  this.el = document.createElement(type);
+  this.el.innerText = content;
+  document.body.append(this.el);
+  this.el.addEventListener("click", () => {
+    console.log(this.el);
+  });
+}
+
+const h1 = new SuperElement("h1", "Hello");
+
+const array = ["a", "b", "c"];
+const myElements = array.map((item) => {
+  return new SuperElement("p", item);
+});
