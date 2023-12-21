@@ -1664,20 +1664,20 @@
 /////////////////////////////
 //////////////////////////////////////// getters and setters///////////////////////////////////////////////
 
-const person = {
-  firstName: "Aleksandre",
-  lastName: "Shervashidze",
-  get fullName() {
-    return `${person.firstName} ${person.lastName}`;
-  },
-  set fullName(value) {
-    const parts = value.split(" ");
-    this.firstName = parts[0];
-    this.lastName = parts[1];
-  },
-};
-person.fullName = "John Smith";
-console.log(person);
+// const person = {
+//   firstName: "Aleksandre",
+//   lastName: "Shervashidze",
+//   get fullName() {
+//     return `${person.firstName} ${person.lastName}`;
+//   },
+//   set fullName(value) {
+//     const parts = value.split(" ");
+//     this.firstName = parts[0];
+//     this.lastName = parts[1];
+//   },
+// };
+// person.fullName = "John Smith";
+// console.log(person);
 
 /////////////////////////////////////////
 /////////////////////////////////////////
@@ -1770,15 +1770,15 @@ attachEventListener();
 // const sina = new Person("Sina");
 // console.log(sina);
 
-function Person(name) {
-  this.name = name;
-  this.talk = () => {
-    return `Hello i am ${this.name}`;
-  };
-}
-const sina = new Person("Sina");
-const ben = new Person("Ben");
-const sam = new Person("Sam");
+// function Person(name) {
+//   this.name = name;
+//   this.talk = () => {
+//     return `Hello i am ${this.name}`;
+//   };
+// }
+// const sina = new Person("Sina");
+// const ben = new Person("Ben");
+// const sam = new Person("Sam");
 
 function SuperElement(type, content) {
   this.el = document.createElement(type);
@@ -1795,3 +1795,114 @@ const array = ["a", "b", "c"];
 const myElements = array.map((item) => {
   return new SuperElement("p", item);
 });
+
+var bunny = {
+  lovesCarrots: true,
+  f: function () {
+    return this.lovesCarrots;
+  },
+};
+console.log(bunny.f()); // true
+
+var person = {
+  firstName: "Penelope",
+  lastName: "Barrymore",
+  getName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
+console.log(person.getName()); // Penelope Barrymore
+
+var o = {
+  prop: 37,
+  f: function () {
+    return this.prop;
+  },
+};
+console.log(o.f()); /// 37
+
+const ad = {
+  name: "wasef",
+  foo: function () {
+    console.log(this);
+  },
+};
+
+ad.foo(); // {name: 'wasef', foo: ƒ}
+
+const at = {
+  name: "wasef",
+  foo: function () {
+    console.log(this);
+  },
+};
+
+const newFoo = at.foo;
+newFoo();
+
+const av = {
+  name: "wasef",
+};
+
+function foo() {
+  console.log(this);
+}
+
+const newFooo = foo.bind(av);
+newFooo();
+
+function foo2() {
+  const a = () => {
+    console.log(this);
+  };
+  a();
+}
+
+foo2();
+
+const person1 = {
+  name: "Pedro",
+  surname: "Sanchez",
+  sayName: function () {
+    return this.name + " " + this.surname;
+  },
+};
+
+const person2 = {
+  name: "Jimena",
+  surname: "Juarez",
+};
+
+console.log(person1.sayName.call(person2)); /// Jimena Juarez
+
+const person3 = {
+  name: "Pedro",
+  surname: "Sanchez",
+  sayName: function (city, country) {
+    return this.name + " " + this.surname + ", " + city + ", " + country;
+  },
+};
+
+const person4 = {
+  name: "Jimena",
+  surname: "Juarez",
+};
+
+console.log(person3.sayName.apply(person4, ["DF", "Mexico"])); // Jimena Juarez, DF, Mexico
+
+const person5 = {
+  name: "Pedro",
+  surname: "Sanchez",
+  sayName: function () {
+    return this.name + " " + this.surname;
+  },
+};
+
+const person6 = {
+  name: "Jimena",
+  surname: "Juarez",
+};
+
+const sayPerson2Name = person5.sayName.bind(person6);
+
+console.log(sayPerson2Name()); // Jimena Juarez
