@@ -1995,3 +1995,21 @@ Dude.prototype.talk = function () {
   return "Talking";
 };
 console.log(me.__proto__); // {talk: ƒ, constructor: ƒ}
+
+let myObj = {}; // new Object()
+console.log(myObj.constructor); // ƒ Object() { [native code] }
+console.log(myObj.__proto__ === myObj.constructor.prototype); // true
+
+/////////////////////
+///////////////// objects delegation to other objects
+
+let cat = { breed: "munchkin" };
+
+let myCat = { name: "Fluffykins" };
+
+Object.setPrototypeOf(myCat, cat);
+console.log(myCat.breed); // munchkin
+
+console.log(myCat.__proto__); // Object {breed: 'munchkin'}
+cat.tailLenght = 15;
+console.log(myCat.__proto__); // {breed: 'munchkin', tailLenght: 15}
