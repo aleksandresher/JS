@@ -1906,3 +1906,92 @@ const person6 = {
 const sayPerson2Name = person5.sayName.bind(person6);
 
 console.log(sayPerson2Name()); // Jimena Juarez
+
+/////////////////////////////////
+////////////////////////////////
+/////////////////////////////////////////// Prototypes ///////////////////////////////////////////////////////
+/////////////////////////
+///////////////////////////
+
+const objTest = {
+  name: "Aleksandre",
+  age: 29,
+};
+console.log(objTest);
+
+///// {name: 'Aleksandre', age: 29}
+// age: 29
+// name: "Aleksandre"
+// [[Prototype]]: Object
+
+const arrTest = [1, 2, 3];
+console.log(arrTest);
+// [1, 2, 3]
+// 0: 1
+// 1: 2
+// 2: 3
+// length: 3
+// [[Prototype]]: Array(0)
+
+const strTest = "string";
+console.log(strTest.__proto__);
+// String {'', constructor: ƒ, anchor: ƒ, at: ƒ, big: ƒ, …}
+
+////////
+////////
+const human = {
+  kind: "Human",
+};
+const sina = Object.create(human);
+console.log(sina);
+// [[Prototype]]: Object
+// kind: "Human"
+// [[Prototype]]: Object
+
+///////////
+/////////////
+class Human {
+  talk() {
+    return "Talking";
+  }
+}
+class SuperHuman extends Human {
+  fly() {
+    return "Flying";
+  }
+}
+const ben = new SuperHuman();
+console.log(ben.fly()); // Flying
+console.log(ben.talk()); // Talking
+console.log(ben); // SuperHuman {}[[Prototype]]: Human
+// [[Prototype]]: Human
+// constructor: class SuperHuman
+// fly: ƒ fly()
+// [[Prototype]]: Object
+// constructor: class Human
+// talk: ƒ talk()
+// [[Prototype]]: Object
+
+////////////////
+//////////////////
+
+function Dude(name) {
+  this.name = name;
+}
+const me = new Dude("Sina");
+console.log(me.prototype); // undefined
+console.log(Dude.prototype);
+// {constructor: ƒ}
+// constructor: ƒ Dude(name)
+// [[Prototype]]: Object
+
+console.log(me.__proto__);
+// {constructor: ƒ}
+// constructor: ƒ Dude(name)
+// [[Prototype]]: Object
+
+console.log(Dude.prototype === me.__proto__); /// true
+Dude.prototype.talk = function () {
+  return "Talking";
+};
+console.log(me.__proto__); // {talk: ƒ, constructor: ƒ}
