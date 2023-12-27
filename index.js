@@ -2013,3 +2013,67 @@ console.log(myCat.breed); // munchkin
 console.log(myCat.__proto__); // Object {breed: 'munchkin'}
 cat.tailLenght = 15;
 console.log(myCat.__proto__); // {breed: 'munchkin', tailLenght: 15}
+
+///////////////////////////////////////
+/////////////////////////////////////
+///////////////////////////////////////////////// Event loop ///////////////////////////////////
+///////////////////////// Micro/Macro Tasks////////////////
+console.log("A stack");
+queueMicrotask(function () {
+  console.log("B microtask");
+});
+requestAnimationFrame(function () {
+  console.log("C rAF");
+});
+console.log("D stack");
+setTimeout(function () {
+  console.log("E task");
+}, 0);
+console.log("F stack");
+Promise.resolve()
+  .then(function () {
+    console.log("G microtask");
+  })
+  .then(function () {
+    console.log("H microtask");
+  });
+requestAnimationFrame(function () {
+  console.log("I rAF");
+});
+console.log("J stack");
+setTimeout(function () {
+  console.log("K task");
+});
+queueMicrotask(function () {
+  console.log("L microtask");
+});
+console.log("M stack");
+// A stack
+// D stack
+// F stack
+// J stack
+// M stack
+// B microtask
+// G microtask
+// L microtask
+// H microtask
+// E task
+// K task
+// C rAF
+// I rAF
+
+setTimeout(() => {
+  console.log("Task1 - completed");
+});
+
+let promiseTask = new Promise((resolve, reject) => {
+  resolve();
+});
+promiseTask.then(() => {
+  console.log("Task2 - completed");
+});
+
+console.log("Main code completed");
+/// Main code completed
+// Task2 - completed
+// Task1 - completed
