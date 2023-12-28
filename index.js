@@ -2184,26 +2184,43 @@ console.log("Main code completed");
 //////////////////////////////////////// Fetch ///////////////////////////////////////
 
 /////////////////////////// Basic fetch
+// const url = "https://jsonplaceholder.typicode.com/users";
+
+// function getData() {
+//   fetch(url)
+//     .then((resp) => {
+//       // error checking
+//       /// 200-299
+//       if (!resp.ok) throw new Error("was not a valid response");
+//       return resp.json(); /// method to extract JSON string and convert it to an Object
+//     })
+//     .then((dataobj) => {
+//       // console.log(dataobj);
+//     })
+//     .catch((err) => {
+//       console.warn(err.message);
+//     });
+
+//   ///// The code below will always fail
+//   // let response = fetch(url);
+//   // let dataobj = response.json();
+//   // console.log(dataobj);
+// }
+// getData();
+
+///////////////////
+/////////////////////////////// try-async
 const url = "https://jsonplaceholder.typicode.com/users";
 
-function getData() {
-  fetch(url)
-    .then((resp) => {
-      // error checking
-      /// 200-299
-      if (!resp.ok) throw new Error("was not a valid response");
-      return resp.json(); /// method to extract JSON string and convert it to an Object
-    })
-    .then((dataobj) => {
-      // console.log(dataobj);
-    })
-    .catch((err) => {
-      console.warn(err.message);
-    });
-
-  ///// The code below will always fail
-  // let response = fetch(url);
-  // let dataobj = response.json();
-  // console.log(dataobj);
+async function getData() {
+  try {
+    let response = await fetch(url);
+    console.log(response);
+    if (!response.ok) throw new Error("not a valid response");
+    let dataobj = await response.json();
+    console.log(dataobj);
+  } catch (err) {
+    console.warn(err.message);
+  }
 }
 getData();
