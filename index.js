@@ -2268,32 +2268,70 @@ Headers
 // getData();
 
 //////////////////////////////////////////
-/////////////////////////////////////////////// response
+/////////////////////////////////////////////// response / generate
 
-let obj = {
-  id: crypto.randomUUID(),
-  name: "the one who knocks",
-  favouriteColor: "blue",
-};
+// let obj = {
+//   id: crypto.randomUUID(),
+//   name: "the one who knocks",
+//   favouriteColor: "blue",
+// };
 
-function getData() {
-  let jsonstring = JSON.stringify(obj);
-  console.log(jsonstring);
-  let file = new File([jsonstring], "mydata.json", {
-    type: "application/json",
-  });
+// const imgstr =
+//   "https://media.istockphoto.com/id/1419410282/photo/silent-forest-in-spring-with-beautiful-bright-sun-rays.jpg?s=2048x2048&w=is&k=20&c=t9_zg20wVbrBoGn0tw__1fFq4ykeKs15TQQ3x-ehVC0=";
+// const jsonstr = "https://random-data-api.com/api/v2/users?size=10";
 
-  let response = new Response(file, {
-    status: 200,
-    statusText: "Say my name",
-    headers: {
-      "content-type": "application/json",
-      "content-length": file.size,
-      "x-steve": "starts with x for a custom header name",
-    },
-  });
-  console.log(response);
-}
-getData();
+// function getData() {
+//   let list = document.getElementById("list"); //the <ul>
 
-/////////////////////////////////////// generate
+//   fetch(jsonstr)
+//     .then((response) => {
+//       if (!response.ok) throw new Error("invalid");
+//       return response.json();
+//     })
+//     .then((dataArray) => {
+//       //
+//       list.innerHTML = dataArray
+//         .map(({ uid, first_name, last_name }) => {
+//           return `<li class="listitem" data-uid="${uid}">
+//             <p>${first_name}</p>
+//             <p>${last_name}</p>
+//           </li>`;
+//         })
+//         .join("");
+//     })
+//     .catch(console.warn);
+//   fetch(imgstr)
+//     .then((resp) => {
+//       if (!resp.ok) throw new Error("invalid");
+//       return resp.blob(); //binary large object images, video, audio, fonts.
+
+//       resp.text(); //for text, html, and xml files, and css, and js.
+//       resp.json(); //for json files
+//     })
+//     .then((blob) => {
+//       console.log(blob); //blob is a chunk of memory on users computer
+//       let url = URL.createObjectURL(blob);
+//       let img = document.getElementById("img");
+//       img.src = url;
+//     })
+//     .catch(console.warn);
+//   let jsonstring = JSON.stringify(obj);
+//   console.log(jsonstring);
+//   let file = new File([jsonstring], "mydata.json", {
+//     type: "application/json",
+//   });
+
+//   let response = new Response(file, {
+//     status: 200,
+//     statusText: "Say my name",
+//     headers: {
+//       "content-type": "application/json",
+//       "content-length": file.size,
+//       "x-steve": "starts with x for a custom header name",
+//     },
+//   });
+//   console.log(response);
+// }
+// getData();
+
+///////////////////////////// API Keys, Authorization, Credentials, Content-Security-Policy
