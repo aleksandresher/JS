@@ -1,7 +1,5 @@
 ////////////////// Numbers
 
-const { response } = require("express");
-
 // let num = 3;
 // let newNum = 3.16;
 
@@ -2244,27 +2242,58 @@ Headers
 - string | object literal | new Headers()
 */
 
-const str = "http://127.0.0.1:5500/local-sample.json?attempt=123&other=hello";
+// const str = "http://127.0.0.1:5500/local-sample.json?attempt=123&other=hello";
+
+// function getData() {
+//   const url = new URL(str);
+//   // console.log(url.host, url.origin, url.protocol, url.port, url.pathname);
+
+//   const request = new Request(url, {
+//     headers: { "x-steve": "hello" },
+//     method: "GET",
+//     cache: "no-store",
+//   });
+
+//   fetch(request)
+//     .then((response) => {
+//       // console.log(response.status);
+//       if (!response.ok) throw new Error("Invalid");
+//       return response;
+//     })
+//     .then((data) => {
+//       console.log(data);
+//     })
+//     .catch((err) => console.warn(err.message));
+// }
+// getData();
+
+//////////////////////////////////////////
+/////////////////////////////////////////////// response
+
+let obj = {
+  id: crypto.randomUUID(),
+  name: "the one who knocks",
+  favouriteColor: "blue",
+};
 
 function getData() {
-  const url = new URL(str);
-  // console.log(url.host, url.origin, url.protocol, url.port, url.pathname);
-
-  const request = new Request(url, {
-    headers: { "x-steve": "hello" },
-    method: "GET",
-    cache: "no-store",
+  let jsonstring = JSON.stringify(obj);
+  console.log(jsonstring);
+  let file = new File([jsonstring], "mydata.json", {
+    type: "application/json",
   });
 
-  fetch(request)
-    .then((response) => {
-      // console.log(response.status);
-      if (!response.ok) throw new Error("Invalid");
-      return response;
-    })
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((err) => console.warn(err.message));
+  let response = new Response(file, {
+    status: 200,
+    statusText: "Say my name",
+    headers: {
+      "content-type": "application/json",
+      "content-length": file.size,
+      "x-steve": "starts with x for a custom header name",
+    },
+  });
+  console.log(response);
 }
 getData();
+
+/////////////////////////////////////// generate
