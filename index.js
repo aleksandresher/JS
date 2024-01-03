@@ -2368,3 +2368,39 @@ function getData() {
     })
     .catch(console.warn);
 }
+
+//////////////////////////////////// Uploading Data//////////////////////////////////
+
+let endpoint = "http://127.0.0.1:3000/";
+
+function setData() {
+  const imgInput = document.getElementById("imgfile");
+  const jsonInput = document.getElementById("jsonfile");
+
+  document.getElementById("myform").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    //upload something
+    let obj = {
+      id: 123,
+      name: "steve",
+    };
+    let jsonstring = JSON.stringify(obj);
+
+    let request = new Request(endpoint, {
+      method: "POST",
+      body: jsonstring,
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+    fetch(request)
+      .then((response) => {
+        if (!response.ok) throw new Error("invalid");
+        return response.text();
+      })
+      .then((txt) => {
+        console.log(txt);
+      })
+      .catch(console.warn);
+  });
+}
