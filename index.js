@@ -2526,30 +2526,67 @@ Headers
 
 //////////////////////////////////////////// Abort ///////////////////////////////////
 
-const url = "https://picsum.photos/id/237/3000/2000";
+// const url = "https://picsum.photos/id/237/3000/2000";
 
-const controller = new AbortController();
-const signal = controller.signal;
+// const controller = new AbortController();
+// const signal = controller.signal;
 
-function getData() {
-  let abortBtn = document.getElementById("abort");
-  abortBtn.addEventListener("click", (ev) => {
-    controller.abort();
-    console.log("aborted");
-  });
+// function getData() {
+//   let abortBtn = document.getElementById("abort");
+//   abortBtn.addEventListener("click", (ev) => {
+//     controller.abort();
+//     console.log("aborted");
+//   });
 
-  let request = new Request(url, {
-    signal: signal,
-  });
-  fetch(request)
-    .then((response) => {
-      if (!response.ok) throw new Error("invalid");
-      return response.blob();
-    })
-    .then((blob) => {
-      console.log("got the blob");
-    })
-    .catch(console.warn);
+//   let request = new Request(url, {
+//     signal: signal,
+//   });
+//   fetch(request)
+//     .then((response) => {
+//       if (!response.ok) throw new Error("invalid");
+//       return response.blob();
+//     })
+//     .then((blob) => {
+//       console.log("got the blob");
+//     })
+//     .catch(console.warn);
+// }
+
+// getData();
+
+///////////////////// error handling/////////
+
+try {
+  console.log("Start of try runs");
+
+  unicycle;
+
+  console.log("End of try runs -- never reached");
+} catch (err) {
+  console.log("Error has occured:" + err.stack);
+} finally {
+  console.log("This is always run");
 }
 
-getData();
+console.log("...Then the executing continues");
+
+let json = { age: 30 };
+
+try {
+  let user = JSON.parse(json);
+  if (!user.name) {
+    throw new SyntaxError("Incomplete data: no name");
+  }
+  console.log(user.name);
+} catch (e) {
+  console.log("JSON Error:" + e);
+}
+
+////////////// modules ////////////////////////
+
+import U, { printAge as printUserName, printAge } from "/rf.js";
+
+const user = new U("Bob", 11);
+console.log(user);
+printUserName(user);
+printAge(user);
