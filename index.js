@@ -2384,13 +2384,16 @@ function setData() {
       id: 123,
       name: "steve",
     };
-    let jsonstring = JSON.stringify(obj);
+    // let jsonstring = JSON.stringify(obj);
+
+    let fd = new FormData(document.getElementById("myform"));
 
     let request = new Request(endpoint, {
       method: "POST",
-      body: jsonstring,
+      // body: jsonstring,
+      body: fd,
       headers: {
-        "content-type": "application/json",
+        "content-type": "multipart/form-data",
       },
     });
     fetch(request)
