@@ -1,2555 +1,2650 @@
-////////////////// Numbers
+// ////////////////// Numbers
 
-// let num = 3;
-// let newNum = 3.16;
+// // let num = 3;
+// // let newNum = 3.16;
 
-// console.log(typeof num);
-// console.log(typeof newNum);
+// // console.log(typeof num);
+// // console.log(typeof newNum);
 
-// let mill = 1e6;
-// console.log(mill); /// 1000000
+// // let mill = 1e6;
+// // console.log(mill); /// 1000000
 
-// let smallNum = 1e-6;
-// console.log(smallNum); /// 0.000001
+// // let smallNum = 1e-6;
+// // console.log(smallNum); /// 0.000001
 
-// let score = new Number(100);
-// console.log(typeof score); // object
+// // let score = new Number(100);
+// // console.log(typeof score); // object
 
-// let testNum = 1e5;
-// console.log(testNum); // 100000
-// console.log(typeof testNum); // number
+// // let testNum = 1e5;
+// // console.log(testNum); // 100000
+// // console.log(typeof testNum); // number
 
-// //////////// Number Methods////////////////
+// // //////////// Number Methods////////////////
 
-// const PI = 3.141596254;
+// // const PI = 3.141596254;
 
-// let num2 = PI.toFixed(2);
-// console.log(num2); /// 3.14
+// // let num2 = PI.toFixed(2);
+// // console.log(num2); /// 3.14
 
-// num2 = PI.toPrecision(5);
-// console.log(num2); // 3.1416
-
-// let mill2 = 1000000;
-// num2 = mill.toExponential();
-// console.log(num2); // 1e+6
-
-// let PI1 = 3.14159;
-// console.log(PI1.toFixed(3)); //3.142
-
-// console.log(PI1.toPrecision(3)); /// 3.14
+// // num2 = PI.toPrecision(5);
+// // console.log(num2); // 3.1416
+
+// // let mill2 = 1000000;
+// // num2 = mill.toExponential();
+// // console.log(num2); // 1e+6
+
+// // let PI1 = 3.14159;
+// // console.log(PI1.toFixed(3)); //3.142
+
+// // console.log(PI1.toPrecision(3)); /// 3.14
 
-// const lightSpeed = 186000;
-// console.log(lightSpeed.toExponential()); // 1.86+5
+// // const lightSpeed = 186000;
+// // console.log(lightSpeed.toExponential()); // 1.86+5
 
-// console.log((123 + 5).valueOf()); // 128 (number type)
-// const stringValue = "10";
-// console.log(typeof Number(stringValue)); // number
+// // console.log((123 + 5).valueOf()); // 128 (number type)
+// // const stringValue = "10";
+// // console.log(typeof Number(stringValue)); // number
 
-// // let x = new Date("1970-01-01");
-// // console.log(x);
+// // // let x = new Date("1970-01-01");
+// // // console.log(x);
 
-// console.log(parseInt("10.55")); // 10 (number type)
-// console.log(parseFloat("10.55")); // 10.55 (number type)
+// // console.log(parseInt("10.55")); // 10 (number type)
+// // console.log(parseFloat("10.55")); // 10.55 (number type)
 
-// /////////////////// Strings////////////////////////////////
+// // /////////////////// Strings////////////////////////////////
 
-// const message = "this is my code"; // string type
-// const another = new String("hi"); // object type
+// // const message = "this is my code"; // string type
+// // const another = new String("hi"); // object type
 
-// console.log(another.length); // 2
-// console.log(message[0]); // t
-// console.log(message.includes("is")); // true
-// console.log(message.includes("her")); // false
-// console.log(message.startsWith("this")); // true
-// console.log(message.indexOf("code")); // 11
-// const newMessage = message.replace("my", "her"); // does not mutate original
-// console.log(newMessage); /// this is her code
-// console.log(message.toUpperCase()); // THIS IS MY CODE
+// // console.log(another.length); // 2
+// // console.log(message[0]); // t
+// // console.log(message.includes("is")); // true
+// // console.log(message.includes("her")); // false
+// // console.log(message.startsWith("this")); // true
+// // console.log(message.indexOf("code")); // 11
+// // const newMessage = message.replace("my", "her"); // does not mutate original
+// // console.log(newMessage); /// this is her code
+// // console.log(message.toUpperCase()); // THIS IS MY CODE
 
-// const message2 = "  this is my code  ";
-// console.log(message2.trim()); // "this is my code"
-// console.log(message.charAt(0)); // t
-// console.log(message.slice(4, 8)); /// is
-// console.log(message.split(" ")); // ['this', 'is', 'my', 'code']
+// // const message2 = "  this is my code  ";
+// // console.log(message2.trim()); // "this is my code"
+// // console.log(message.charAt(0)); // t
+// // console.log(message.slice(4, 8)); /// is
+// // console.log(message.split(" ")); // ['this', 'is', 'my', 'code']
 
-// ///////////// var, let, const /////////////////////
+// // ///////////// var, let, const /////////////////////
 
-// function start() {
-//   for (var i = 0; i < 5; i++) {
-//     console.log(i);
-//   }
-//   console.log(i); ///// var is accessible outside of block-scope (in function scope)
-// }
-// start();
+// // function start() {
+// //   for (var i = 0; i < 5; i++) {
+// //     console.log(i);
+// //   }
+// //   console.log(i); ///// var is accessible outside of block-scope (in function scope)
+// // }
+// // start();
 
-// function start2() {
-//   for (let i = 0; i < 5; i++) {
-//     console.log(i);
-//   }
-//   console.log(i); ///// got error because let is not accessible outside block-scope
-// }
-// start2();
+// // function start2() {
+// //   for (let i = 0; i < 5; i++) {
+// //     console.log(i);
+// //   }
+// //   console.log(i); ///// got error because let is not accessible outside block-scope
+// // }
+// // start2();
 
-// var color = "red"; /// attaches variable to window object
-// let age = 30;
+// // var color = "red"; /// attaches variable to window object
+// // let age = 30;
 
-///// global scope
+// ///// global scope
 
-// var x = 1;
-// let y = 2;
-// const z = 3;
+// // var x = 1;
+// // let y = 2;
+// // const z = 3;
 
-//// local scope
-// function myFunc() {
-//   const z = 5;
-//   console.log(z);
-
-//   {
-//     let y = 4;
-//     console.log(y);
-//   }
-// }
-// myFunc();
-
-// console.log(`global: ${x}`);
-// console.log(`global: ${y}`);
-// console.log(`global: ${z}`);
-
-// function myFunc() {
-//   var x = 10;
-//   const z = 5;
-//   console.log(`function: ${x}`);
-//   console.log(`function: ${y}`);
-//   console.log(`function: ${z}`);
-
-//   {
-//     var x = 11;
-//     const z = 6;
-//     console.log(`block: ${x}`);
-//     console.log(`block: ${y}`);
-//     console.log(`block: ${z}`);
-//   }
-// }
-// myFunc();
-
-///////////// hoisting
-
-// getName(); /// "Namaste Javascript"
-// console.log(x); /// undefined
-
-// var x = 7;
-
-// function getName() {
-//   console.log("Namaste Javascript");
-// }
-
-// carName = "Volvo";
-// let carName; //// Cannot access 'carName' before initialization
-////////
-
-// console.log(me); // undefined
-// console.log(lastName); //Cannot access 'lastName' before initialization
-// console.log(year); // Cannot access 'year' before initialization
-
-// var me = "Aleksandre";
-// let lastName = "Shervashidze";
-// const year = 1994;
-
-//// functions
-// console.log(addDecl(2, 3)); /// 5
-// console.log(addExpr(2, 3)); /// Cannot access 'addExpr' before initialization
-// console.log(addArrow(2, 3)); ////  Cannot access 'addArrow' before initialization
-// console.log(addArrow2(2, 3)); ///  addArrow2 is not a function  (undefined(2,3))
-
-// function addDecl(a, b) {
-//   return a + b;
-// }
-
-// const addExpr = function (a, b) {
-//   return a + b;
-// };
-
-// const addArrow = (a, b) => a + b;
-
-// var addArrow2 = (a, b) => a + b;
-
-//////////////////////// closures
-
-// for (var i = 0; i < 3; i++) {
-//   const log = () => {
-//     console.log(i); /// 3 3 3
-//   };
-//   setTimeout(log, 100);
-// }
-
-// for (let i = 0; i < 3; i++) {
-//   const log = () => {
-//     console.log(i); /// 0 1 2
-//   };
-//   setTimeout(log, 100);
-// }
-
-// let myName = "Aleksandre";
-
-// function printName() {
-//   console.log(myName); /// zura
-// }
-
-// myName = "zura";
-
-// printName();
-
-// function outerFunction(outerVariable) {
-//   return function innerFunction(innerVariable) {
-//     console.log("Outer Variable" + outerVariable);
-//     console.log("Inner Variable" + innerVariable);
-//   };
-// }
-// const newFunction = outerFunction("outside");
-// newFunction(); //// Outer Variableoutside
-////Inner Variableundefined
-
-///////////// loops
-
-// for (let i = 0; i < 6; i++) {
-//   // console.log(`statement ${i}`);
-// }
-
-// for (let i = 0; i < 6; i++) {
-//   if (i === 4) {
-//     break;
-//   }
-//   // console.log(`statement ${i}`);
-// }
-
-// const arr = [1, 2, 3];
-
-// for (let i = 0; i < arr.length; i++) {
-//   console.log(arr[i]);
-// }
-
-// ///// iterate  over object properties
-
-// const capitals = {
-//   a: "Tbilisi",
-//   b: "Cairo",
-//   c: "Belgrade",
-// };
-
-// for (let key in capitals) {
-//   console.log(key + ": " + capitals[key]);
-// }
-
-// ///////// for of
-
-// const arr2 = ["Fred", "Tom", "Bob"];
-
-// for (let i of arr2) {
-//   console.log(i);
-// }
-
-// //// while
-
-// // let i = 1;
-
-// // while (i < 5) {
-// //   console.log(i);
-// //   i++;
+// //// local scope
+// // function myFunc() {
+// //   const z = 5;
+// //   console.log(z);
+
+// //   {
+// //     let y = 4;
+// //     console.log(y);
+// //   }
+// // }
+// // myFunc();
+
+// // console.log(`global: ${x}`);
+// // console.log(`global: ${y}`);
+// // console.log(`global: ${z}`);
+
+// // function myFunc() {
+// //   var x = 10;
+// //   const z = 5;
+// //   console.log(`function: ${x}`);
+// //   console.log(`function: ${y}`);
+// //   console.log(`function: ${z}`);
+
+// //   {
+// //     var x = 11;
+// //     const z = 6;
+// //     console.log(`block: ${x}`);
+// //     console.log(`block: ${y}`);
+// //     console.log(`block: ${z}`);
+// //   }
+// // }
+// // myFunc();
+
+// ///////////// hoisting
+
+// // getName(); /// "Namaste Javascript"
+// // console.log(x); /// undefined
+
+// // var x = 7;
+
+// // function getName() {
+// //   console.log("Namaste Javascript");
 // // }
 
-// ///// do while  //// run at least once // condition is checked at the end of iteration
-// let i = 10;
-
-// do {
-//   console.log(i); /// 10
-//   i++;
-// } while (i < 10);
-
-// const myName = "Aleksandre";
-// // var age = 29;
-
-// function first() {
-//   // const age = 30;
-//   if (age >= 29) {
-//     const decade = 3;
-//     var millenial = true;
-//   }
-//   function second() {
-//     const job = "teacher";
-//     // const age = 31;
-
-//     console.log(`${myName} is a ${age}-old ${job}`);
-//   }
-//   second();
-// }
-
-// first();
-// let age = 32;
-// first();
-
-//// exercise 1
-
-// function test() {
-//   console.log(a);
-//   console.log(foo());
-
-//   var a = 1;
-//   const foo = function () {
-//     return 2;
-//   };
-// }
-
-// test();
-
-///// exercise 2
-
-// var a = 1;
-
-// function someFunction(number) {
-//   function otherFunction(input) {
-//     return a;
-//   }
-
-//   a = 5;
-
-//   otherFunction();
-// }
-
-// var firstResult = someFunction();
-// console.log(firstResult);
-
-//// exercise 3
-// var a = 1;
-// function b() {
-//   a = 10;
-//   return;
-//   function a() {}
-// }
-// b();
-// console.log(a);
-
-///exercise 4
-
-// function some() {
-//   return a();
-
-//   function a() {
-//     return 2 + 6;
-//   }
-// }
-// const result = some();
-// console.log(result);
-
-//////exercise 5
-
-// const result = calcAge(1994);
-
-// function calcAge(birthYear) {
-//   const age = 2023 - birthYear;
-
-//   return age;
-// }
-// console.log(result);
-
-///////exercise 6
-
-// const result = calcAge(1994);
-
-// const calcAge = function (birthYear) {
-//   const age = 2023 - birthYear;
-//   return age;
-// };
-// console.log(result);
-
-//// exercise 7
-
-// function calcAge(birthYear) {
-//   const age = 2023 - birthYear;
-
-//   function printAge() {
-//     const output = `${firstName}, your are ${age}, born in ${birthYear}`;
-//     console.log(output);
-//   }
-//   printAge();
-
-//   return age;
-// }
-// const firstName = "Aleksandre";
-// calcAge(1994);
-
-// function outer() {
-//   var a = 10;
-
-//   function inner() {
-//     var b = 20;
-//     console.log(a); // What is the output?
-//   }
-
-//   inner();
-//   // console.log(b); // What happens if you uncomment this line?
-// }
-
-// outer();
-
-// const secureBooking = function () {
-//   let passengerCount = 0;
-
-//   return function () {
-//     passengerCount++;
-//     console.log(`${passengerCount} passengers`);
-//   };
-// };
-
-// const booker = secureBooking();
-// booker();
-
-// function createCounter() {
-//   let count = 0;
-
-//   function increment() {
-//     count++;
-//     console.log(count);
-//   }
-
-//   function decrement() {
-//     count--;
-//     console.log(count);
-//   }
-
-//   function reset() {
-//     count = 0;
-//     console.log(count);
-//   }
-
-//   function getCount() {
-//     console.log(count);
-//   }
-
-//   return {
-//     increment: increment,
-//     decrement: decrement,
-//     reset: reset,
-//     getCount: getCount,
-//   };
-// }
-
-// const counter1 = createCounter();
-// const counter2 = createCounter();
-
-// // Exercise 1:
-// counter1.increment(); // What will this output?
-// counter1.increment(); // What will this output?
-// counter1.decrement(); // What will this output?
-// counter1.reset(); // What will this output?
-
-// // Exercise 2:
-// counter2.increment(); // What will this output?
-// counter2.getCount(); // What will this output?
-
-// // Exercise 3:
-// counter1.getCount(); // What will this output?
-
-// let f;
-
-// const g = function () {
-//   const a = 23;
-//   f = function () {
-//     console.log(a * 2);
-//   };
-// };
-// const result = g();
-// console.log(result);
-
-// const boardPassengers = function (n, wait) {
-//   const perGroup = n / 3;
-
-//   setTimeout(function () {
-//     console.log(`We are now boarding all ${n} passengers`);
-//     console.log(`There are 3 groups, each with ${perGroup} passengers`);
-//   }, wait * 1000);
-
-//   console.log(`Will start boarding in ${wait} seconds`);
-// };
-
-// const result = boardPassengers(180, 3);
-// console.log(result);
-
-// if (3 === 3) {
-//   var somerandom = 3;
-// } else {
-//   var somerandom2 = 4;
-// }
-// function sayHello() {
-//   var say = function () {
-//     console.log(hello);
-//   };
-//   var hello = "Hello, world!";
-//   return say;
-// }
-// var sayHelloClosure = sayHello();
-// sayHelloClosure();
-
-// var x = 10;
-// function foo(a) {
-//   var b = 20;
-
-//   function bar(c) {
-//     var d = 30;
-//     return boop(x + a + b + c + d);
-//   }
-
-//   function boop(e) {
-//     return e * -1;
-//   }
-
-//   return bar;
-// }
-
-// var moar = foo(5);
-
-// moar(15);
-
-// let arr_1 = [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2];
-
-// function getSum() {
-//   let sum = 0;
-//   for (let i = 0; i < arr_1.length; i++) {
-//     sum += arr_1[i];
-//   }
-//   return sum;
-// }
-// const result = getSum();
-// console.log(result); //276
-
-// function getSum2() {
-//   let sum = 0;
-//   for (const number of arr_1) {
-//     sum += number;
-//   }
-//   return sum;
-// }
-// const result2 = getSum2();
-// console.log(result2); // 276
-
-// function getSum3() {
-//   let sum = 0;
-//   let i = 0;
-
-//   while (i < arr_1.length) {
-//     sum += arr_1[i];
-//     i++;
-//   }
-//   return sum;
-// }
-// const result3 = getSum3();
-// console.log(result3); // 276
-
-// function getSum4() {
-//   let sum = 0;
-//   let i = 0;
-
-//   do {
-//     sum += arr_1[i];
-//     i++;
-//   } while (i < arr_1.length);
-//   return sum;
-// }
-// const result4 = getSum4();
-// console.log(result4); ///276
-
-// let arr_3 = [4, 6, 7];
-// let arr_4 = [8, 1, 9];
-
-// function sumToArray() {
-//   let sum = 0;
-//   let newArray = [];
-
-//   for (let i = 0; i < arr_3.length; i++) {
-//     let currentSum = arr_3[i] + arr_4[i];
-//     sum += currentSum;
-
-//     newArray.push(arr_3[i] + arr_4[i]);
-//   }
-//   return { sum, newArray };
-// }
-// const result5 = sumToArray();
-// console.log(result5); //// newArray [12,7,16] /// sum 35
-
-// let arr = [3, 4, 5, 6, 8, 12, 14, 13, 23, 22, 28];
-
-// function separateNums() {
-//   let even = [];
-//   let odd = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] % 2 == 0) {
-//       even.push(arr[i]);
-//     } else {
-//       odd.push(arr[i]);
-//     }
-//   }
-//   return { even, odd };
-// }
-// const checkResult = separateNums();
-// console.log(checkResult); ////// even [4, 6, 8, 12, 14, 22, 28]  odd [3, 5, 13, 23]
-
-// let arr6 = [
-//   [1, 2, 3],
-//   [4, 5, 6],
-//   [7, 8, 9],
-//   [10, 11, 12],
-// ];
-
-// function getSum6() {
-//   let sum = 0;
-
-//   for (let i = 0; i < arr6.length; i++) {
-//     for (let j = 0; j < arr6[i].length; j++) {
-//       sum += arr6[i][j];
-//     }
-//   }
-//   return sum;
-// }
-
-// const arr6Result = getSum6();
-// console.log(arr6Result); // 78
-
-/////////////////////////////////////////// Arrays ///////////////////////////////////////////////////////////////////////////
-
-// const myArray = [];
-// //// add element to an array
-// myArray[0] = "Dave";
-// myArray[1] = 1001;
-// myArray[2] = false;
-
-// //// refer to an array
-// console.log(myArray);
-// ////length property
-// console.log(myArray.length);
-// ////last element in array
-// console.log(myArray[myArray.length - 1]);
-
-// ////add element at the end of an array
-// myArray.push("school");
-
-// //// add element at the start of an array
-// myArray.unshift(42);
-// const newLength = myArray.unshift(42); /// 4 // will return new length of array
-// console.log(myArray);
-
-// /// remove and save last element from array
-// const lastItem = myArray.pop();
-// console.log(lastItem); /// "school"
-
-// /// remove and save first element from array
-// const firstItem = myArray.shift();
-
-// const myArray = [];
-// //// add element to an array
-// myArray[0] = "Dave";
-// myArray[1] = 1001;
-// myArray[2] = false;
-
-// /// delete certain element from array
-// myArray.splice(1, 1); /// start from position 1 and delete 1 element
-// console.log(myArray); ////  ['Dave', false]
-
-// ///// replace element(s) in array
-// const newArray = ["Aleksandre", 1001, false];
-// newArray.splice(1, 1, 42); /// start from position 1 and replace one element with 42
-// console.log(newArray); ///  ['Aleksandre', 42, false]
-// newArray.splice(1, 2, 45, true); //// start from position 1 and replace 2 element. first with 45, second with - true
-// console.log(newArray); //// ['Aleksandre', 45, true]
-
-// ///// insert element in array
-// newArray.splice(1, 0, 42); /// add element at position 1
-// console.log(newArray); // ['Aleksandre', 42, 45, true]
-
-// const newArray = [2, 3, 4];
-
-// const myArray = ["A", "B", "C", "D", "E", "F"];
-
-// const newArray = myArray.slice(2, 5); /// takes elements from 2 to 5
-// console.log(newArray); //// ['C', 'D', 'E']
-
-// const reversedArray = myArray.reverse();
-// console.log(reversedArray); /// ['F', 'E', 'D', 'C', 'B', 'A'] /// mutates original array
-
-// const newString = myArray.join();
-// console.log(newString); //// F,E,D,C,B,A
-
-// const arrayA = ["A", "B", "C"];
-// const arrayB = ["D", "E", "F"];
-
-// const concatedArray = arrayA.concat(arrayB);
-// console.log(concatedArray); /// ['A', 'B', 'C', 'D', 'E', 'F']
-
-// const combinedArray = [...arrayA, ...arrayB];
-// console.log(combinedArray); // ['A', 'B', 'C', 'D', 'E', 'F']
-
-// const equipShelfA = ["baseball", "football", "volleyboll"];
-// const equipShelfB = ["basketball", "golf balls", "tennis balls"];
-
-// const clothesShelfA = ["tank tops", "t-shirts", "jerseys"];
-// const clothesShelfB = ["sweat tops", "sweat pants", "hoodies"];
-
-// const equipDept = [equipShelfA, equipShelfB];
-// const clothesDept = [clothesShelfA, clothesShelfB];
-
-// console.log(equipDept[0][1]); /// football
-// console.log(clothesDept[1][0]); /// sweat tops
-
-// const sportStore = [equipDept, clothesDept];
-// console.log(sportStore[0][0][1]); // football
-
-// const people = ["Sally", "Kyle", "John"];
-// const newPeople = people.with(2, "New"); /// does not mutate original array
-// console.log(newPeople); /// ['Sally', 'Kyle', 'New']
-// console.log(people); //  ['Sally', 'Kyle', 'John']
-
-// const sortedPeople = people.toSorted(); /// sort alphabetically
-// console.log(sortedPeople); ///  ['John', 'Kyle', 'Sally']
-
-// const reversedPeople = people.toReversed(); // reversing array
-// console.log(reversedPeople); /// ['John', 'Kyle', 'Sally']
-
-// const spliced = people.toSpliced(0, 2, "New"); /// works as splice method but does not change/mutate original array
-// console.log(people); /// ['Sally', 'Kyle', 'John']
-// console.log(spliced); /// ['New', 'John']
-
-// ////////////// foreach
-// //// use when need to perform some action on each element
-
-// const food = ["Grape", "Apple", "Banana", "Orange", "Strawberry"];
-// food.forEach((item, index) => {
-//   console.log(`${item}  delicious index is ${index + 1} from ${food.length} `);
-// });
-
-// ///////////// map
-// /////// use when need to perform some action on element and return result in new array
-// const newMappedArray = food.map((item) => item + item);
-// console.log(newMappedArray); //// ['GrapeGrape', 'AppleApple', 'BananaBanana', 'OrangeOrange', 'StrawberryStrawberry']
-
-// /////////filter
-// const filteredFruit = food.filter((item) => item.length > 5);
-// console.log(filteredFruit); ///  ['Banana', 'Orange', 'Strawberry']
-
-// ////// find
-// const foundItem = food.find((item) => item.length === 5);
-// console.log(foundItem); //// Grape
-// //// It returns the value of the first element in the array that satisfies the testing function
-
-// ////// findIndex
-// const findIndexOfElement = food.findIndex((item) => item.length === 10);
-// console.log(findIndexOfElement); /// 4
-// /////// returns index of first element which satisfies contidion
-
-// ////// indexOf
-// const result = food.indexOf("Orange");
-// const result2 = food.indexOf("Orange", 4);
-// console.log(result); //// 3
-// console.log(result2); //// -1
-// //// -1 if no result
-
-// /////// lastIndexOf
-// const food2 = ["Grape", "Apple", "Apple", "Banana", "Orange", "Strawberry"];
-// const lastIndex = food2.lastIndexOf("Apple");
-// console.log(lastIndex); //// 2
-
-// ////// some
-// const checkIf = food.some((item) => item.startsWith("B"));
-// console.log(checkIf); /// true
-// ///// check if at least one element satisfies condition
-
-// ///////every
-// const chechIfAll = food.every((item) => item.endsWith("a"));
-// console.log(chechIfAll); //// false
-
-// //////// includes
-// const ifIncludesOrange = food.includes("Orange");
-// const ifIncludesKiwi = food.includes("Kiwi");
-// console.log(ifIncludesOrange); /// true
-// console.log(ifIncludesKiwi); /// false
-// //// array.included(element, fromIndex)
-
-// /////// toString
-// const arrayToString = food.toString();
-// console.log(arrayToString); /// Grape,Apple,Banana,Orange,Strawberry
-
-// ////// join
-// const separated = food.join(" - ");
-// console.log(separated); /// Grape - Apple - Banana - Orange - Strawberry
-// /// with join we can specify separator
-
-// ///// fill
-// // const filledWithKiwi = food.fill("Kiwi");
-// console.log(food); //// ['Kiwi', 'Kiwi', 'Kiwi', 'Kiwi', 'Kiwi']
-// //// we can also specify start and/or last index of fill ("Kiwi", 2);  ("Kiwi", 2, 6)
-
-// ///// copyWithin
-// // const newArray2 = food.copyWithin(0, 3, 4);
-// // console.log(newArray2); //  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] //// takes 3 th element and paste in at 0
-// // console.log(food);//  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] /// modifies original array
-
-// ///// splice
-// // const result4 = food.splice(0, 1, "Kiwi");
-// // console.log(food); /// ['Kiwi', 'Apple', 'Banana', 'Orange', 'Strawberry']
-// // console.log(result4); /// ['Grape']
-
-// ////// sort
-// const numArray = [1, 3, 5, 60, 9, 8];
-// newArray.sort();
-// console.log(numArray); ///  [1, 3, 5, 60, 9, 8]
-// numArray.sort((a, b) => {
-//   return a - b;
-// });
-// console.log(numArray); /// [1, 3, 5, 8, 9, 60]
-// console.log(
-//   numArray.sort((a, b) => {
-//     return b - a;
-//   })
-// ); //// [60, 9, 8, 5, 3, 1]
-// ///// > 0  /// sort a after b
-// //// < 0  /// sort a before b
-// //// === 0  //// keep original order
-
-// ///// from
-// const str = "1234";
-// const numbers = Array.from(str, (element) => Number(element));
-// console.log(numbers); /// [1, 2, 3, 4]
-
-// //// isArray
-// const checkIfArray = Array.isArray(food);
-// console.log(checkIfArray); // true
-// console.log(Array.isArray(str)); // false
-
-// /// valueOf
-// const foodCopy = food.valueOf();
-// console.log(foodCopy); /// ['Grape', 'Apple', 'Banana', 'Orange', 'Strawberry']
-// /// creates copy
-
-// /// entries
-// const foodEntries = food.entries();
-// for (let element of foodEntries) {
-//   console.log(element);
-// }
-
-// //  [0, 'Grape']
-// //  [1, 'Apple']
-// //  [2, 'Banana']
-// //  [3, 'Orange']
-// //  [4, 'Strawberry']
-
-// ///// keys
-// const foodKeys = food.keys();
-// for (let key of foodKeys) {
-//   console.log(key);
-// }
-// // 0
-// // 1;
-// // 2;
-// // 3;
-// // 4;
-
-// ///// values
-// const foodValues = food.values();
-// for (let value of foodValues) {
-//   console.log(value);
-// }
-// // Grape
-// //  Apple
-// //  Banana
-// //  Orange
-// //  Strawberry
-
-// ///// reduce
-// const numbersArray = [1, 2, 3, 4];
-// function reducer(prev, curr) {
-//   return prev + curr;
-// }
-// const sum = numbersArray.reduce(reducer, 0);
-// console.log(sum); /// 10
-
-// ///// reduceRight
-// const sum2 = numbersArray.reduceRight(reducer, 0);
-// console.log(sum2); // 10
-
-// //// flat
-// //// array.flat(depth)
-// const nestedArray = [1, 2, 3, [4, 5, [6, 7]]];
-// const flatedArray1 = nestedArray.flat();
-// console.log(flatedArray1); /// [1, 2, 3, 4, 5, Array(2)]
-// console.log(nestedArray.flat(2)); /// [1, 2, 3, 4, 5, 6, 7]
-
-// ///// flatMap
-// const nestedArray2 = [
-//   [1, 2],
-//   [3, 4],
-// ];
-// const resultArray = nestedArray2.flatMap((array) => {
-//   return [array[0] + array[1]];
-// });
-// console.log(resultArray); // [3, 7]
-
-//// Write a JavaScript program to find the most frequent item in an array.
-// let arr1 = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
-// let mf = 1;
-// let m = 0;
-// let item;
-
-// for (let i = 0; i < arr1.length; i++) {
-//   for (let j = i; j < arr1.length; j++) {
-//     if (arr1[i] === arr1[j]) {
-//       m++;
-//     }
-//     if (mf < m) {
-//       mf = m;
-//       item = arr1[i];
-//     }
-//   }
-//   m = 0;
-// }
-// console.log(item + " ( " + mf + " times ) "); /// a (5 times)
-
-//////////// Given an array of numbers, square each number and return only the even squares.
-// const numbers = [1, 2, 3, 4, 5, 6];
-
-// const result = numbers
-//   .filter((item) => (item * item) % 2 === 0)
-//   .map((item) => item * item);
-// console.log(result); /// [4, 16, 36]
-
-// //////////// Write a function that calculates the factorial of a given number using the reduce method.
-// const calculateFactorial = (n) => {
-//   const nArray = Array.from({ length: n }, (_, index) => index + 1);
-//   const res = nArray.reduce((prev, curr) => prev * curr);
-//   return res;
-// };
-// console.log(calculateFactorial(5));
-
-// /////////// Given an array of strings, concatenate them into a single string and convert it to uppercase.
-// const words = ["hello", "world", "javascript", "array"];
-// const newArray = words.map((item) => item.toUpperCase()).join("");
-// console.log(newArray);
-
-// // Find the first element in an array that is divisible by 7.
-// const numbers2 = [8, 15, 21, 30, 42, 50];
-// const res = numbers2.find((item) => item % 7 === 0);
-// console.log(res);
-
-// //// Sort an array of strings in descending order of their lengths and then reverse the sorted array.
-// const words2 = ["apple", "banana", "orange", "strawberry", "kiwi"];
-
-// const res2 = words2
-//   .sort((a, b) => {
-//     if (a.length > b.length) {
-//       return 1; //// > 0    a after b
-//     } else if (a.length < b.length) {
-//       return -1; //// <0   a before b
-//     } else {
-//       return 0;
-//     }
-//   })
-//   .reverse();
-// console.log(res2); //  ['strawberry', 'orange', 'banana', 'apple', 'kiwi']
-
-// ////////////////////////////// Objects ////////////////////////////////////
-
-// const myObj = { name: "Aleksandre" };
-// console.log(myObj); // {name: 'Aleksandre'}
-// console.log(myObj.name); /// Aleksandre
-
-// const anotherObj = {
-//   alive: true,
-//   answer: 42,
-//   hobbies: ["Eat", "Sleep", "Code"],
-//   beverage: {
-//     morning: "Coffee",
-//     afternoon: "Iced Tea",
-//   },
-//   action: function () {
-//     return "Hello from method";
-//   },
-//   action2: function () {
-//     return `Time for ${this.beverage.morning}`; //// "this" refers to object
-//   },
-// };
-// console.log(anotherObj.hobbies); /// ['Eat', 'Sleep', 'Code']
-// console.log(anotherObj["hobbies"]); /// ['Eat', 'Sleep', 'Code']
-// console.log(anotherObj.beverage.morning); /// Coffee
-// console.log(anotherObj.action()); /// Hello from method
-// console.log(anotherObj.action2()); /// Time for Coffee
-// ////
-// ////
-// ////
-// ////////// generic object
-// const vehicle = {
-//   wheels: 4,
-//   engine: function () {
-//     return "Vrroooom!";
-//   },
-// };
-// //////
-// /////
-// const truck = Object.create(vehicle);
-// truck.doors = 2;
-// console.log(truck); /// {doors: 2}
-// console.log(truck.wheels); /// 4  /////// Inheritance //////// truck inherits properties and methods of vehicle
-// console.log(truck.engine()); /// Vrroooom!
-// /////
-// /////
-// const car = Object.create(vehicle);
-// car.doors = 4;
-// car.engine = function () {
-//   return "Whooosh";
-// }; ///// /// overwrite inherited method
-// console.log(car.engine()); //// Whooosh
-// ////
-// ////
-// const tesla = Object.create(car);
-// console.log(tesla.wheels); //4  /// inherits from vehicle  //// vehicle -> car -> tesla
-// console.log(tesla.engine()); /// Whooosh
-// tesla.engine = function () {
-//   return "Shhhhhh";
-// };
-// console.log(tesla.engine()); //// Shhhhhh
-// ///////////////
-// //////////////
-// /////////////
-// const band = {
-//   vocals: "Robert Plant",
-//   guitar: "Jimmy Page",
-//   bass: "John Paul Jones",
-//   drums: "John Bonham",
-// };
-
-// // delete band.drums; ///// delete property
-// console.log(Object.keys(band)); ///// ['vocals', 'guitar', 'bass', 'drums']
-// console.log(Object.values(band)); ////  ['Robert Plant', 'Jimmy Page', 'John Paul Jones', 'John Bonham']
-// console.log(band.hasOwnProperty("guitar")); //// true
-// /////
-// /////
-// for (let job in band) {
-//   console.log(band[job]);
-// }
-// // Robert Plant
-// // Jimmy Page
-// // John Paul Jones
-// // John Bonham
-// for (let job in band) {
-//   console.log(`On ${job}, it's ${band[job]}!`);
-// }
-// // On vocals, it's Robert Plant!
-// // On guitar, it's Jimmy Page!
-// // On bass, it's John Paul Jones!
-// // On drums, it's John Bonham!
-// /////////
-// //////////
-
-// /////////////////////////// destructuring objects
-
-// const { guitar: myVariable, bass: myBass } = band;
-// console.log(myVariable); //// Jimmy Page
-// console.log(myBass); /// John Paul Jones
-// const { vocals, guitar, bass, drums } = band;
-// console.log(drums); // John Bonham
-
+// // carName = "Volvo";
+// // let carName; //// Cannot access 'carName' before initialization
 // ////////
-// function sings({ vocals }) {
-//   return `${vocals} sings!`;
-// }
-// console.log(sings(band)); //// Robert Plant sings!
-// ////////////
-// ////////////
-// //////////
-// //////// define object with object literals
-// const circleObj = {
-//   radius: 1,
-//   location: {
-//     x: 1,
-//     y: 1,
-//   },
-//   draw: function () {
-//     return "draw";
-//   },
-// };
 
-// console.log(circleObj.draw()); // "draw"
+// // console.log(me); // undefined
+// // console.log(lastName); //Cannot access 'lastName' before initialization
+// // console.log(year); // Cannot access 'year' before initialization
 
-// //////////// define object with factory
-// //// factory function
-// function createCircle(radius) {
-//   return {
-//     radius,
-//     draw: function () {
-//       console.log("draw");
-//     },
-//   };
-// }
-// const circle = createCircle(1);
+// // var me = "Aleksandre";
+// // let lastName = "Shervashidze";
+// // const year = 1994;
 
-// //////////// constructor funtion
-// function Circle(radius) {
-//   this.radius = radius;
-//   this.draw = function () {
-//     console.log("draw");
-//   };
-// }
-// const another = new Circle(1);
+// //// functions
+// // console.log(addDecl(2, 3)); /// 5
+// // console.log(addExpr(2, 3)); /// Cannot access 'addExpr' before initialization
+// // console.log(addArrow(2, 3)); ////  Cannot access 'addArrow' before initialization
+// // console.log(addArrow2(2, 3)); ///  addArrow2 is not a function  (undefined(2,3))
 
-// ////////// constructor property
-// //////////// every object has a constructor property and that references to function that was used to create that object
-// let x = {}; ///// let x = new Object();
-// console.log(another.constructor);
-// // ƒ Circle(radius) {
+// // function addDecl(a, b) {
+// //   return a + b;
+// // }
+
+// // const addExpr = function (a, b) {
+// //   return a + b;
+// // };
+
+// // const addArrow = (a, b) => a + b;
+
+// // var addArrow2 = (a, b) => a + b;
+
+// //////////////////////// closures
+
+// // for (var i = 0; i < 3; i++) {
+// //   const log = () => {
+// //     console.log(i); /// 3 3 3
+// //   };
+// //   setTimeout(log, 100);
+// // }
+
+// // for (let i = 0; i < 3; i++) {
+// //   const log = () => {
+// //     console.log(i); /// 0 1 2
+// //   };
+// //   setTimeout(log, 100);
+// // }
+
+// // let myName = "Aleksandre";
+
+// // function printName() {
+// //   console.log(myName); /// zura
+// // }
+
+// // myName = "zura";
+
+// // printName();
+
+// // function outerFunction(outerVariable) {
+// //   return function innerFunction(innerVariable) {
+// //     console.log("Outer Variable" + outerVariable);
+// //     console.log("Inner Variable" + innerVariable);
+// //   };
+// // }
+// // const newFunction = outerFunction("outside");
+// // newFunction(); //// Outer Variableoutside
+// ////Inner Variableundefined
+
+// ///////////// loops
+
+// // for (let i = 0; i < 6; i++) {
+// //   // console.log(`statement ${i}`);
+// // }
+
+// // for (let i = 0; i < 6; i++) {
+// //   if (i === 4) {
+// //     break;
+// //   }
+// //   // console.log(`statement ${i}`);
+// // }
+
+// // const arr = [1, 2, 3];
+
+// // for (let i = 0; i < arr.length; i++) {
+// //   console.log(arr[i]);
+// // }
+
+// // ///// iterate  over object properties
+
+// // const capitals = {
+// //   a: "Tbilisi",
+// //   b: "Cairo",
+// //   c: "Belgrade",
+// // };
+
+// // for (let key in capitals) {
+// //   console.log(key + ": " + capitals[key]);
+// // }
+
+// // ///////// for of
+
+// // const arr2 = ["Fred", "Tom", "Bob"];
+
+// // for (let i of arr2) {
+// //   console.log(i);
+// // }
+
+// // //// while
+
+// // // let i = 1;
+
+// // // while (i < 5) {
+// // //   console.log(i);
+// // //   i++;
+// // // }
+
+// // ///// do while  //// run at least once // condition is checked at the end of iteration
+// // let i = 10;
+
+// // do {
+// //   console.log(i); /// 10
+// //   i++;
+// // } while (i < 10);
+
+// // const myName = "Aleksandre";
+// // // var age = 29;
+
+// // function first() {
+// //   // const age = 30;
+// //   if (age >= 29) {
+// //     const decade = 3;
+// //     var millenial = true;
+// //   }
+// //   function second() {
+// //     const job = "teacher";
+// //     // const age = 31;
+
+// //     console.log(`${myName} is a ${age}-old ${job}`);
+// //   }
+// //   second();
+// // }
+
+// // first();
+// // let age = 32;
+// // first();
+
+// //// exercise 1
+
+// // function test() {
+// //   console.log(a);
+// //   console.log(foo());
+
+// //   var a = 1;
+// //   const foo = function () {
+// //     return 2;
+// //   };
+// // }
+
+// // test();
+
+// ///// exercise 2
+
+// // var a = 1;
+
+// // function someFunction(number) {
+// //   function otherFunction(input) {
+// //     return a;
+// //   }
+
+// //   a = 5;
+
+// //   otherFunction();
+// // }
+
+// // var firstResult = someFunction();
+// // console.log(firstResult);
+
+// //// exercise 3
+// // var a = 1;
+// // function b() {
+// //   a = 10;
+// //   return;
+// //   function a() {}
+// // }
+// // b();
+// // console.log(a);
+
+// ///exercise 4
+
+// // function some() {
+// //   return a();
+
+// //   function a() {
+// //     return 2 + 6;
+// //   }
+// // }
+// // const result = some();
+// // console.log(result);
+
+// //////exercise 5
+
+// // const result = calcAge(1994);
+
+// // function calcAge(birthYear) {
+// //   const age = 2023 - birthYear;
+
+// //   return age;
+// // }
+// // console.log(result);
+
+// ///////exercise 6
+
+// // const result = calcAge(1994);
+
+// // const calcAge = function (birthYear) {
+// //   const age = 2023 - birthYear;
+// //   return age;
+// // };
+// // console.log(result);
+
+// //// exercise 7
+
+// // function calcAge(birthYear) {
+// //   const age = 2023 - birthYear;
+
+// //   function printAge() {
+// //     const output = `${firstName}, your are ${age}, born in ${birthYear}`;
+// //     console.log(output);
+// //   }
+// //   printAge();
+
+// //   return age;
+// // }
+// // const firstName = "Aleksandre";
+// // calcAge(1994);
+
+// // function outer() {
+// //   var a = 10;
+
+// //   function inner() {
+// //     var b = 20;
+// //     console.log(a); // What is the output?
+// //   }
+
+// //   inner();
+// //   // console.log(b); // What happens if you uncomment this line?
+// // }
+
+// // outer();
+
+// // const secureBooking = function () {
+// //   let passengerCount = 0;
+
+// //   return function () {
+// //     passengerCount++;
+// //     console.log(`${passengerCount} passengers`);
+// //   };
+// // };
+
+// // const booker = secureBooking();
+// // booker();
+
+// // function createCounter() {
+// //   let count = 0;
+
+// //   function increment() {
+// //     count++;
+// //     console.log(count);
+// //   }
+
+// //   function decrement() {
+// //     count--;
+// //     console.log(count);
+// //   }
+
+// //   function reset() {
+// //     count = 0;
+// //     console.log(count);
+// //   }
+
+// //   function getCount() {
+// //     console.log(count);
+// //   }
+
+// //   return {
+// //     increment: increment,
+// //     decrement: decrement,
+// //     reset: reset,
+// //     getCount: getCount,
+// //   };
+// // }
+
+// // const counter1 = createCounter();
+// // const counter2 = createCounter();
+
+// // // Exercise 1:
+// // counter1.increment(); // What will this output?
+// // counter1.increment(); // What will this output?
+// // counter1.decrement(); // What will this output?
+// // counter1.reset(); // What will this output?
+
+// // // Exercise 2:
+// // counter2.increment(); // What will this output?
+// // counter2.getCount(); // What will this output?
+
+// // // Exercise 3:
+// // counter1.getCount(); // What will this output?
+
+// // let f;
+
+// // const g = function () {
+// //   const a = 23;
+// //   f = function () {
+// //     console.log(a * 2);
+// //   };
+// // };
+// // const result = g();
+// // console.log(result);
+
+// // const boardPassengers = function (n, wait) {
+// //   const perGroup = n / 3;
+
+// //   setTimeout(function () {
+// //     console.log(`We are now boarding all ${n} passengers`);
+// //     console.log(`There are 3 groups, each with ${perGroup} passengers`);
+// //   }, wait * 1000);
+
+// //   console.log(`Will start boarding in ${wait} seconds`);
+// // };
+
+// // const result = boardPassengers(180, 3);
+// // console.log(result);
+
+// // if (3 === 3) {
+// //   var somerandom = 3;
+// // } else {
+// //   var somerandom2 = 4;
+// // }
+// // function sayHello() {
+// //   var say = function () {
+// //     console.log(hello);
+// //   };
+// //   var hello = "Hello, world!";
+// //   return say;
+// // }
+// // var sayHelloClosure = sayHello();
+// // sayHelloClosure();
+
+// // var x = 10;
+// // function foo(a) {
+// //   var b = 20;
+
+// //   function bar(c) {
+// //     var d = 30;
+// //     return boop(x + a + b + c + d);
+// //   }
+
+// //   function boop(e) {
+// //     return e * -1;
+// //   }
+
+// //   return bar;
+// // }
+
+// // var moar = foo(5);
+
+// // moar(15);
+
+// // let arr_1 = [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2];
+
+// // function getSum() {
+// //   let sum = 0;
+// //   for (let i = 0; i < arr_1.length; i++) {
+// //     sum += arr_1[i];
+// //   }
+// //   return sum;
+// // }
+// // const result = getSum();
+// // console.log(result); //276
+
+// // function getSum2() {
+// //   let sum = 0;
+// //   for (const number of arr_1) {
+// //     sum += number;
+// //   }
+// //   return sum;
+// // }
+// // const result2 = getSum2();
+// // console.log(result2); // 276
+
+// // function getSum3() {
+// //   let sum = 0;
+// //   let i = 0;
+
+// //   while (i < arr_1.length) {
+// //     sum += arr_1[i];
+// //     i++;
+// //   }
+// //   return sum;
+// // }
+// // const result3 = getSum3();
+// // console.log(result3); // 276
+
+// // function getSum4() {
+// //   let sum = 0;
+// //   let i = 0;
+
+// //   do {
+// //     sum += arr_1[i];
+// //     i++;
+// //   } while (i < arr_1.length);
+// //   return sum;
+// // }
+// // const result4 = getSum4();
+// // console.log(result4); ///276
+
+// // let arr_3 = [4, 6, 7];
+// // let arr_4 = [8, 1, 9];
+
+// // function sumToArray() {
+// //   let sum = 0;
+// //   let newArray = [];
+
+// //   for (let i = 0; i < arr_3.length; i++) {
+// //     let currentSum = arr_3[i] + arr_4[i];
+// //     sum += currentSum;
+
+// //     newArray.push(arr_3[i] + arr_4[i]);
+// //   }
+// //   return { sum, newArray };
+// // }
+// // const result5 = sumToArray();
+// // console.log(result5); //// newArray [12,7,16] /// sum 35
+
+// // let arr = [3, 4, 5, 6, 8, 12, 14, 13, 23, 22, 28];
+
+// // function separateNums() {
+// //   let even = [];
+// //   let odd = [];
+// //   for (let i = 0; i < arr.length; i++) {
+// //     if (arr[i] % 2 == 0) {
+// //       even.push(arr[i]);
+// //     } else {
+// //       odd.push(arr[i]);
+// //     }
+// //   }
+// //   return { even, odd };
+// // }
+// // const checkResult = separateNums();
+// // console.log(checkResult); ////// even [4, 6, 8, 12, 14, 22, 28]  odd [3, 5, 13, 23]
+
+// // let arr6 = [
+// //   [1, 2, 3],
+// //   [4, 5, 6],
+// //   [7, 8, 9],
+// //   [10, 11, 12],
+// // ];
+
+// // function getSum6() {
+// //   let sum = 0;
+
+// //   for (let i = 0; i < arr6.length; i++) {
+// //     for (let j = 0; j < arr6[i].length; j++) {
+// //       sum += arr6[i][j];
+// //     }
+// //   }
+// //   return sum;
+// // }
+
+// // const arr6Result = getSum6();
+// // console.log(arr6Result); // 78
+
+// /////////////////////////////////////////// Arrays ///////////////////////////////////////////////////////////////////////////
+
+// // const myArray = [];
+// // //// add element to an array
+// // myArray[0] = "Dave";
+// // myArray[1] = 1001;
+// // myArray[2] = false;
+
+// // //// refer to an array
+// // console.log(myArray);
+// // ////length property
+// // console.log(myArray.length);
+// // ////last element in array
+// // console.log(myArray[myArray.length - 1]);
+
+// // ////add element at the end of an array
+// // myArray.push("school");
+
+// // //// add element at the start of an array
+// // myArray.unshift(42);
+// // const newLength = myArray.unshift(42); /// 4 // will return new length of array
+// // console.log(myArray);
+
+// // /// remove and save last element from array
+// // const lastItem = myArray.pop();
+// // console.log(lastItem); /// "school"
+
+// // /// remove and save first element from array
+// // const firstItem = myArray.shift();
+
+// // const myArray = [];
+// // //// add element to an array
+// // myArray[0] = "Dave";
+// // myArray[1] = 1001;
+// // myArray[2] = false;
+
+// // /// delete certain element from array
+// // myArray.splice(1, 1); /// start from position 1 and delete 1 element
+// // console.log(myArray); ////  ['Dave', false]
+
+// // ///// replace element(s) in array
+// // const newArray = ["Aleksandre", 1001, false];
+// // newArray.splice(1, 1, 42); /// start from position 1 and replace one element with 42
+// // console.log(newArray); ///  ['Aleksandre', 42, false]
+// // newArray.splice(1, 2, 45, true); //// start from position 1 and replace 2 element. first with 45, second with - true
+// // console.log(newArray); //// ['Aleksandre', 45, true]
+
+// // ///// insert element in array
+// // newArray.splice(1, 0, 42); /// add element at position 1
+// // console.log(newArray); // ['Aleksandre', 42, 45, true]
+
+// // const newArray = [2, 3, 4];
+
+// // const myArray = ["A", "B", "C", "D", "E", "F"];
+
+// // const newArray = myArray.slice(2, 5); /// takes elements from 2 to 5
+// // console.log(newArray); //// ['C', 'D', 'E']
+
+// // const reversedArray = myArray.reverse();
+// // console.log(reversedArray); /// ['F', 'E', 'D', 'C', 'B', 'A'] /// mutates original array
+
+// // const newString = myArray.join();
+// // console.log(newString); //// F,E,D,C,B,A
+
+// // const arrayA = ["A", "B", "C"];
+// // const arrayB = ["D", "E", "F"];
+
+// // const concatedArray = arrayA.concat(arrayB);
+// // console.log(concatedArray); /// ['A', 'B', 'C', 'D', 'E', 'F']
+
+// // const combinedArray = [...arrayA, ...arrayB];
+// // console.log(combinedArray); // ['A', 'B', 'C', 'D', 'E', 'F']
+
+// // const equipShelfA = ["baseball", "football", "volleyboll"];
+// // const equipShelfB = ["basketball", "golf balls", "tennis balls"];
+
+// // const clothesShelfA = ["tank tops", "t-shirts", "jerseys"];
+// // const clothesShelfB = ["sweat tops", "sweat pants", "hoodies"];
+
+// // const equipDept = [equipShelfA, equipShelfB];
+// // const clothesDept = [clothesShelfA, clothesShelfB];
+
+// // console.log(equipDept[0][1]); /// football
+// // console.log(clothesDept[1][0]); /// sweat tops
+
+// // const sportStore = [equipDept, clothesDept];
+// // console.log(sportStore[0][0][1]); // football
+
+// // const people = ["Sally", "Kyle", "John"];
+// // const newPeople = people.with(2, "New"); /// does not mutate original array
+// // console.log(newPeople); /// ['Sally', 'Kyle', 'New']
+// // console.log(people); //  ['Sally', 'Kyle', 'John']
+
+// // const sortedPeople = people.toSorted(); /// sort alphabetically
+// // console.log(sortedPeople); ///  ['John', 'Kyle', 'Sally']
+
+// // const reversedPeople = people.toReversed(); // reversing array
+// // console.log(reversedPeople); /// ['John', 'Kyle', 'Sally']
+
+// // const spliced = people.toSpliced(0, 2, "New"); /// works as splice method but does not change/mutate original array
+// // console.log(people); /// ['Sally', 'Kyle', 'John']
+// // console.log(spliced); /// ['New', 'John']
+
+// // ////////////// foreach
+// // //// use when need to perform some action on each element
+
+// // const food = ["Grape", "Apple", "Banana", "Orange", "Strawberry"];
+// // food.forEach((item, index) => {
+// //   console.log(`${item}  delicious index is ${index + 1} from ${food.length} `);
+// // });
+
+// // ///////////// map
+// // /////// use when need to perform some action on element and return result in new array
+// // const newMappedArray = food.map((item) => item + item);
+// // console.log(newMappedArray); //// ['GrapeGrape', 'AppleApple', 'BananaBanana', 'OrangeOrange', 'StrawberryStrawberry']
+
+// // /////////filter
+// // const filteredFruit = food.filter((item) => item.length > 5);
+// // console.log(filteredFruit); ///  ['Banana', 'Orange', 'Strawberry']
+
+// // ////// find
+// // const foundItem = food.find((item) => item.length === 5);
+// // console.log(foundItem); //// Grape
+// // //// It returns the value of the first element in the array that satisfies the testing function
+
+// // ////// findIndex
+// // const findIndexOfElement = food.findIndex((item) => item.length === 10);
+// // console.log(findIndexOfElement); /// 4
+// // /////// returns index of first element which satisfies contidion
+
+// // ////// indexOf
+// // const result = food.indexOf("Orange");
+// // const result2 = food.indexOf("Orange", 4);
+// // console.log(result); //// 3
+// // console.log(result2); //// -1
+// // //// -1 if no result
+
+// // /////// lastIndexOf
+// // const food2 = ["Grape", "Apple", "Apple", "Banana", "Orange", "Strawberry"];
+// // const lastIndex = food2.lastIndexOf("Apple");
+// // console.log(lastIndex); //// 2
+
+// // ////// some
+// // const checkIf = food.some((item) => item.startsWith("B"));
+// // console.log(checkIf); /// true
+// // ///// check if at least one element satisfies condition
+
+// // ///////every
+// // const chechIfAll = food.every((item) => item.endsWith("a"));
+// // console.log(chechIfAll); //// false
+
+// // //////// includes
+// // const ifIncludesOrange = food.includes("Orange");
+// // const ifIncludesKiwi = food.includes("Kiwi");
+// // console.log(ifIncludesOrange); /// true
+// // console.log(ifIncludesKiwi); /// false
+// // //// array.included(element, fromIndex)
+
+// // /////// toString
+// // const arrayToString = food.toString();
+// // console.log(arrayToString); /// Grape,Apple,Banana,Orange,Strawberry
+
+// // ////// join
+// // const separated = food.join(" - ");
+// // console.log(separated); /// Grape - Apple - Banana - Orange - Strawberry
+// // /// with join we can specify separator
+
+// // ///// fill
+// // // const filledWithKiwi = food.fill("Kiwi");
+// // console.log(food); //// ['Kiwi', 'Kiwi', 'Kiwi', 'Kiwi', 'Kiwi']
+// // //// we can also specify start and/or last index of fill ("Kiwi", 2);  ("Kiwi", 2, 6)
+
+// // ///// copyWithin
+// // // const newArray2 = food.copyWithin(0, 3, 4);
+// // // console.log(newArray2); //  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] //// takes 3 th element and paste in at 0
+// // // console.log(food);//  ['Orange', 'Apple', 'Banana', 'Orange', 'Strawberry'] /// modifies original array
+
+// // ///// splice
+// // // const result4 = food.splice(0, 1, "Kiwi");
+// // // console.log(food); /// ['Kiwi', 'Apple', 'Banana', 'Orange', 'Strawberry']
+// // // console.log(result4); /// ['Grape']
+
+// // ////// sort
+// // const numArray = [1, 3, 5, 60, 9, 8];
+// // newArray.sort();
+// // console.log(numArray); ///  [1, 3, 5, 60, 9, 8]
+// // numArray.sort((a, b) => {
+// //   return a - b;
+// // });
+// // console.log(numArray); /// [1, 3, 5, 8, 9, 60]
+// // console.log(
+// //   numArray.sort((a, b) => {
+// //     return b - a;
+// //   })
+// // ); //// [60, 9, 8, 5, 3, 1]
+// // ///// > 0  /// sort a after b
+// // //// < 0  /// sort a before b
+// // //// === 0  //// keep original order
+
+// // ///// from
+// // const str = "1234";
+// // const numbers = Array.from(str, (element) => Number(element));
+// // console.log(numbers); /// [1, 2, 3, 4]
+
+// // //// isArray
+// // const checkIfArray = Array.isArray(food);
+// // console.log(checkIfArray); // true
+// // console.log(Array.isArray(str)); // false
+
+// // /// valueOf
+// // const foodCopy = food.valueOf();
+// // console.log(foodCopy); /// ['Grape', 'Apple', 'Banana', 'Orange', 'Strawberry']
+// // /// creates copy
+
+// // /// entries
+// // const foodEntries = food.entries();
+// // for (let element of foodEntries) {
+// //   console.log(element);
+// // }
+
+// // //  [0, 'Grape']
+// // //  [1, 'Apple']
+// // //  [2, 'Banana']
+// // //  [3, 'Orange']
+// // //  [4, 'Strawberry']
+
+// // ///// keys
+// // const foodKeys = food.keys();
+// // for (let key of foodKeys) {
+// //   console.log(key);
+// // }
+// // // 0
+// // // 1;
+// // // 2;
+// // // 3;
+// // // 4;
+
+// // ///// values
+// // const foodValues = food.values();
+// // for (let value of foodValues) {
+// //   console.log(value);
+// // }
+// // // Grape
+// // //  Apple
+// // //  Banana
+// // //  Orange
+// // //  Strawberry
+
+// // ///// reduce
+// // const numbersArray = [1, 2, 3, 4];
+// // function reducer(prev, curr) {
+// //   return prev + curr;
+// // }
+// // const sum = numbersArray.reduce(reducer, 0);
+// // console.log(sum); /// 10
+
+// // ///// reduceRight
+// // const sum2 = numbersArray.reduceRight(reducer, 0);
+// // console.log(sum2); // 10
+
+// // //// flat
+// // //// array.flat(depth)
+// // const nestedArray = [1, 2, 3, [4, 5, [6, 7]]];
+// // const flatedArray1 = nestedArray.flat();
+// // console.log(flatedArray1); /// [1, 2, 3, 4, 5, Array(2)]
+// // console.log(nestedArray.flat(2)); /// [1, 2, 3, 4, 5, 6, 7]
+
+// // ///// flatMap
+// // const nestedArray2 = [
+// //   [1, 2],
+// //   [3, 4],
+// // ];
+// // const resultArray = nestedArray2.flatMap((array) => {
+// //   return [array[0] + array[1]];
+// // });
+// // console.log(resultArray); // [3, 7]
+
+// //// Write a JavaScript program to find the most frequent item in an array.
+// // let arr1 = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+// // let mf = 1;
+// // let m = 0;
+// // let item;
+
+// // for (let i = 0; i < arr1.length; i++) {
+// //   for (let j = i; j < arr1.length; j++) {
+// //     if (arr1[i] === arr1[j]) {
+// //       m++;
+// //     }
+// //     if (mf < m) {
+// //       mf = m;
+// //       item = arr1[i];
+// //     }
+// //   }
+// //   m = 0;
+// // }
+// // console.log(item + " ( " + mf + " times ) "); /// a (5 times)
+
+// //////////// Given an array of numbers, square each number and return only the even squares.
+// // const numbers = [1, 2, 3, 4, 5, 6];
+
+// // const result = numbers
+// //   .filter((item) => (item * item) % 2 === 0)
+// //   .map((item) => item * item);
+// // console.log(result); /// [4, 16, 36]
+
+// // //////////// Write a function that calculates the factorial of a given number using the reduce method.
+// // const calculateFactorial = (n) => {
+// //   const nArray = Array.from({ length: n }, (_, index) => index + 1);
+// //   const res = nArray.reduce((prev, curr) => prev * curr);
+// //   return res;
+// // };
+// // console.log(calculateFactorial(5));
+
+// // /////////// Given an array of strings, concatenate them into a single string and convert it to uppercase.
+// // const words = ["hello", "world", "javascript", "array"];
+// // const newArray = words.map((item) => item.toUpperCase()).join("");
+// // console.log(newArray);
+
+// // // Find the first element in an array that is divisible by 7.
+// // const numbers2 = [8, 15, 21, 30, 42, 50];
+// // const res = numbers2.find((item) => item % 7 === 0);
+// // console.log(res);
+
+// // //// Sort an array of strings in descending order of their lengths and then reverse the sorted array.
+// // const words2 = ["apple", "banana", "orange", "strawberry", "kiwi"];
+
+// // const res2 = words2
+// //   .sort((a, b) => {
+// //     if (a.length > b.length) {
+// //       return 1; //// > 0    a after b
+// //     } else if (a.length < b.length) {
+// //       return -1; //// <0   a before b
+// //     } else {
+// //       return 0;
+// //     }
+// //   })
+// //   .reverse();
+// // console.log(res2); //  ['strawberry', 'orange', 'banana', 'apple', 'kiwi']
+
+// // ////////////////////////////// Objects ////////////////////////////////////
+
+// // const myObj = { name: "Aleksandre" };
+// // console.log(myObj); // {name: 'Aleksandre'}
+// // console.log(myObj.name); /// Aleksandre
+
+// // const anotherObj = {
+// //   alive: true,
+// //   answer: 42,
+// //   hobbies: ["Eat", "Sleep", "Code"],
+// //   beverage: {
+// //     morning: "Coffee",
+// //     afternoon: "Iced Tea",
+// //   },
+// //   action: function () {
+// //     return "Hello from method";
+// //   },
+// //   action2: function () {
+// //     return `Time for ${this.beverage.morning}`; //// "this" refers to object
+// //   },
+// // };
+// // console.log(anotherObj.hobbies); /// ['Eat', 'Sleep', 'Code']
+// // console.log(anotherObj["hobbies"]); /// ['Eat', 'Sleep', 'Code']
+// // console.log(anotherObj.beverage.morning); /// Coffee
+// // console.log(anotherObj.action()); /// Hello from method
+// // console.log(anotherObj.action2()); /// Time for Coffee
+// // ////
+// // ////
+// // ////
+// // ////////// generic object
+// // const vehicle = {
+// //   wheels: 4,
+// //   engine: function () {
+// //     return "Vrroooom!";
+// //   },
+// // };
+// // //////
+// // /////
+// // const truck = Object.create(vehicle);
+// // truck.doors = 2;
+// // console.log(truck); /// {doors: 2}
+// // console.log(truck.wheels); /// 4  /////// Inheritance //////// truck inherits properties and methods of vehicle
+// // console.log(truck.engine()); /// Vrroooom!
+// // /////
+// // /////
+// // const car = Object.create(vehicle);
+// // car.doors = 4;
+// // car.engine = function () {
+// //   return "Whooosh";
+// // }; ///// /// overwrite inherited method
+// // console.log(car.engine()); //// Whooosh
+// // ////
+// // ////
+// // const tesla = Object.create(car);
+// // console.log(tesla.wheels); //4  /// inherits from vehicle  //// vehicle -> car -> tesla
+// // console.log(tesla.engine()); /// Whooosh
+// // tesla.engine = function () {
+// //   return "Shhhhhh";
+// // };
+// // console.log(tesla.engine()); //// Shhhhhh
+// // ///////////////
+// // //////////////
+// // /////////////
+// // const band = {
+// //   vocals: "Robert Plant",
+// //   guitar: "Jimmy Page",
+// //   bass: "John Paul Jones",
+// //   drums: "John Bonham",
+// // };
+
+// // // delete band.drums; ///// delete property
+// // console.log(Object.keys(band)); ///// ['vocals', 'guitar', 'bass', 'drums']
+// // console.log(Object.values(band)); ////  ['Robert Plant', 'Jimmy Page', 'John Paul Jones', 'John Bonham']
+// // console.log(band.hasOwnProperty("guitar")); //// true
+// // /////
+// // /////
+// // for (let job in band) {
+// //   console.log(band[job]);
+// // }
+// // // Robert Plant
+// // // Jimmy Page
+// // // John Paul Jones
+// // // John Bonham
+// // for (let job in band) {
+// //   console.log(`On ${job}, it's ${band[job]}!`);
+// // }
+// // // On vocals, it's Robert Plant!
+// // // On guitar, it's Jimmy Page!
+// // // On bass, it's John Paul Jones!
+// // // On drums, it's John Bonham!
+// // /////////
+// // //////////
+
+// // /////////////////////////// destructuring objects
+
+// // const { guitar: myVariable, bass: myBass } = band;
+// // console.log(myVariable); //// Jimmy Page
+// // console.log(myBass); /// John Paul Jones
+// // const { vocals, guitar, bass, drums } = band;
+// // console.log(drums); // John Bonham
+
+// // ////////
+// // function sings({ vocals }) {
+// //   return `${vocals} sings!`;
+// // }
+// // console.log(sings(band)); //// Robert Plant sings!
+// // ////////////
+// // ////////////
+// // //////////
+// // //////// define object with object literals
+// // const circleObj = {
+// //   radius: 1,
+// //   location: {
+// //     x: 1,
+// //     y: 1,
+// //   },
+// //   draw: function () {
+// //     return "draw";
+// //   },
+// // };
+
+// // console.log(circleObj.draw()); // "draw"
+
+// // //////////// define object with factory
+// // //// factory function
+// // function createCircle(radius) {
+// //   return {
+// //     radius,
+// //     draw: function () {
+// //       console.log("draw");
+// //     },
+// //   };
+// // }
+// // const circle = createCircle(1);
+
+// // //////////// constructor funtion
+// // function Circle(radius) {
 // //   this.radius = radius;
 // //   this.draw = function () {
 // //     console.log("draw");
 // //   };
-
-// ///////// functions are object
-// Circle.call({}, 1); /// is same as -  const another = new Circle(1);
-
-// //// Primitives are copied by their value ///// Objects are copied by their reference
-// /// value type
-// let number = 10;
-
-// function increase(number) {
-//   number++;
-// }
-// increase(number);
-// console.log(number); /// 10 //// we have two independent copies
-
-// //// reference type
-// let obj = { value: 10 };
-
-// function increase1(obj) {
-//   obj.value++;
-// }
-// increase1(obj);
-// console.log(obj); /// {value: 11} /// passed by reference
-
-// /////////////
-// //////////////
-// const propertyName = "location";
-// circle[propertyName] = { x: 1 };
-
-// function Cirlce(radius) {
-//   this.radius = radius;
-//   this.defaultLocation = { x: 0, y: 0 };
-
-//   let computeOptimumLocation = function (factor) {
-//     ///
-//   };
-//   this.draw = function () {
-//     computeOptimumLocation(0.1);
-
-//     console.log("draw");
-//   };
-// }
-// const cirlce = new Circle(10);
-
-// circle.draw();
-
-// //////////////
-// /////////////
-
-// const grades = {
-//   math: 90,
-//   science: 85,
-//   sport: 100,
-// };
-
-// function iterateOverObj(obj) {
-//   for (let subject in obj) {
-//     console.log(`${subject} ${obj[subject]}`);
-//   }
-// }
-// const result3 = iterateOverObj(grades);
-
-// ///////////////
-// //////////////
-
-// const shop = {
-//   items: [
-//     { name: "item1", price: 10 },
-//     { name: "item2", price: 20 },
-//     { name: "item3", price: 30 },
-//   ],
-//   totalCost: function () {
-//     let total = 0;
-//     for (let i = 0; i < this.items.length; i++) {
-//       total += this.items[i].price;
-//     }
-//     return total;
-//   },
-// };
-// const res3 = shop.totalCost();
-// console.log(res3);
-
-// //////////// Write a JavaScript program to list the properties of a JavaScript object.
-// const student = {
-//   name: "David Rayy",
-//   sclass: "VI",
-//   rollno: 12,
-// };
-
-// const res1 = Object.keys(student);
-// console.log(res1); /// ['name', 'sclass', 'rollno']
-
-// /////// Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
-// // delete student.rollno;
-// console.log(student); /// {name: 'David Rayy', sclass: 'VI'}
-
-// //////////////////////////////////////////Classes////////////////////////////////////////////////////////////
-// /////////////////
-// ///////////////////
-// //// create class
-// class Rectangle {
-//   //// setup object
-//   constructor(_width, _height, _color) {
-//     console.log("the rectange is being created");
-
-//     //////// define instance properties
-//     //// "this" refers to object which will created using class
-//     this.width = _width;
-//     this.height = _height;
-//     this.color = _color;
-//   }
-//   ///// creating instance methods
-//   getArea() {
-//     return this.width * this.height;
-//   }
-//   printDescription() {
-//     console.log(
-//       `I am rectangle of ${this.width} x ${this.height} and i am ${this.color}`
-//     );
-//   }
-// }
-// let myRectangle1 = new Rectangle(5, 3, "blue");
-// let myRectangle2 = new Rectangle(10, 5, "red");
-// console.log(myRectangle1); /// Rectangle {width: 5, height: 3, color: 'blue'}
-// console.log(myRectangle2); /// Rectangle {width: 10, height: 5, color: 'red'}
-// console.log(myRectangle1.getArea()); // 15
-// console.log(myRectangle2.getArea()); // 50
-// myRectangle1.printDescription(); // I am rectangle of 5 x 3 and i am blue
-// ///////////////////////
-// //////////////////////
-// /////////////////////// Getters and Setters
-
-// class Square {
-//   constructor(_width) {
-//     this.width = _width;
-//     this.height = _width;
-//     this.numOfRequestForArea = 0;
-//   }
-//   //// getter
-//   get area() {
-//     this.numOfRequestForArea++;
-//     return this.width * this.height;
-//   }
-//   //// setter
-//   set area(area) {
-//     this.width = Math.sqrt(area);
-//     this.height = this.width;
-//   }
-// }
-// let square1 = new Square(4);
-// console.log(square1.area); /// 16
-
-// square1.area = 25;
-// console.log(square1.width); /// 5
-
-// console.log(square1.area);
-// console.log(square1.area);
-// console.log(square1.numOfRequestForArea); // 3
-
-// //////////////// static methods
-// /////////////// used as helper functions
-// /////////// does not require instances
-
-// class Square1 {
-//   constructor(_width) {
-//     this.width = _width;
-//     this.height = _width;
-//   }
-//   //// a and b are two different instances
-//   static equals(a, b) {
-//     return a.width * a.height === b.width * b.height;
-//   }
-//   static isValidDimensions(width, height) {
-//     return width === height;
-//   }
-// }
-// let square3 = new Square1(8);
-// let square4 = new Square1(9);
-
-// ////// static methods called on Square1 class directly,  not on instance
-// console.log(Square1.equals(square3, square4)); /// flase
-// console.log(square3); /// Square1 {width: 8, height: 8}
-// console.log(Square1.isValidDimensions(6, 6)); /// true
-
-// /////////////////
-// /////////////////
-// ////////////////
-// //////////////////////// inheritance/extends////////////
-// ////// parent class to create child class
-
-// class Person {
-//   constructor(_name, _age) {
-//     this.name = _name;
-//     this.age = _age;
-//   }
-//   describe() {
-//     console.log(`I am ${this.name} and I am ${this.age} years old`);
-//   }
-// }
-
-// class Programmer extends Person {
-//   constructor(_name, _age, _yearsOfExperience) {
-//     super(_name, _age);
-
-//     /////// Custom behavior
-//     this.yearsOfExperience = _yearsOfExperience;
-//   }
-//   code() {
-//     console.log(`${this.name} is coding`);
-//   }
-// }
-// let person1 = new Person("Jeff", 48);
-// let programmer1 = new Programmer("Dom", 56, 12);
-
-// console.log(programmer1.code()); /// Dom is coding
-
-// ////// Programmer inherits describe method from parent class(Person)
-// programmer1.describe(); /// I am Dom and I am 56 years old
-// // console.log(person1); /// Person {name: 'Jeff', age: 48}
-// // console.log(programmer1); /// Programmer {name: 'Dom', age: 56, yearsOfExperience: 12
-
-// const programmers = [
-//   new Programmer("John", 56, 15),
-//   new Programmer("Denn", 24, 4),
-// ];
-
-// function developSoftware(programmers) {
-//   for (let programmer of programmers) {
-//     programmer.code();
-//   }
-// }
-// developSoftware(programmers);
-// // John is coding
-// // Denn is coding
-
-// /////////////////////////////////
-// /////////////////////////////////
-// ///////////////////////////////////// Polymorphism
-// //////// overwrite method inside child class
-
-// class Animal {
-//   constructor(name) {
-//     this.name = name;
-//   }
-//   makeSound() {
-//     console.log(`Generic animal sound!`);
-//   }
-// }
-
-// class Dog extends Animal {
-//   constructor(name) {
-//     super(name);
-//   }
-//   makeSound() {
-//     ///// super calls parent method
-//     super.makeSound();
-//     console.log("Woof Woof!");
-//   }
-// }
-// const a1 = new Animal("Dom");
-// a1.makeSound(); /// Generic animal sound!
-
-// const a2 = new Dog("Jeff");
-// a2.makeSound(); /// Woof Woof!
-
-// // class Pizza {
-// //   constructor(pizzaType, pizzaSize) {
-// //     this.type = pizzaType;
-// //     this.size = pizzaSize;
-// //     this.crust = "original";
-// //     this.toppings = [];
-// //   }
-// //   getCrust() {
-// //     return this.crust;
-// //   }
-// //   setCrust(pizzaCrust) {
-// //     this.crust = pizzaCrust;
-// //   }
-// //   getToppings() {
-// //     return this.toppings;
-// //   }
-// //   setToppings(topping) {
-// //     this.toppings.push(topping);
-// //   }
-// //   bake() {
-// //     console.log(`Baking a ${this.size} ${this.size} ${this.crust} crust pizza`);
-// //   }
 // // }
-// // const myPizza = new Pizza("pepperoni", "small");
-// // myPizza.setCrust("thin");
-// // myPizza.bake(); // Baking a small small thin crust pizza
-// // myPizza.setToppings("sausage");
-// // myPizza.setToppings("olive");
-// // console.log(myPizza.getToppings()); // ['sausage', 'olive']
+// // const another = new Circle(1);
 
-// ///////////////////
-// ///////////////////
-// // class Pizza {
-// //   constructor(pizzaSize) {
-// //     this.size = pizzaSize;
-// //     this.crust = "original";
-// //   }
-// //   getCrust() {
-// //     return this.crust;
-// //   }
-// //   setCrust(pizzaCrust) {
-// //     this.crust = pizzaCrust;
-// //   }
+// // ////////// constructor property
+// // //////////// every object has a constructor property and that references to function that was used to create that object
+// // let x = {}; ///// let x = new Object();
+// // console.log(another.constructor);
+// // // ƒ Circle(radius) {
+// // //   this.radius = radius;
+// // //   this.draw = function () {
+// // //     console.log("draw");
+// // //   };
+
+// // ///////// functions are object
+// // Circle.call({}, 1); /// is same as -  const another = new Circle(1);
+
+// // //// Primitives are copied by their value ///// Objects are copied by their reference
+// // /// value type
+// // let number = 10;
+
+// // function increase(number) {
+// //   number++;
 // // }
+// // increase(number);
+// // console.log(number); /// 10 //// we have two independent copies
 
-// // class SpecialtyPizza extends Pizza {
-// //   constructor(pizzaSize) {
-// //     super(pizzaSize);
-// //     this.type = "The works";
-// //   }
-// //   slice() {
-// //     console.log(`Our ${this.type} ${this.size} pizza has 8 slices.`);
-// //   }
+// // //// reference type
+// // let obj = { value: 10 };
+
+// // function increase1(obj) {
+// //   obj.value++;
 // // }
+// // increase1(obj);
+// // console.log(obj); /// {value: 11} /// passed by reference
 
-// // const mySpecialty = new SpecialtyPizza("medium");
-// // mySpecialty.slice(); // Our The works medium pizza has 8 slices.
+// // /////////////
+// // //////////////
+// // const propertyName = "location";
+// // circle[propertyName] = { x: 1 };
 
-// ///////
-// /////// naming conventions
-// ////// underscore(_) means that it is intended to be private
+// // function Cirlce(radius) {
+// //   this.radius = radius;
+// //   this.defaultLocation = { x: 0, y: 0 };
 
-// // class Pizza {
-// //   constructor(pizzaSize) {
-// //     this._size = pizzaSize;
-// //     this._crust = "original";
-// //   }
-// //   getCrust() {
-// //     return this._crust;
-// //   }
-// //   setCrust(pizzaCrust) {
-// //     this._crust = pizzaCrust;
-// //   }
-// // }
+// //   let computeOptimumLocation = function (factor) {
+// //     ///
+// //   };
+// //   this.draw = function () {
+// //     computeOptimumLocation(0.1);
 
-// /////////// factory function
-// ////////// we have private properties which will not accessible outside of object
-
-// // function pizzaFactory(pizzaSize) {
-// //   const crust = "original";
-// //   const size = pizzaSize;
-// //   return {
-// //     bake: () => console.log(`Baking a ${size} ${crust} crust pizza`),
+// //     console.log("draw");
 // //   };
 // // }
+// // const cirlce = new Circle(10);
 
-// // const myPizza = pizzaFactory("small");
-// // myPizza.bake(); /// Baking a small original crust pizza
+// // circle.draw();
 
-// ///// public and private fields
-// class Pizza {
-//   ///// public field
-//   crust = "original";
-//   //// private field
-//   #sauce = "traditional";
-//   #size;
-//   constructor(pizzaSize) {
-//     this.#size = pizzaSize;
-//   }
-//   getCrust() {
-//     return this.crust;
-//   }
-//   setCrust(pizzaCrust) {
-//     this.crust = pizzaCrust;
-//   }
-//   hereYouGo() {
-//     console.log(
-//       `Here's your ${this.crust} ${this.#sauce} sauce ${this.#size} pizza`
-//     );
-//   }
-// }
-// const myPizza = new Pizza("large");
-// myPizza.hereYouGo(); // Here's your original traditional sauce large pizza
-// //// is accessible with . notation
-// console.log(myPizza.getCrust()); // original
-// /// is not accessible
-// console.log(myPizza.sauce); /// undefined
+// // //////////////
+// // /////////////
 
-// ////////////////////////////////////// this keyword ///////////////////////////////////////////////////////
+// // const grades = {
+// //   math: 90,
+// //   science: 85,
+// //   sport: 100,
+// // };
 
-// /////////// method -> obj
-// const video = {
-//   title: "a",
-//   play() {
-//     console.log(this);
-//   },
-// };
-// video.stop = function () {
-//   console.log(this);
-// };
-// video.play(); /// {title: 'a', play: ƒ} /// got video object
-// video.stop(); // {title: 'a', play: ƒ, stop: ƒ}   // got video object
+// // function iterateOverObj(obj) {
+// //   for (let subject in obj) {
+// //     console.log(`${subject} ${obj[subject]}`);
+// //   }
+// // }
+// // const result3 = iterateOverObj(grades);
 
-// ///////////// function -> global (window, global)
+// // ///////////////
+// // //////////////
 
-// function Video(title) {
-//   this.title = title;
-//   console.log(this);
-// }
-// const v = new Video("b"); /// Video {title: 'b'}
+// // const shop = {
+// //   items: [
+// //     { name: "item1", price: 10 },
+// //     { name: "item2", price: 20 },
+// //     { name: "item3", price: 30 },
+// //   ],
+// //   totalCost: function () {
+// //     let total = 0;
+// //     for (let i = 0; i < this.items.length; i++) {
+// //       total += this.items[i].price;
+// //     }
+// //     return total;
+// //   },
+// // };
+// // const res3 = shop.totalCost();
+// // console.log(res3);
 
-// ///////////////
+// // //////////// Write a JavaScript program to list the properties of a JavaScript object.
+// // const student = {
+// //   name: "David Rayy",
+// //   sclass: "VI",
+// //   rollno: 12,
+// // };
 
-// const video2 = {
-//   title: "a",
-//   tags: ["a", "b", "c"],
-//   showTags() {
-//     this.tags.forEach(function (tag) {
-//       console.log(this, tag);
-//     });
-//   },
-// };
-// video2.showTags();
-// // undefined 'a'
-// // undefined 'b'
-// // undefined 'c'
+// // const res1 = Object.keys(student);
+// // console.log(res1); /// ['name', 'sclass', 'rollno']
 
-// const video3 = {
-//   title: "a",
-//   tags: ["a", "b", "c"],
-//   showTags() {
-//     this.tags.forEach(function (tag) {
-//       console.log(this.title, tag);
-//     }, this); /////// we can pass this as second argument in callback function with will point to object
-//   },
-// };
-// video3.showTags();
-// // a a
-// // a b
-// // a c
+// // /////// Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+// // // delete student.rollno;
+// // console.log(student); /// {name: 'David Rayy', sclass: 'VI'}
 
-// ///////////////////
-// ///////////////////
-// //////////////////
+// // //////////////////////////////////////////Classes////////////////////////////////////////////////////////////
+// // /////////////////
+// // ///////////////////
+// // //// create class
+// // class Rectangle {
+// //   //// setup object
+// //   constructor(_width, _height, _color) {
+// //     console.log("the rectange is being created");
 
-// function showFace() {
-//   return this.face;
-// }
-// const jeff = {
-//   face: "smile",
-// };
-// const showJeffFace = showFace.bind(jeff);
-// console.log(showJeffFace()); /// smile
-// /////////////////////
-// /////////////////////
-// /////////////////////
+// //     //////// define instance properties
+// //     //// "this" refers to object which will created using class
+// //     this.width = _width;
+// //     this.height = _height;
+// //     this.color = _color;
+// //   }
+// //   ///// creating instance methods
+// //   getArea() {
+// //     return this.width * this.height;
+// //   }
+// //   printDescription() {
+// //     console.log(
+// //       `I am rectangle of ${this.width} x ${this.height} and i am ${this.color}`
+// //     );
+// //   }
+// // }
+// // let myRectangle1 = new Rectangle(5, 3, "blue");
+// // let myRectangle2 = new Rectangle(10, 5, "red");
+// // console.log(myRectangle1); /// Rectangle {width: 5, height: 3, color: 'blue'}
+// // console.log(myRectangle2); /// Rectangle {width: 10, height: 5, color: 'red'}
+// // console.log(myRectangle1.getArea()); // 15
+// // console.log(myRectangle2.getArea()); // 50
+// // myRectangle1.printDescription(); // I am rectangle of 5 x 3 and i am blue
+// // ///////////////////////
+// // //////////////////////
+// // /////////////////////// Getters and Setters
 
-// function talk() {
-//   return `I am ${this.name}`;
-// }
+// // class Square {
+// //   constructor(_width) {
+// //     this.width = _width;
+// //     this.height = _width;
+// //     this.numOfRequestForArea = 0;
+// //   }
+// //   //// getter
+// //   get area() {
+// //     this.numOfRequestForArea++;
+// //     return this.width * this.height;
+// //   }
+// //   //// setter
+// //   set area(area) {
+// //     this.width = Math.sqrt(area);
+// //     this.height = this.width;
+// //   }
+// // }
+// // let square1 = new Square(4);
+// // console.log(square1.area); /// 16
 
-// const me = {
-//   name: "Sina",
-//   talk,
-// };
-// const you = {
-//   name: "Qoli",
-//   talk,
-// };
-// console.log(me.talk()); // I am Sina
-// console.log(you.talk()); // I am Qoli
+// // square1.area = 25;
+// // console.log(square1.width); /// 5
 
-// /////////////////
-// ////////////////// bind/////////
+// // console.log(square1.area);
+// // console.log(square1.area);
+// // console.log(square1.numOfRequestForArea); // 3
 
-// function talk2() {
-//   return `I am ${this.name}`;
-// }
-// const me2 = {
-//   name: "Sina",
-// };
-// console.log(talk.bind(me)); ////////// takes me object and you as value of this
-// // ////ƒ talk() {
+// // //////////////// static methods
+// // /////////////// used as helper functions
+// // /////////// does not require instances
+
+// // class Square1 {
+// //   constructor(_width) {
+// //     this.width = _width;
+// //     this.height = _width;
+// //   }
+// //   //// a and b are two different instances
+// //   static equals(a, b) {
+// //     return a.width * a.height === b.width * b.height;
+// //   }
+// //   static isValidDimensions(width, height) {
+// //     return width === height;
+// //   }
+// // }
+// // let square3 = new Square1(8);
+// // let square4 = new Square1(9);
+
+// // ////// static methods called on Square1 class directly,  not on instance
+// // console.log(Square1.equals(square3, square4)); /// flase
+// // console.log(square3); /// Square1 {width: 8, height: 8}
+// // console.log(Square1.isValidDimensions(6, 6)); /// true
+
+// // /////////////////
+// // /////////////////
+// // ////////////////
+// // //////////////////////// inheritance/extends////////////
+// // ////// parent class to create child class
+
+// // class Person {
+// //   constructor(_name, _age) {
+// //     this.name = _name;
+// //     this.age = _age;
+// //   }
+// //   describe() {
+// //     console.log(`I am ${this.name} and I am ${this.age} years old`);
+// //   }
+// // }
+
+// // class Programmer extends Person {
+// //   constructor(_name, _age, _yearsOfExperience) {
+// //     super(_name, _age);
+
+// //     /////// Custom behavior
+// //     this.yearsOfExperience = _yearsOfExperience;
+// //   }
+// //   code() {
+// //     console.log(`${this.name} is coding`);
+// //   }
+// // }
+// // let person1 = new Person("Jeff", 48);
+// // let programmer1 = new Programmer("Dom", 56, 12);
+
+// // console.log(programmer1.code()); /// Dom is coding
+
+// // ////// Programmer inherits describe method from parent class(Person)
+// // programmer1.describe(); /// I am Dom and I am 56 years old
+// // // console.log(person1); /// Person {name: 'Jeff', age: 48}
+// // // console.log(programmer1); /// Programmer {name: 'Dom', age: 56, yearsOfExperience: 12
+
+// // const programmers = [
+// //   new Programmer("John", 56, 15),
+// //   new Programmer("Denn", 24, 4),
+// // ];
+
+// // function developSoftware(programmers) {
+// //   for (let programmer of programmers) {
+// //     programmer.code();
+// //   }
+// // }
+// // developSoftware(programmers);
+// // // John is coding
+// // // Denn is coding
+
+// // /////////////////////////////////
+// // /////////////////////////////////
+// // ///////////////////////////////////// Polymorphism
+// // //////// overwrite method inside child class
+
+// // class Animal {
+// //   constructor(name) {
+// //     this.name = name;
+// //   }
+// //   makeSound() {
+// //     console.log(`Generic animal sound!`);
+// //   }
+// // }
+
+// // class Dog extends Animal {
+// //   constructor(name) {
+// //     super(name);
+// //   }
+// //   makeSound() {
+// //     ///// super calls parent method
+// //     super.makeSound();
+// //     console.log("Woof Woof!");
+// //   }
+// // }
+// // const a1 = new Animal("Dom");
+// // a1.makeSound(); /// Generic animal sound!
+
+// // const a2 = new Dog("Jeff");
+// // a2.makeSound(); /// Woof Woof!
+
+// // // class Pizza {
+// // //   constructor(pizzaType, pizzaSize) {
+// // //     this.type = pizzaType;
+// // //     this.size = pizzaSize;
+// // //     this.crust = "original";
+// // //     this.toppings = [];
+// // //   }
+// // //   getCrust() {
+// // //     return this.crust;
+// // //   }
+// // //   setCrust(pizzaCrust) {
+// // //     this.crust = pizzaCrust;
+// // //   }
+// // //   getToppings() {
+// // //     return this.toppings;
+// // //   }
+// // //   setToppings(topping) {
+// // //     this.toppings.push(topping);
+// // //   }
+// // //   bake() {
+// // //     console.log(`Baking a ${this.size} ${this.size} ${this.crust} crust pizza`);
+// // //   }
+// // // }
+// // // const myPizza = new Pizza("pepperoni", "small");
+// // // myPizza.setCrust("thin");
+// // // myPizza.bake(); // Baking a small small thin crust pizza
+// // // myPizza.setToppings("sausage");
+// // // myPizza.setToppings("olive");
+// // // console.log(myPizza.getToppings()); // ['sausage', 'olive']
+
+// // ///////////////////
+// // ///////////////////
+// // // class Pizza {
+// // //   constructor(pizzaSize) {
+// // //     this.size = pizzaSize;
+// // //     this.crust = "original";
+// // //   }
+// // //   getCrust() {
+// // //     return this.crust;
+// // //   }
+// // //   setCrust(pizzaCrust) {
+// // //     this.crust = pizzaCrust;
+// // //   }
+// // // }
+
+// // // class SpecialtyPizza extends Pizza {
+// // //   constructor(pizzaSize) {
+// // //     super(pizzaSize);
+// // //     this.type = "The works";
+// // //   }
+// // //   slice() {
+// // //     console.log(`Our ${this.type} ${this.size} pizza has 8 slices.`);
+// // //   }
+// // // }
+
+// // // const mySpecialty = new SpecialtyPizza("medium");
+// // // mySpecialty.slice(); // Our The works medium pizza has 8 slices.
+
+// // ///////
+// // /////// naming conventions
+// // ////// underscore(_) means that it is intended to be private
+
+// // // class Pizza {
+// // //   constructor(pizzaSize) {
+// // //     this._size = pizzaSize;
+// // //     this._crust = "original";
+// // //   }
+// // //   getCrust() {
+// // //     return this._crust;
+// // //   }
+// // //   setCrust(pizzaCrust) {
+// // //     this._crust = pizzaCrust;
+// // //   }
+// // // }
+
+// // /////////// factory function
+// // ////////// we have private properties which will not accessible outside of object
+
+// // // function pizzaFactory(pizzaSize) {
+// // //   const crust = "original";
+// // //   const size = pizzaSize;
+// // //   return {
+// // //     bake: () => console.log(`Baking a ${size} ${crust} crust pizza`),
+// // //   };
+// // // }
+
+// // // const myPizza = pizzaFactory("small");
+// // // myPizza.bake(); /// Baking a small original crust pizza
+
+// // ///// public and private fields
+// // class Pizza {
+// //   ///// public field
+// //   crust = "original";
+// //   //// private field
+// //   #sauce = "traditional";
+// //   #size;
+// //   constructor(pizzaSize) {
+// //     this.#size = pizzaSize;
+// //   }
+// //   getCrust() {
+// //     return this.crust;
+// //   }
+// //   setCrust(pizzaCrust) {
+// //     this.crust = pizzaCrust;
+// //   }
+// //   hereYouGo() {
+// //     console.log(
+// //       `Here's your ${this.crust} ${this.#sauce} sauce ${this.#size} pizza`
+// //     );
+// //   }
+// // }
+// // const myPizza = new Pizza("large");
+// // myPizza.hereYouGo(); // Here's your original traditional sauce large pizza
+// // //// is accessible with . notation
+// // console.log(myPizza.getCrust()); // original
+// // /// is not accessible
+// // console.log(myPizza.sauce); /// undefined
+
+// // ////////////////////////////////////// this keyword ///////////////////////////////////////////////////////
+
+// // /////////// method -> obj
+// // const video = {
+// //   title: "a",
+// //   play() {
+// //     console.log(this);
+// //   },
+// // };
+// // video.stop = function () {
+// //   console.log(this);
+// // };
+// // video.play(); /// {title: 'a', play: ƒ} /// got video object
+// // video.stop(); // {title: 'a', play: ƒ, stop: ƒ}   // got video object
+
+// // ///////////// function -> global (window, global)
+
+// // function Video(title) {
+// //   this.title = title;
+// //   console.log(this);
+// // }
+// // const v = new Video("b"); /// Video {title: 'b'}
+
+// // ///////////////
+
+// // const video2 = {
+// //   title: "a",
+// //   tags: ["a", "b", "c"],
+// //   showTags() {
+// //     this.tags.forEach(function (tag) {
+// //       console.log(this, tag);
+// //     });
+// //   },
+// // };
+// // video2.showTags();
+// // // undefined 'a'
+// // // undefined 'b'
+// // // undefined 'c'
+
+// // const video3 = {
+// //   title: "a",
+// //   tags: ["a", "b", "c"],
+// //   showTags() {
+// //     this.tags.forEach(function (tag) {
+// //       console.log(this.title, tag);
+// //     }, this); /////// we can pass this as second argument in callback function with will point to object
+// //   },
+// // };
+// // video3.showTags();
+// // // a a
+// // // a b
+// // // a c
+
+// // ///////////////////
+// // ///////////////////
+// // //////////////////
+
+// // function showFace() {
+// //   return this.face;
+// // }
+// // const jeff = {
+// //   face: "smile",
+// // };
+// // const showJeffFace = showFace.bind(jeff);
+// // console.log(showJeffFace()); /// smile
+// // /////////////////////
+// // /////////////////////
+// // /////////////////////
+
+// // function talk() {
 // //   return `I am ${this.name}`;
 // // }
-// const meTalk = talk.bind(me);
-// console.log(meTalk()); /// I am Sina
 
-// console.log(talk.call(me)); /// I am Sina
+// // const me = {
+// //   name: "Sina",
+// //   talk,
+// // };
+// // const you = {
+// //   name: "Qoli",
+// //   talk,
+// // };
+// // console.log(me.talk()); // I am Sina
+// // console.log(you.talk()); // I am Qoli
 
-// //////////////////
-// /////////////////// call with one argument
+// // /////////////////
+// // ////////////////// bind/////////
 
-// // function talk3(lang) {
-// //   if (lang === "en") {
-// //     return `I am ${this.name}`;
-// //   } else if (lang === "it") {
-// //     return `Io sono ${this.name}`;
+// // function talk2() {
+// //   return `I am ${this.name}`;
+// // }
+// // const me2 = {
+// //   name: "Sina",
+// // };
+// // console.log(talk.bind(me)); ////////// takes me object and you as value of this
+// // // ////ƒ talk() {
+// // //   return `I am ${this.name}`;
+// // // }
+// // const meTalk = talk.bind(me);
+// // console.log(meTalk()); /// I am Sina
+
+// // console.log(talk.call(me)); /// I am Sina
+
+// // //////////////////
+// // /////////////////// call with one argument
+
+// // // function talk3(lang) {
+// // //   if (lang === "en") {
+// // //     return `I am ${this.name}`;
+// // //   } else if (lang === "it") {
+// // //     return `Io sono ${this.name}`;
+// // //   }
+// // // }
+// // // const me3 = {
+// // //   name: "Sina",
+// // // };
+// // // console.log(talk3.call(me, "en")); ///  I am Sina
+// // // console.log(talk3.call(me, "it")); // Io sono Sina
+
+// // ////////////////
+// // ///////////////// call with two argument
+
+// // function talk3(lang, isPolite) {
+// //   if (isPolite) {
+// //     if (lang === "en") {
+// //       return `I am ${this.name}`;
+// //     } else if (lang === "it") {
+// //       return `Ciao bella, sono ${this.name}`;
+// //     }
+// //   }
+// //   if (!isPolite) {
+// //     if (lang === "en") {
+// //       return `${this.name} what you want?`;
+// //     } else if (lang === "it") {
+// //       return `Sono ${this.name}`;
+// //     }
 // //   }
 // // }
 // // const me3 = {
 // //   name: "Sina",
 // // };
-// // console.log(talk3.call(me, "en")); ///  I am Sina
-// // console.log(talk3.call(me, "it")); // Io sono Sina
 
-// ////////////////
-// ///////////////// call with two argument
+// // console.log(talk3.call(me3, "it", true)); /// Ciao bella, sono Sina
 
-// function talk3(lang, isPolite) {
-//   if (isPolite) {
-//     if (lang === "en") {
-//       return `I am ${this.name}`;
-//     } else if (lang === "it") {
-//       return `Ciao bella, sono ${this.name}`;
-//     }
-//   }
-//   if (!isPolite) {
-//     if (lang === "en") {
-//       return `${this.name} what you want?`;
-//     } else if (lang === "it") {
-//       return `Sono ${this.name}`;
-//     }
-//   }
+// // ///////////// same with apply // arguments are passed with array
+// // console.log(talk3.apply(me3, ["it", true])); //// Ciao bella, sono Sina
+
+// // //////////////////////
+// // ////////////////////
+// // //////////// constructor functions///////////// binding is created automaticaly
+
+// // function PersonNew(n) {
+// //   this.name = n;
+// //   this.talk = function () {
+// //     console.log(this);
+// //   };
+// //   // setTimeout(function () {
+// //   //   console.log(this); /////////// Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+// //   // }, 100);
+
+// //   // setTimeout(
+// //   //   function () {
+// //   //     console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
+// //   //   }.bind(this),
+// //   //   100
+// //   // );
+
+// //   setTimeout(() => {
+// //     console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
+// //   }, 100);
+// // }
+// // const me4 = new PersonNew("Sina"); /// PersonNew {name: 'Sina'}
+// // me4.talk(); /// PersonNew {name: 'Sina', talk: ƒ}
+
+// /////////////////////////////
+// /////////////////////////////
+// //////////////////////////////////////// getters and setters///////////////////////////////////////////////
+
+// // const person = {
+// //   firstName: "Aleksandre",
+// //   lastName: "Shervashidze",
+// //   get fullName() {
+// //     return `${person.firstName} ${person.lastName}`;
+// //   },
+// //   set fullName(value) {
+// //     const parts = value.split(" ");
+// //     this.firstName = parts[0];
+// //     this.lastName = parts[1];
+// //   },
+// // };
+// // person.fullName = "John Smith";
+// // console.log(person);
+
+// /////////////////////////////////////////
+// /////////////////////////////////////////
+// ////////////////////////////////////////////////// functions //////////////////////////////
+
+// ////////////
+// //////////// function statement aka function declaration
+// a(); /// a called  ///// function statement/declaration are hoisted and can be called before declaration
+
+// function a() {
+//   console.log("a called");
 // }
-// const me3 = {
-//   name: "Sina",
+
+// //////////
+// ///////// function expression
+// // b(); // Uncaught ReferenceError: Cannot access 'b' before initialization
+
+// const b = function () {
+//   console.log("b called");
 // };
 
-// console.log(talk3.call(me3, "it", true)); /// Ciao bella, sono Sina
+// //////////
+// ////////// Anonymous function
+// //////// functions without a name. we need to assign it to variable
 
-// ///////////// same with apply // arguments are passed with array
-// console.log(talk3.apply(me3, ["it", true])); //// Ciao bella, sono Sina
+// // function () {
+// //   //...
+// // });
+
+// /////////
+// ///////// Named functions expression
+
+// const b2 = function xys() {
+//   console.log("b2 called");
+// };
+
+// //////// xys it not created in outer scope
+// // xys(); /// xys is not defined
 
 // //////////////////////
-// ////////////////////
-// //////////// constructor functions///////////// binding is created automaticaly
+// /////////////////////  difference between parameters and arguments
 
-// function PersonNew(n) {
-//   this.name = n;
-//   this.talk = function () {
-//     console.log(this);
-//   };
-//   // setTimeout(function () {
-//   //   console.log(this); /////////// Window {window: Window, self: Window, document: document, name: '', location: Location, …}
-//   // }, 100);
-
-//   // setTimeout(
-//   //   function () {
-//   //     console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
-//   //   }.bind(this),
-//   //   100
-//   // );
-
-//   setTimeout(() => {
-//     console.log(this); /////////// PersonNew {name: 'Sina', talk: ƒ}
-//   }, 100);
-// }
-// const me4 = new PersonNew("Sina"); /// PersonNew {name: 'Sina'}
-// me4.talk(); /// PersonNew {name: 'Sina', talk: ƒ}
-
-/////////////////////////////
-/////////////////////////////
-//////////////////////////////////////// getters and setters///////////////////////////////////////////////
-
-// const person = {
-//   firstName: "Aleksandre",
-//   lastName: "Shervashidze",
-//   get fullName() {
-//     return `${person.firstName} ${person.lastName}`;
-//   },
-//   set fullName(value) {
-//     const parts = value.split(" ");
-//     this.firstName = parts[0];
-//     this.lastName = parts[1];
-//   },
+// const b3 = function (param1, param2) {
+//   /// param1 and param2 are parameters
+//   console.log(`b called with ${param1}, ${param2}`); /// param1 and param2 are accessable only in this body
 // };
-// person.fullName = "John Smith";
-// console.log(person);
+// b3(1, 2); ///// 1, 2 are arguments
 
-/////////////////////////////////////////
-/////////////////////////////////////////
-////////////////////////////////////////////////// functions //////////////////////////////
+// //////////////////
+// //////////////////// first class functions/// first class citizens
+// ///////////// ability to use functions as values /// and return function from function
 
-////////////
-//////////// function statement aka function declaration
-a(); /// a called  ///// function statement/declaration are hoisted and can be called before declaration
+// const b4 = function (param1) {
+//   return function xyz() {};
+// };
+// console.log(b4()); // ƒ xyz() {}
 
-function a() {
-  console.log("a called");
-}
+// /////////////////////
+// /////////////////////// callback function
 
-//////////
-///////// function expression
-// b(); // Uncaught ReferenceError: Cannot access 'b' before initialization
+// setTimeout(function () {
+//   console.log("times");
+// }, 5000);
 
-const b = function () {
-  console.log("b called");
-};
-
-//////////
-////////// Anonymous function
-//////// functions without a name. we need to assign it to variable
-
-// function () {
-//   //...
+// function x(y) {
+//   console.log("x");
+//   y();
+// }
+// x(function y() {
+//   console.log("y");
 // });
 
-/////////
-///////// Named functions expression
-
-const b2 = function xys() {
-  console.log("b2 called");
-};
-
-//////// xys it not created in outer scope
-// xys(); /// xys is not defined
-
-//////////////////////
-/////////////////////  difference between parameters and arguments
-
-const b3 = function (param1, param2) {
-  /// param1 and param2 are parameters
-  console.log(`b called with ${param1}, ${param2}`); /// param1 and param2 are accessable only in this body
-};
-b3(1, 2); ///// 1, 2 are arguments
-
-//////////////////
-//////////////////// first class functions/// first class citizens
-///////////// ability to use functions as values /// and return function from function
-
-const b4 = function (param1) {
-  return function xyz() {};
-};
-console.log(b4()); // ƒ xyz() {}
-
-/////////////////////
-/////////////////////// callback function
-
-setTimeout(function () {
-  console.log("times");
-}, 5000);
-
-function x(y) {
-  console.log("x");
-  y();
-}
-x(function y() {
-  console.log("y");
-});
-
-//////////////
-//////////////
-
-function attachEventListener() {
-  let count = 0;
-  document.getElementById("clickMe").addEventListener("click", function xyz() {
-    console.log("button clicked", ++count);
-  });
-}
-
-attachEventListener();
-
-////////////////////////////////  Constructor function /////////////////////////////////////////////////////////
-
-// function Person(name) {
-//   this.name = name;
-// }
-// const sina = new Person("Sina");
-// console.log(sina);
-
-// function Person(name) {
-//   this.name = name;
-//   this.talk = () => {
-//     return `Hello i am ${this.name}`;
-//   };
-// }
-// const sina = new Person("Sina");
-// const ben = new Person("Ben");
-// const sam = new Person("Sam");
-
-function SuperElement(type, content) {
-  this.el = document.createElement(type);
-  this.el.innerText = content;
-  document.body.append(this.el);
-  this.el.addEventListener("click", () => {
-    console.log(this.el);
-  });
-}
-
-const h1 = new SuperElement("h1", "Hello");
-
-const array = ["a", "b", "c"];
-const myElements = array.map((item) => {
-  return new SuperElement("p", item);
-});
-
-var bunny = {
-  lovesCarrots: true,
-  f: function () {
-    return this.lovesCarrots;
-  },
-};
-console.log(bunny.f()); // true
-
-var person = {
-  firstName: "Penelope",
-  lastName: "Barrymore",
-  getName: function () {
-    return this.firstName + " " + this.lastName;
-  },
-};
-console.log(person.getName()); // Penelope Barrymore
-
-var o = {
-  prop: 37,
-  f: function () {
-    return this.prop;
-  },
-};
-console.log(o.f()); /// 37
-
-const ad = {
-  name: "wasef",
-  foo: function () {
-    console.log(this);
-  },
-};
-
-ad.foo(); // {name: 'wasef', foo: ƒ}
-
-const at = {
-  name: "wasef",
-  foo: function () {
-    console.log(this);
-  },
-};
-
-const newFoo = at.foo;
-newFoo();
-
-const av = {
-  name: "wasef",
-};
-
-function foo() {
-  console.log(this);
-}
-
-const newFooo = foo.bind(av);
-newFooo();
-
-function foo2() {
-  const a = () => {
-    console.log(this);
-  };
-  a();
-}
-
-foo2();
-
-const person1 = {
-  name: "Pedro",
-  surname: "Sanchez",
-  sayName: function () {
-    return this.name + " " + this.surname;
-  },
-};
-
-const person2 = {
-  name: "Jimena",
-  surname: "Juarez",
-};
-
-console.log(person1.sayName.call(person2)); /// Jimena Juarez
-
-const person3 = {
-  name: "Pedro",
-  surname: "Sanchez",
-  sayName: function (city, country) {
-    return this.name + " " + this.surname + ", " + city + ", " + country;
-  },
-};
-
-const person4 = {
-  name: "Jimena",
-  surname: "Juarez",
-};
-
-console.log(person3.sayName.apply(person4, ["DF", "Mexico"])); // Jimena Juarez, DF, Mexico
-
-const person5 = {
-  name: "Pedro",
-  surname: "Sanchez",
-  sayName: function () {
-    return this.name + " " + this.surname;
-  },
-};
-
-const person6 = {
-  name: "Jimena",
-  surname: "Juarez",
-};
-
-const sayPerson2Name = person5.sayName.bind(person6);
-
-console.log(sayPerson2Name()); // Jimena Juarez
-
-/////////////////////////////////
-////////////////////////////////
-/////////////////////////////////////////// Prototypes ///////////////////////////////////////////////////////
-/////////////////////////
-///////////////////////////
-
-const objTest = {
-  name: "Aleksandre",
-  age: 29,
-};
-console.log(objTest);
-
-///// {name: 'Aleksandre', age: 29}
-// age: 29
-// name: "Aleksandre"
-// [[Prototype]]: Object
-
-const arrTest = [1, 2, 3];
-console.log(arrTest);
-// [1, 2, 3]
-// 0: 1
-// 1: 2
-// 2: 3
-// length: 3
-// [[Prototype]]: Array(0)
-
-const strTest = "string";
-console.log(strTest.__proto__);
-// String {'', constructor: ƒ, anchor: ƒ, at: ƒ, big: ƒ, …}
-
-////////
-////////
-const human = {
-  kind: "Human",
-};
-const sina = Object.create(human);
-console.log(sina);
-// [[Prototype]]: Object
-// kind: "Human"
-// [[Prototype]]: Object
-
-///////////
-/////////////
-class Human {
-  talk() {
-    return "Talking";
-  }
-}
-class SuperHuman extends Human {
-  fly() {
-    return "Flying";
-  }
-}
-const ben = new SuperHuman();
-console.log(ben.fly()); // Flying
-console.log(ben.talk()); // Talking
-console.log(ben); // SuperHuman {}[[Prototype]]: Human
-// [[Prototype]]: Human
-// constructor: class SuperHuman
-// fly: ƒ fly()
-// [[Prototype]]: Object
-// constructor: class Human
-// talk: ƒ talk()
-// [[Prototype]]: Object
-
-////////////////
-//////////////////
-
-function Dude(name) {
-  this.name = name;
-}
-const me = new Dude("Sina");
-console.log(me.prototype); // undefined
-console.log(Dude.prototype);
-// {constructor: ƒ}
-// constructor: ƒ Dude(name)
-// [[Prototype]]: Object
-
-console.log(me.__proto__);
-// {constructor: ƒ}
-// constructor: ƒ Dude(name)
-// [[Prototype]]: Object
-
-console.log(Dude.prototype === me.__proto__); /// true
-Dude.prototype.talk = function () {
-  return "Talking";
-};
-console.log(me.__proto__); // {talk: ƒ, constructor: ƒ}
-
-let myObj = {}; // new Object()
-console.log(myObj.constructor); // ƒ Object() { [native code] }
-console.log(myObj.__proto__ === myObj.constructor.prototype); // true
-
-/////////////////////
-///////////////// objects delegation to other objects
-
-let cat = { breed: "munchkin" };
-
-let myCat = { name: "Fluffykins" };
-
-Object.setPrototypeOf(myCat, cat);
-console.log(myCat.breed); // munchkin
-
-console.log(myCat.__proto__); // Object {breed: 'munchkin'}
-cat.tailLenght = 15;
-console.log(myCat.__proto__); // {breed: 'munchkin', tailLenght: 15}
-
-///////////////////////////////////////
-/////////////////////////////////////
-///////////////////////////////////////////////// Event loop ///////////////////////////////////
-///////////////////////// Micro/Macro Tasks////////////////
-console.log("A stack");
-queueMicrotask(function () {
-  console.log("B microtask");
-});
-requestAnimationFrame(function () {
-  console.log("C rAF");
-});
-console.log("D stack");
-setTimeout(function () {
-  console.log("E task");
-}, 0);
-console.log("F stack");
-Promise.resolve()
-  .then(function () {
-    console.log("G microtask");
-  })
-  .then(function () {
-    console.log("H microtask");
-  });
-requestAnimationFrame(function () {
-  console.log("I rAF");
-});
-console.log("J stack");
-setTimeout(function () {
-  console.log("K task");
-});
-queueMicrotask(function () {
-  console.log("L microtask");
-});
-console.log("M stack");
-// A stack
-// D stack
-// F stack
-// J stack
-// M stack
-// B microtask
-// G microtask
-// L microtask
-// H microtask
-// E task
-// K task
-// C rAF
-// I rAF
-
-setTimeout(() => {
-  console.log("Task1 - completed");
-});
-
-let promiseTask = new Promise((resolve, reject) => {
-  resolve();
-});
-promiseTask.then(() => {
-  console.log("Task2 - completed");
-});
-
-console.log("Main code completed");
-/// Main code completed
-// Task2 - completed
-// Task1 - completed
-
-///////////////////////////////////////////////// Async ///////////////////////////////////////
-////////////////////////// callbacks
-
-// const posts = [
-//   { title: "Post One", body: "This is post one" },
-//   { title: "Post Two", body: "This is post two" },
-// ];
-
-// function getPosts() {
-//   setTimeout(() => {
-//     let output = "";
-//     posts.forEach((post, index) => {
-//       output += `<li>${post.title}</li>`;
-//     });
-//     document.body.innerHTML = output;
-//   }, 1000);
-// }
-
-// function createPost(post, callback) {
-//   setTimeout(() => {
-//     posts.push(post);
-//     callback();
-//   }, 2000);
-// }
-
-// getPosts();
-
-// createPost({ title: "Post Three", body: "This is post three" }, getPosts);
-
-///////////////////////////////
-/////////////////////////////////  Promises
-
-// const posts = [
-//   { title: "Post One", body: "This is post one" },
-//   { title: "Post Two", body: "This is post two" },
-// ];
-
-// function getPosts() {
-//   setTimeout(() => {
-//     let output = "";
-//     posts.forEach((post, index) => {
-//       output += `<li>${post.title}</li>`;
-//     });
-//     document.body.innerHTML = output;
-//   }, 1000);
-// }
-
-// function createPost(post) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       posts.push(post);
-//       const error = false;
-
-//       if (!error) {
-//         resolve();
-//       } else {
-//         reject("Error: something went wrong");
-//       }
-//     }, 2000);
+// //////////////
+// //////////////
+
+// function attachEventListener() {
+//   let count = 0;
+//   document.getElementById("clickMe").addEventListener("click", function xyz() {
+//     console.log("button clicked", ++count);
 //   });
 // }
 
-// // createPost({ title: "Post Three", body: "This is post three" })
-// //   .then(getPosts)
-// //   .catch((err) => console.log(err));
+// attachEventListener();
 
-// ///// Async/Await
-// /////////
+// ////////////////////////////////  Constructor function /////////////////////////////////////////////////////////
 
-// async function init() {
-//   await createPost({ title: "Post Three", body: "This is post three" });
-//   getPosts();
-// }
-// init();
+// // function Person(name) {
+// //   this.name = name;
+// // }
+// // const sina = new Person("Sina");
+// // console.log(sina);
 
-// ///////// Async await with fetch
-// /////////////
+// // function Person(name) {
+// //   this.name = name;
+// //   this.talk = () => {
+// //     return `Hello i am ${this.name}`;
+// //   };
+// // }
+// // const sina = new Person("Sina");
+// // const ben = new Person("Ben");
+// // const sam = new Person("Sam");
 
-// async function fetchUsers() {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/users");
-//   const data = await res.json();
-//   console.log(data);
-// }
-// fetchUsers();
-// ////// Promise.all
-// /////////
-
-// const promise1 = Promise.resolve("Hello World");
-// const promise2 = 10;
-// const promise3 = new Promise((resolve, reject) =>
-//   setTimeout(resolve, 2000, "Goodbye")
-// );
-
-// const promise4 = fetch("https://jsonplaceholder.typicode.com/users").then(
-//   (res) => res.json()
-// );
-
-// Promise.all([promise1, promise2, promise3, promise4]).then((values) =>
-//   console.log(values)
-// );
-
-////////////////////////////////////////
-/////////////////////////////////////
-//////////////////////////////////////// Fetch ///////////////////////////////////////
-
-/////////////////////////// Basic fetch
-// const url = "https://jsonplaceholder.typicode.com/users";
-
-// function getData() {
-//   fetch(url)
-//     .then((resp) => {
-//       // error checking
-//       /// 200-299
-//       if (!resp.ok) throw new Error("was not a valid response");
-//       return resp.json(); /// method to extract JSON string and convert it to an Object
-//     })
-//     .then((dataobj) => {
-//       // console.log(dataobj);
-//     })
-//     .catch((err) => {
-//       console.warn(err.message);
-//     });
-
-//   ///// The code below will always fail
-//   // let response = fetch(url);
-//   // let dataobj = response.json();
-//   // console.log(dataobj);
-// }
-// getData();
-
-///////////////////
-/////////////////////////////// try-async
-// const url = "https://jsonplaceholder.typicode.com/users";
-
-// async function getData() {
-//   try {
-//     let response = await fetch(url);
-//     console.log(response);
-//     if (!response.ok) throw new Error("not a valid response");
-//     let dataobj = await response.json();
-//     console.log(dataobj);
-//   } catch (err) {
-//     console.warn(err.message);
-//   }
-// }
-// getData();
-
-////////////////
-///////////////////////////// url-request
-
-/*
- url: href, host, hostname, port, protocol, origin, pathname, hash, search, searchParams
-request options: method, body, headers, cache
-cache  (HTTP Cache, NOT Cache API)
-- `default`: cache first, server request if stale, update cache if newer
-- `reload`: always go to server AND update the cache
-- `no-store`: always go to server but do not update the cache
-- `no-cache`: make a conditional request to server and compare, update cache and use latest
-- `force-cache`: only makes request if there is no HTTP Cache file
-- `only-if-cache`: from cache or 504 gateway timeout error
-Headers
-- string | object literal | new Headers()
-*/
-
-// const str = "http://127.0.0.1:5500/local-sample.json?attempt=123&other=hello";
-
-// function getData() {
-//   const url = new URL(str);
-//   // console.log(url.host, url.origin, url.protocol, url.port, url.pathname);
-
-//   const request = new Request(url, {
-//     headers: { "x-steve": "hello" },
-//     method: "GET",
-//     cache: "no-store",
+// function SuperElement(type, content) {
+//   this.el = document.createElement(type);
+//   this.el.innerText = content;
+//   document.body.append(this.el);
+//   this.el.addEventListener("click", () => {
+//     console.log(this.el);
 //   });
-
-//   fetch(request)
-//     .then((response) => {
-//       // console.log(response.status);
-//       if (!response.ok) throw new Error("Invalid");
-//       return response;
-//     })
-//     .then((data) => {
-//       console.log(data);
-//     })
-//     .catch((err) => console.warn(err.message));
 // }
-// getData();
 
-//////////////////////////////////////////
-/////////////////////////////////////////////// response / generate
+// const h1 = new SuperElement("h1", "Hello");
 
-// let obj = {
-//   id: crypto.randomUUID(),
-//   name: "the one who knocks",
-//   favouriteColor: "blue",
+// const array = ["a", "b", "c"];
+// const myElements = array.map((item) => {
+//   return new SuperElement("p", item);
+// });
+
+// var bunny = {
+//   lovesCarrots: true,
+//   f: function () {
+//     return this.lovesCarrots;
+//   },
+// };
+// console.log(bunny.f()); // true
+
+// var person = {
+//   firstName: "Penelope",
+//   lastName: "Barrymore",
+//   getName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },
+// };
+// console.log(person.getName()); // Penelope Barrymore
+
+// var o = {
+//   prop: 37,
+//   f: function () {
+//     return this.prop;
+//   },
+// };
+// console.log(o.f()); /// 37
+
+// const ad = {
+//   name: "wasef",
+//   foo: function () {
+//     console.log(this);
+//   },
 // };
 
-// const imgstr =
-//   "https://media.istockphoto.com/id/1419410282/photo/silent-forest-in-spring-with-beautiful-bright-sun-rays.jpg?s=2048x2048&w=is&k=20&c=t9_zg20wVbrBoGn0tw__1fFq4ykeKs15TQQ3x-ehVC0=";
-// const jsonstr = "https://random-data-api.com/api/v2/users?size=10";
+// ad.foo(); // {name: 'wasef', foo: ƒ}
 
-// function getData() {
-//   let list = document.getElementById("list"); //the <ul>
+// const at = {
+//   name: "wasef",
+//   foo: function () {
+//     console.log(this);
+//   },
+// };
 
-//   fetch(jsonstr)
-//     .then((response) => {
-//       if (!response.ok) throw new Error("invalid");
-//       return response.json();
-//     })
-//     .then((dataArray) => {
-//       //
-//       list.innerHTML = dataArray
-//         .map(({ uid, first_name, last_name }) => {
-//           return `<li class="listitem" data-uid="${uid}">
-//             <p>${first_name}</p>
-//             <p>${last_name}</p>
-//           </li>`;
-//         })
-//         .join("");
-//     })
-//     .catch(console.warn);
-//   fetch(imgstr)
-//     .then((resp) => {
-//       if (!resp.ok) throw new Error("invalid");
-//       return resp.blob(); //binary large object images, video, audio, fonts.
+// const newFoo = at.foo;
+// newFoo();
 
-//       resp.text(); //for text, html, and xml files, and css, and js.
-//       resp.json(); //for json files
-//     })
-//     .then((blob) => {
-//       console.log(blob); //blob is a chunk of memory on users computer
-//       let url = URL.createObjectURL(blob);
-//       let img = document.getElementById("img");
-//       img.src = url;
-//     })
-//     .catch(console.warn);
-//   let jsonstring = JSON.stringify(obj);
-//   console.log(jsonstring);
-//   let file = new File([jsonstring], "mydata.json", {
-//     type: "application/json",
-//   });
+// const av = {
+//   name: "wasef",
+// };
 
-//   let response = new Response(file, {
-//     status: 200,
-//     statusText: "Say my name",
-//     headers: {
-//       "content-type": "application/json",
-//       "content-length": file.size,
-//       "x-steve": "starts with x for a custom header name",
-//     },
-//   });
-//   console.log(response);
-// }
-// getData();
-
-///////////////////////////// API Keys, Authorization, Credentials, Content-Security-Policy
-
-// function getData() {
-//   let str = "http://127.0.0.1:3000/?name=value&steve=griffith";
-//   let url = new URL(str); //url.search
-//   let sp = url.searchParams;
-//   sp.append("hello", "world");
-//   sp.append("api-key", "sdfsdfert34rwsedweferf");
-//   // document.cookie('')
-
-//   let h = new Headers();
-//   // h.append('content-type', 'application/json')
-//   // h.append('origin', 'https://cia.org')
-//   h.append("x-api-key", "lijhkjehrkwjehrkwjer"); //API key
-//   h.append("Authorization", "liuhsgdigfyksdjfksdlfsddfdf"); //JWT
-//   //Forbidden Header Names
-
-//   let request = new Request(url, {
-//     method: "GET",
-//     headers: h,
-//     cache: "default",
-//     credentials: "same-origin",
-//   });
-
-//   fetch(request)
-//     .then((response) => {
-//       if (!response.ok) throw new Error("invalid");
-//       return response.text();
-//     })
-//     .then((txt) => {
-//       console.log(txt);
-//     })
-//     .catch(console.warn);
+// function foo() {
+//   console.log(this);
 // }
 
-// //////////////////////////////////// Uploading Data//////////////////////////////////
+// const newFooo = foo.bind(av);
+// newFooo();
 
-// let endpoint = "http://127.0.0.1:3000/";
-
-// function setData() {
-//   const imgInput = document.getElementById("imgfile");
-//   const jsonInput = document.getElementById("jsonfile");
-
-//   document.getElementById("myform").addEventListener("submit", (ev) => {
-//     ev.preventDefault();
-//     //upload something
-//     let obj = {
-//       id: 123,
-//       name: "steve",
-//     };
-//     // let jsonstring = JSON.stringify(obj);
-
-//     let fd = new FormData(document.getElementById("myform"));
-
-//     let request = new Request(endpoint, {
-//       method: "POST",
-//       // body: jsonstring,
-//       body: fd,
-//       headers: {
-//         "content-type": "multipart/form-data",
-//       },
-//     });
-//     fetch(request)
-//       .then((response) => {
-//         if (!response.ok) throw new Error("invalid");
-//         return response.text();
-//       })
-//       .then((txt) => {
-//         console.log(txt);
-//       })
-//       .catch(console.warn);
-//   });
+// function foo2() {
+//   const a = () => {
+//     console.log(this);
+//   };
+//   a();
 // }
 
-// /////////////////////////////////// Cors ///////////////////////////////////////////
+// foo2();
+
+// const person1 = {
+//   name: "Pedro",
+//   surname: "Sanchez",
+//   sayName: function () {
+//     return this.name + " " + this.surname;
+//   },
+// };
+
+// const person2 = {
+//   name: "Jimena",
+//   surname: "Juarez",
+// };
+
+// console.log(person1.sayName.call(person2)); /// Jimena Juarez
+
+// const person3 = {
+//   name: "Pedro",
+//   surname: "Sanchez",
+//   sayName: function (city, country) {
+//     return this.name + " " + this.surname + ", " + city + ", " + country;
+//   },
+// };
+
+// const person4 = {
+//   name: "Jimena",
+//   surname: "Juarez",
+// };
+
+// console.log(person3.sayName.apply(person4, ["DF", "Mexico"])); // Jimena Juarez, DF, Mexico
+
+// const person5 = {
+//   name: "Pedro",
+//   surname: "Sanchez",
+//   sayName: function () {
+//     return this.name + " " + this.surname;
+//   },
+// };
+
+// const person6 = {
+//   name: "Jimena",
+//   surname: "Juarez",
+// };
+
+// const sayPerson2Name = person5.sayName.bind(person6);
+
+// console.log(sayPerson2Name()); // Jimena Juarez
+
+// /////////////////////////////////
+// ////////////////////////////////
+// /////////////////////////////////////////// Prototypes ///////////////////////////////////////////////////////
+// /////////////////////////
+// ///////////////////////////
+
+// const objTest = {
+//   name: "Aleksandre",
+//   age: 29,
+// };
+// console.log(objTest);
+
+// ///// {name: 'Aleksandre', age: 29}
+// // age: 29
+// // name: "Aleksandre"
+// // [[Prototype]]: Object
+
+// const arrTest = [1, 2, 3];
+// console.log(arrTest);
+// // [1, 2, 3]
+// // 0: 1
+// // 1: 2
+// // 2: 3
+// // length: 3
+// // [[Prototype]]: Array(0)
+
+// const strTest = "string";
+// console.log(strTest.__proto__);
+// // String {'', constructor: ƒ, anchor: ƒ, at: ƒ, big: ƒ, …}
+
+// ////////
+// ////////
+// const human = {
+//   kind: "Human",
+// };
+// const sina = Object.create(human);
+// console.log(sina);
+// // [[Prototype]]: Object
+// // kind: "Human"
+// // [[Prototype]]: Object
+
+// ///////////
+// /////////////
+// class Human {
+//   talk() {
+//     return "Talking";
+//   }
+// }
+// class SuperHuman extends Human {
+//   fly() {
+//     return "Flying";
+//   }
+// }
+// const ben = new SuperHuman();
+// console.log(ben.fly()); // Flying
+// console.log(ben.talk()); // Talking
+// console.log(ben); // SuperHuman {}[[Prototype]]: Human
+// // [[Prototype]]: Human
+// // constructor: class SuperHuman
+// // fly: ƒ fly()
+// // [[Prototype]]: Object
+// // constructor: class Human
+// // talk: ƒ talk()
+// // [[Prototype]]: Object
+
+// ////////////////
+// //////////////////
+
+// function Dude(name) {
+//   this.name = name;
+// }
+// const me = new Dude("Sina");
+// console.log(me.prototype); // undefined
+// console.log(Dude.prototype);
+// // {constructor: ƒ}
+// // constructor: ƒ Dude(name)
+// // [[Prototype]]: Object
+
+// console.log(me.__proto__);
+// // {constructor: ƒ}
+// // constructor: ƒ Dude(name)
+// // [[Prototype]]: Object
+
+// console.log(Dude.prototype === me.__proto__); /// true
+// Dude.prototype.talk = function () {
+//   return "Talking";
+// };
+// console.log(me.__proto__); // {talk: ƒ, constructor: ƒ}
+
+// let myObj = {}; // new Object()
+// console.log(myObj.constructor); // ƒ Object() { [native code] }
+// console.log(myObj.__proto__ === myObj.constructor.prototype); // true
+
+// /////////////////////
+// ///////////////// objects delegation to other objects
+
+// let cat = { breed: "munchkin" };
+
+// let myCat = { name: "Fluffykins" };
+
+// Object.setPrototypeOf(myCat, cat);
+// console.log(myCat.breed); // munchkin
+
+// console.log(myCat.__proto__); // Object {breed: 'munchkin'}
+// cat.tailLenght = 15;
+// console.log(myCat.__proto__); // {breed: 'munchkin', tailLenght: 15}
+
+// ///////////////////////////////////////
+// /////////////////////////////////////
+// ///////////////////////////////////////////////// Event loop ///////////////////////////////////
+// ///////////////////////// Micro/Macro Tasks////////////////
+// console.log("A stack");
+// queueMicrotask(function () {
+//   console.log("B microtask");
+// });
+// requestAnimationFrame(function () {
+//   console.log("C rAF");
+// });
+// console.log("D stack");
+// setTimeout(function () {
+//   console.log("E task");
+// }, 0);
+// console.log("F stack");
+// Promise.resolve()
+//   .then(function () {
+//     console.log("G microtask");
+//   })
+//   .then(function () {
+//     console.log("H microtask");
+//   });
+// requestAnimationFrame(function () {
+//   console.log("I rAF");
+// });
+// console.log("J stack");
+// setTimeout(function () {
+//   console.log("K task");
+// });
+// queueMicrotask(function () {
+//   console.log("L microtask");
+// });
+// console.log("M stack");
+// // A stack
+// // D stack
+// // F stack
+// // J stack
+// // M stack
+// // B microtask
+// // G microtask
+// // L microtask
+// // H microtask
+// // E task
+// // K task
+// // C rAF
+// // I rAF
+
+// setTimeout(() => {
+//   console.log("Task1 - completed");
+// });
+
+// let promiseTask = new Promise((resolve, reject) => {
+//   resolve();
+// });
+// promiseTask.then(() => {
+//   console.log("Task2 - completed");
+// });
+
+// console.log("Main code completed");
+// /// Main code completed
+// // Task2 - completed
+// // Task1 - completed
+
+// ///////////////////////////////////////////////// Async ///////////////////////////////////////
+// ////////////////////////// callbacks
+
+// // const posts = [
+// //   { title: "Post One", body: "This is post one" },
+// //   { title: "Post Two", body: "This is post two" },
+// // ];
+
+// // function getPosts() {
+// //   setTimeout(() => {
+// //     let output = "";
+// //     posts.forEach((post, index) => {
+// //       output += `<li>${post.title}</li>`;
+// //     });
+// //     document.body.innerHTML = output;
+// //   }, 1000);
+// // }
+
+// // function createPost(post, callback) {
+// //   setTimeout(() => {
+// //     posts.push(post);
+// //     callback();
+// //   }, 2000);
+// // }
+
+// // getPosts();
+
+// // createPost({ title: "Post Three", body: "This is post three" }, getPosts);
+
+// ///////////////////////////////
+// /////////////////////////////////  Promises
+
+// // const posts = [
+// //   { title: "Post One", body: "This is post one" },
+// //   { title: "Post Two", body: "This is post two" },
+// // ];
+
+// // function getPosts() {
+// //   setTimeout(() => {
+// //     let output = "";
+// //     posts.forEach((post, index) => {
+// //       output += `<li>${post.title}</li>`;
+// //     });
+// //     document.body.innerHTML = output;
+// //   }, 1000);
+// // }
+
+// // function createPost(post) {
+// //   return new Promise((resolve, reject) => {
+// //     setTimeout(() => {
+// //       posts.push(post);
+// //       const error = false;
+
+// //       if (!error) {
+// //         resolve();
+// //       } else {
+// //         reject("Error: something went wrong");
+// //       }
+// //     }, 2000);
+// //   });
+// // }
+
+// // // createPost({ title: "Post Three", body: "This is post three" })
+// // //   .then(getPosts)
+// // //   .catch((err) => console.log(err));
+
+// // ///// Async/Await
+// // /////////
+
+// // async function init() {
+// //   await createPost({ title: "Post Three", body: "This is post three" });
+// //   getPosts();
+// // }
+// // init();
+
+// // ///////// Async await with fetch
+// // /////////////
+
+// // async function fetchUsers() {
+// //   const res = await fetch("https://jsonplaceholder.typicode.com/users");
+// //   const data = await res.json();
+// //   console.log(data);
+// // }
+// // fetchUsers();
+// // ////// Promise.all
+// // /////////
+
+// // const promise1 = Promise.resolve("Hello World");
+// // const promise2 = 10;
+// // const promise3 = new Promise((resolve, reject) =>
+// //   setTimeout(resolve, 2000, "Goodbye")
+// // );
+
+// // const promise4 = fetch("https://jsonplaceholder.typicode.com/users").then(
+// //   (res) => res.json()
+// // );
+
+// // Promise.all([promise1, promise2, promise3, promise4]).then((values) =>
+// //   console.log(values)
+// // );
+
+// ////////////////////////////////////////
+// /////////////////////////////////////
+// //////////////////////////////////////// Fetch ///////////////////////////////////////
+
+// /////////////////////////// Basic fetch
+// // const url = "https://jsonplaceholder.typicode.com/users";
+
+// // function getData() {
+// //   fetch(url)
+// //     .then((resp) => {
+// //       // error checking
+// //       /// 200-299
+// //       if (!resp.ok) throw new Error("was not a valid response");
+// //       return resp.json(); /// method to extract JSON string and convert it to an Object
+// //     })
+// //     .then((dataobj) => {
+// //       // console.log(dataobj);
+// //     })
+// //     .catch((err) => {
+// //       console.warn(err.message);
+// //     });
+
+// //   ///// The code below will always fail
+// //   // let response = fetch(url);
+// //   // let dataobj = response.json();
+// //   // console.log(dataobj);
+// // }
+// // getData();
+
+// ///////////////////
+// /////////////////////////////// try-async
+// // const url = "https://jsonplaceholder.typicode.com/users";
+
+// // async function getData() {
+// //   try {
+// //     let response = await fetch(url);
+// //     console.log(response);
+// //     if (!response.ok) throw new Error("not a valid response");
+// //     let dataobj = await response.json();
+// //     console.log(dataobj);
+// //   } catch (err) {
+// //     console.warn(err.message);
+// //   }
+// // }
+// // getData();
+
+// ////////////////
+// ///////////////////////////// url-request
+
 // /*
-// All requests that are not GET or HEAD need to include an `origin` header.
-// Set by the browser, not the script.
-// Server sets ACCESS-Control-Allow-Origin: http://127.0.0.1:5500
-
-// Simple Request: The preflight request is NOT needed when:
-
-// 1. method is HEAD, GET, or POST;
-// 2. and headers are only accept, accept-language, content-language, content-type, or range
-// 3. and content-type is only `text/plain`, `multipart/form-data`, or `application/x-www-form-urlencoded`;
-// 4. and `accept`, `accept-language`, and `content-language` are only standard values;
-// 5. and no ReadableStream object is used in the Request
-
-// CORS OPTIONS request includes the
-// `Access-Control-Request-Method` and
-// `Access-Control-Request-Headers` headers.
-
-// Request Mode
-// - no-cors: skip the OPTIONS request
-// - cors: must meet the CORS criteria. OPTIONS request will be made
-// - same-origin: result in an error if not same origin
-// - navigate: only set by the browser, not by JS
-
-// Opaque responses can be used as the contents of a `<script>`, `<link rel="stylesheet">`, `<img>`, `<video>`, `<audio>`, `<iframe>`, `<embed>` or `<object>`.
-
-// Not for `<canvas>`.
-
-// Not for Web Fonts.
-
-// Not for Cache Storage `add()` or `addAll()`. But you can do a fetch and then use Cache `put()`.
-
-// Opaque responses have a status of 0.
-
-// Using no-cors mode basically means that, if you get an opaque response:
-
-// 1. you don't care about seeing the resulting file
-// 2. don't bother sending a preflight request.
-
-// A CORS-safelisted response-header names
-
-// `Cache-Control` `Content-Language` `Content-Length` `Content-Type` `Expires` `Last-Modified` `Pragma`
+//  url: href, host, hostname, port, protocol, origin, pathname, hash, search, searchParams
+// request options: method, body, headers, cache
+// cache  (HTTP Cache, NOT Cache API)
+// - `default`: cache first, server request if stale, update cache if newer
+// - `reload`: always go to server AND update the cache
+// - `no-store`: always go to server but do not update the cache
+// - `no-cache`: make a conditional request to server and compare, update cache and use latest
+// - `force-cache`: only makes request if there is no HTTP Cache file
+// - `only-if-cache`: from cache or 504 gateway timeout error
+// Headers
+// - string | object literal | new Headers()
 // */
 
+// // const str = "http://127.0.0.1:5500/local-sample.json?attempt=123&other=hello";
+
+// // function getData() {
+// //   const url = new URL(str);
+// //   // console.log(url.host, url.origin, url.protocol, url.port, url.pathname);
+
+// //   const request = new Request(url, {
+// //     headers: { "x-steve": "hello" },
+// //     method: "GET",
+// //     cache: "no-store",
+// //   });
+
+// //   fetch(request)
+// //     .then((response) => {
+// //       // console.log(response.status);
+// //       if (!response.ok) throw new Error("Invalid");
+// //       return response;
+// //     })
+// //     .then((data) => {
+// //       console.log(data);
+// //     })
+// //     .catch((err) => console.warn(err.message));
+// // }
+// // getData();
+
+// //////////////////////////////////////////
+// /////////////////////////////////////////////// response / generate
+
+// // let obj = {
+// //   id: crypto.randomUUID(),
+// //   name: "the one who knocks",
+// //   favouriteColor: "blue",
+// // };
+
+// // const imgstr =
+// //   "https://media.istockphoto.com/id/1419410282/photo/silent-forest-in-spring-with-beautiful-bright-sun-rays.jpg?s=2048x2048&w=is&k=20&c=t9_zg20wVbrBoGn0tw__1fFq4ykeKs15TQQ3x-ehVC0=";
+// // const jsonstr = "https://random-data-api.com/api/v2/users?size=10";
+
+// // function getData() {
+// //   let list = document.getElementById("list"); //the <ul>
+
+// //   fetch(jsonstr)
+// //     .then((response) => {
+// //       if (!response.ok) throw new Error("invalid");
+// //       return response.json();
+// //     })
+// //     .then((dataArray) => {
+// //       //
+// //       list.innerHTML = dataArray
+// //         .map(({ uid, first_name, last_name }) => {
+// //           return `<li class="listitem" data-uid="${uid}">
+// //             <p>${first_name}</p>
+// //             <p>${last_name}</p>
+// //           </li>`;
+// //         })
+// //         .join("");
+// //     })
+// //     .catch(console.warn);
+// //   fetch(imgstr)
+// //     .then((resp) => {
+// //       if (!resp.ok) throw new Error("invalid");
+// //       return resp.blob(); //binary large object images, video, audio, fonts.
+
+// //       resp.text(); //for text, html, and xml files, and css, and js.
+// //       resp.json(); //for json files
+// //     })
+// //     .then((blob) => {
+// //       console.log(blob); //blob is a chunk of memory on users computer
+// //       let url = URL.createObjectURL(blob);
+// //       let img = document.getElementById("img");
+// //       img.src = url;
+// //     })
+// //     .catch(console.warn);
+// //   let jsonstring = JSON.stringify(obj);
+// //   console.log(jsonstring);
+// //   let file = new File([jsonstring], "mydata.json", {
+// //     type: "application/json",
+// //   });
+
+// //   let response = new Response(file, {
+// //     status: 200,
+// //     statusText: "Say my name",
+// //     headers: {
+// //       "content-type": "application/json",
+// //       "content-length": file.size,
+// //       "x-steve": "starts with x for a custom header name",
+// //     },
+// //   });
+// //   console.log(response);
+// // }
+// // getData();
+
+// ///////////////////////////// API Keys, Authorization, Credentials, Content-Security-Policy
+
+// // function getData() {
+// //   let str = "http://127.0.0.1:3000/?name=value&steve=griffith";
+// //   let url = new URL(str); //url.search
+// //   let sp = url.searchParams;
+// //   sp.append("hello", "world");
+// //   sp.append("api-key", "sdfsdfert34rwsedweferf");
+// //   // document.cookie('')
+
+// //   let h = new Headers();
+// //   // h.append('content-type', 'application/json')
+// //   // h.append('origin', 'https://cia.org')
+// //   h.append("x-api-key", "lijhkjehrkwjehrkwjer"); //API key
+// //   h.append("Authorization", "liuhsgdigfyksdjfksdlfsddfdf"); //JWT
+// //   //Forbidden Header Names
+
+// //   let request = new Request(url, {
+// //     method: "GET",
+// //     headers: h,
+// //     cache: "default",
+// //     credentials: "same-origin",
+// //   });
+
+// //   fetch(request)
+// //     .then((response) => {
+// //       if (!response.ok) throw new Error("invalid");
+// //       return response.text();
+// //     })
+// //     .then((txt) => {
+// //       console.log(txt);
+// //     })
+// //     .catch(console.warn);
+// // }
+
+// // //////////////////////////////////// Uploading Data//////////////////////////////////
+
+// // let endpoint = "http://127.0.0.1:3000/";
+
+// // function setData() {
+// //   const imgInput = document.getElementById("imgfile");
+// //   const jsonInput = document.getElementById("jsonfile");
+
+// //   document.getElementById("myform").addEventListener("submit", (ev) => {
+// //     ev.preventDefault();
+// //     //upload something
+// //     let obj = {
+// //       id: 123,
+// //       name: "steve",
+// //     };
+// //     // let jsonstring = JSON.stringify(obj);
+
+// //     let fd = new FormData(document.getElementById("myform"));
+
+// //     let request = new Request(endpoint, {
+// //       method: "POST",
+// //       // body: jsonstring,
+// //       body: fd,
+// //       headers: {
+// //         "content-type": "multipart/form-data",
+// //       },
+// //     });
+// //     fetch(request)
+// //       .then((response) => {
+// //         if (!response.ok) throw new Error("invalid");
+// //         return response.text();
+// //       })
+// //       .then((txt) => {
+// //         console.log(txt);
+// //       })
+// //       .catch(console.warn);
+// //   });
+// // }
+
+// // /////////////////////////////////// Cors ///////////////////////////////////////////
+// // /*
+// // All requests that are not GET or HEAD need to include an `origin` header.
+// // Set by the browser, not the script.
+// // Server sets ACCESS-Control-Allow-Origin: http://127.0.0.1:5500
+
+// // Simple Request: The preflight request is NOT needed when:
+
+// // 1. method is HEAD, GET, or POST;
+// // 2. and headers are only accept, accept-language, content-language, content-type, or range
+// // 3. and content-type is only `text/plain`, `multipart/form-data`, or `application/x-www-form-urlencoded`;
+// // 4. and `accept`, `accept-language`, and `content-language` are only standard values;
+// // 5. and no ReadableStream object is used in the Request
+
+// // CORS OPTIONS request includes the
+// // `Access-Control-Request-Method` and
+// // `Access-Control-Request-Headers` headers.
+
+// // Request Mode
+// // - no-cors: skip the OPTIONS request
+// // - cors: must meet the CORS criteria. OPTIONS request will be made
+// // - same-origin: result in an error if not same origin
+// // - navigate: only set by the browser, not by JS
+
+// // Opaque responses can be used as the contents of a `<script>`, `<link rel="stylesheet">`, `<img>`, `<video>`, `<audio>`, `<iframe>`, `<embed>` or `<object>`.
+
+// // Not for `<canvas>`.
+
+// // Not for Web Fonts.
+
+// // Not for Cache Storage `add()` or `addAll()`. But you can do a fetch and then use Cache `put()`.
+
+// // Opaque responses have a status of 0.
+
+// // Using no-cors mode basically means that, if you get an opaque response:
+
+// // 1. you don't care about seeing the resulting file
+// // 2. don't bother sending a preflight request.
+
+// // A CORS-safelisted response-header names
+
+// // `Cache-Control` `Content-Language` `Content-Length` `Content-Type` `Expires` `Last-Modified` `Pragma`
+// // */
+
+// // function getData() {
+// //   const imgurl = `https://picsum.photos/id/237/300/200`;
+
+// //   let request = new Request(imgurl, {
+// //     cache: "default",
+// //     credentials: "same-origin",
+// //     method: "GET",
+// //     mode: "no-cors",
+// //   });
+
+// //   fetch(imgurl).then((resp) => {
+// //     console.log("External IMG mode: cors");
+// //     console.log(resp.status); // 200
+// //   });
+// //   fetch(imgurl, { mode: "no-cors" }).then((resp) => {
+// //     console.log("External IMG mode: no-cors");
+// //     console.log(resp.status); // 0
+// //   });
+
+// //   const jsonurl = `http://127.0.0.1:5500/local-sample.json`;
+// //   fetch(jsonurl, { mode: "cors" }).then((resp) => {
+// //     console.log("Local JSON mode: cors");
+// //     console.log(resp.status); // 200
+// //   });
+// //   fetch(jsonurl, { mode: "no-cors" }).then((resp) => {
+// //     console.log("Local JSON mode: no-cors");
+// //     console.log(resp.status); // 0
+// //   });
+// // }
+// // getData();
+
+// ///////////////////////////////////// multiple requests //////////////////////////////
+// // const jsonstr = "https://random-data-api.com/api/v2/users?size=10";
+// // const imgstr = "https://picsum.photos/id/237/300/200";
+
+// // function getData() {
+// //   //
+// //   let imgResponse;
+// //   let jsonResponse;
+// //   fetch(imgstr)
+// //     .then((response) => {
+// //       if (!response.ok) throw new Error("invalid");
+// //       return response.blob();
+// //       //we can add another then and work with image here
+// //     })
+// //     .then((blob) => {
+// //       //work with blob add img to page...
+// //       return fetch(jsonstr);
+// //     })
+// //     .then((response) => {
+// //       if (!response.ok) throw new Error("invalid");
+// //       jsonResponse = response.json();
+// //       return Promise.all([imgResponse, jsonResponse]);
+// //     })
+// //     .then(([blob, dataObj]) => {
+// //       console.log(dataObj);
+// //       console.log(blob);
+// //     })
+// //     .catch(console.warn);
+
+// //   Promise.all([fetch(imgstr), fetch(jsonstr)])
+// //     .then(([imgRes, jsonRes]) => {
+// //       return Promise.all([imgRes.blob(), jsonRes.json()]);
+// //     })
+// //     .then(([blob, jsonData]) => {
+// //       //at the same time
+// //     })
+// //     .catch(console.warn);
+// // }
+
+// // getData();
+
+// //////////////////////////////////////////// Abort ///////////////////////////////////
+
+// const url = "https://picsum.photos/id/237/3000/2000";
+
+// const controller = new AbortController();
+// const signal = controller.signal;
+
 // function getData() {
-//   const imgurl = `https://picsum.photos/id/237/300/200`;
-
-//   let request = new Request(imgurl, {
-//     cache: "default",
-//     credentials: "same-origin",
-//     method: "GET",
-//     mode: "no-cors",
+//   let abortBtn = document.getElementById("abort");
+//   abortBtn.addEventListener("click", (ev) => {
+//     controller.abort();
+//     console.log("aborted");
 //   });
 
-//   fetch(imgurl).then((resp) => {
-//     console.log("External IMG mode: cors");
-//     console.log(resp.status); // 200
+//   let request = new Request(url, {
+//     signal: signal,
 //   });
-//   fetch(imgurl, { mode: "no-cors" }).then((resp) => {
-//     console.log("External IMG mode: no-cors");
-//     console.log(resp.status); // 0
-//   });
-
-//   const jsonurl = `http://127.0.0.1:5500/local-sample.json`;
-//   fetch(jsonurl, { mode: "cors" }).then((resp) => {
-//     console.log("Local JSON mode: cors");
-//     console.log(resp.status); // 200
-//   });
-//   fetch(jsonurl, { mode: "no-cors" }).then((resp) => {
-//     console.log("Local JSON mode: no-cors");
-//     console.log(resp.status); // 0
-//   });
-// }
-// getData();
-
-///////////////////////////////////// multiple requests //////////////////////////////
-// const jsonstr = "https://random-data-api.com/api/v2/users?size=10";
-// const imgstr = "https://picsum.photos/id/237/300/200";
-
-// function getData() {
-//   //
-//   let imgResponse;
-//   let jsonResponse;
-//   fetch(imgstr)
+//   fetch(request)
 //     .then((response) => {
 //       if (!response.ok) throw new Error("invalid");
 //       return response.blob();
-//       //we can add another then and work with image here
 //     })
 //     .then((blob) => {
-//       //work with blob add img to page...
-//       return fetch(jsonstr);
-//     })
-//     .then((response) => {
-//       if (!response.ok) throw new Error("invalid");
-//       jsonResponse = response.json();
-//       return Promise.all([imgResponse, jsonResponse]);
-//     })
-//     .then(([blob, dataObj]) => {
-//       console.log(dataObj);
-//       console.log(blob);
-//     })
-//     .catch(console.warn);
-
-//   Promise.all([fetch(imgstr), fetch(jsonstr)])
-//     .then(([imgRes, jsonRes]) => {
-//       return Promise.all([imgRes.blob(), jsonRes.json()]);
-//     })
-//     .then(([blob, jsonData]) => {
-//       //at the same time
+//       console.log("got the blob");
 //     })
 //     .catch(console.warn);
 // }
 
 // getData();
 
-//////////////////////////////////////////// Abort ///////////////////////////////////
+//////////////////////////// local storage////  session storage/////    cookies///////////////////////////
 
-const url = "https://picsum.photos/id/237/3000/2000";
+localStorage.setItem("name", "aleksandre");
+console.log(localStorage.getItem("name"));
+localStorage.removeItem("name");
+localStorage.clear();
 
-const controller = new AbortController();
-const signal = controller.signal;
+sessionStorage.setItem("name", "aleksandre");
+console.log(sessionStorage.getItem("name"));
 
-function getData() {
-  let abortBtn = document.getElementById("abort");
-  abortBtn.addEventListener("click", (ev) => {
-    controller.abort();
-    console.log("aborted");
-  });
+document.cookie =
+  "name=aleksandre; expires=" + new Date(2024, 15, 1).toUTCString();
+console.log(document.cookie);
 
-  let request = new Request(url, {
-    signal: signal,
-  });
-  fetch(request)
-    .then((response) => {
-      if (!response.ok) throw new Error("invalid");
-      return response.blob();
-    })
-    .then((blob) => {
-      console.log("got the blob");
-    })
-    .catch(console.warn);
+///////////////////////// generators///////////
+
+function* simpleGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
 }
 
-getData();
+const generatorObject = simpleGenerator();
+const generatorObject2 = simpleGenerator();
+
+console.log(generatorObject.next());
+console.log(generatorObject2.next());
+console.log(generatorObject.next());
+console.log(generatorObject.next());
+
+///////////////////////////////// recursion //////////////////////////////////////
+
+function countDown(n) {
+  for (let i = n; i > 0; i--) {
+    console.log(i);
+  }
+  console.log("Hooray");
+}
+
+function countDownRecursive(n) {
+  if (n <= 0) {
+    console.log("Hooray");
+    return;
+  }
+  console.log(n);
+  countDownRecursive(n - 1);
+}
+countDownRecursive(3);
+
+/////////////////
+//////////////
+
+function sumRange(n) {
+  let total = 0;
+  for (let i = n; i > 0; i--) {
+    total += i;
+  }
+  return total;
+}
+
+function sumRangeRecursive(n, total = 0) {
+  if (n <= 0) {
+    return total;
+  }
+  return sumRangeRecursive(n - 1, total + n);
+}
+sumRangeRecursive(3, 0);
+
+function printChildrenRecursive(t) {
+  if (t.children.length === 0) {
+    return;
+  }
+  t.children.forEach((child) => {
+    console.log(child.name);
+    printChildrenRecursive(child);
+  });
+}
+
+const tree = {
+  name: "John",
+  children: [
+    {
+      name: "Jim",
+      children: [],
+    },
+    {
+      name: "Zoe",
+      children: [
+        { name: "Kyle", children: [] },
+        { name: "Sophia", children: [] },
+      ],
+    },
+  ],
+};
